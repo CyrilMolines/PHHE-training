@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 
 import requests
 
-from .http_client import HttpConfig, head_then_get
+from .http_client import HttpConfig, HttpError, head_then_get
 from .schema import LinkCheckResult
 
 
@@ -49,7 +49,7 @@ def check_url(url: str, *, cfg: HttpConfig) -> LinkCheckResult:
             status_code=int(r.status_code),
             error="",
         )
-    except requests.RequestException as e:
+    except (requests.RequestException, HttpError) as e:
         return LinkCheckResult(
             checked_at_utc=checked_at,
             ok=False,
