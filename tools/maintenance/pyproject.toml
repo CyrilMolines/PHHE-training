@@ -1,0 +1,9 @@
+[project]
+name = "who-training-maintenance"
+version = "0.1.0"
+description = "Maintenance tooling for WHO training directory (copy list): ingestion, link checking, discovery."
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+

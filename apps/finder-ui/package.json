@@ -1,0 +1,25 @@
+{
+  "name": "who-training-finder-ui",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:demo-data": "node ./scripts/build-demo-data.mjs",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2",
+    "idb": "^8.0.0",
+    "papaparse": "^5.4.1",
+    "preact": "^10.25.4"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.1",
+    "@types/papaparse": "^5.3.16",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}
+

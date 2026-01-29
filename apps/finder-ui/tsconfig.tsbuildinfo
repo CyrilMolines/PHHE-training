@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/lib/cache.ts","./src/lib/config.ts","./src/lib/demo.ts","./src/lib/embeddings.ts","./src/lib/normalize.ts","./src/lib/schema.ts","./src/lib/search.ts","./src/lib/sharepoint.ts","./src/ui/app.tsx"],"version":"5.9.3"}
