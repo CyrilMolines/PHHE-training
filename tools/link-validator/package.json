@@ -1,0 +1,13 @@
+{
+  "name": "who-phhe-link-validator",
+  "version": "1.0.0",
+  "description": "Deep content validation for WHO PHHE training links",
+  "main": "validate-links.js",
+  "scripts": {
+    "validate": "node validate-links.js",
+    "validate:demo": "node validate-links.js ../../apps/finder-ui/public/demo-trainings.json",
+    "validate:csv": "node validate-links.js"
+  },
+  "author": "WHO PHHE",
+  "license": "MIT"
+}

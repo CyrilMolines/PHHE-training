@@ -1,0 +1,23 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "TrainingFinderSPFx",
+    "environment": "spo",
+    "packageManager": "npm",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "useGulp": false,
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "TrainingFinder",
+    "componentDescription": "WHO Training Finder",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.11.0",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "training-finder-sp-fx",
+    "libraryId": "5b06fb0c-9cb2-4e5d-991b-541446da7cd9",
+    "solutionShortDescription": "TrainingFinderSPFx description"
+  }
+}

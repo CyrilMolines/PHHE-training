@@ -1,11 +1,21 @@
-import { env, pipeline, type FeatureExtractionPipeline } from "@xenova/transformers";
+import { env, pipeline } from "@huggingface/transformers";
 
-let _pipe: FeatureExtractionPipeline | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let _pipe: any = null;
+let _currentModel: string | null = null;
 
 export interface EmbeddingsConfig {
-  modelsBasePath: string; // e.g. "./models"
+  modelsBasePath: string;
   allowRemoteModels: boolean;
+  embeddingModel: "minilm" | "bge-small" | "gte-small";
 }
+
+// Model configurations
+const MODEL_MAP = {
+  "minilm": "Xenova/all-MiniLM-L6-v2",
+  "bge-small": "Xenova/bge-small-en-v1.5",
+  "gte-small": "Xenova/gte-small"
+} as const;
 
 function normalizeBasePath(p: string): string {
   const v = p.trim();
@@ -13,27 +23,50 @@ function normalizeBasePath(p: string): string {
   return v.replace(/\/+$/, "");
 }
 
-export async function loadEmbeddingsPipeline(cfg: EmbeddingsConfig): Promise<FeatureExtractionPipeline> {
-  if (_pipe) return _pipe;
+export async function loadEmbeddingsPipeline(cfg: EmbeddingsConfig): Promise<typeof _pipe> {
+  const modelId = MODEL_MAP[cfg.embeddingModel] || MODEL_MAP["bge-small"];
+  
+  // Return cached pipeline if same model
+  if (_pipe && _currentModel === modelId) return _pipe;
+  
+  // Clear cache if switching models
+  if (_pipe && _currentModel !== modelId) {
+    _pipe = null;
+  }
 
-  env.allowLocalModels = true;
+  // When allowRemoteModels is true, disable local models to avoid 404 errors
+  env.allowLocalModels = !cfg.allowRemoteModels;
   env.allowRemoteModels = cfg.allowRemoteModels;
-  env.localModelPath = normalizeBasePath(cfg.modelsBasePath);
+  
+  if (!cfg.allowRemoteModels) {
+    env.localModelPath = normalizeBasePath(cfg.modelsBasePath);
+  }
 
-  // Model must be present under `${modelsBasePath}/all-MiniLM-L6-v2/` when remote models are disabled.
-  _pipe = (await pipeline("feature-extraction", "all-MiniLM-L6-v2", {
-    quantized: true
-  })) as FeatureExtractionPipeline;
+  console.log(`[Embeddings] Loading model: ${modelId}`);
+  const startTime = performance.now();
+  
+  _pipe = await pipeline("feature-extraction", modelId, {
+    dtype: "fp32",
+    progress_callback: (progress: { status: string; progress?: number }) => {
+      if (progress.progress !== undefined) {
+        console.log(`[Embeddings] ${progress.status}: ${Math.round(progress.progress)}%`);
+      }
+    }
+  });
+  
+  _currentModel = modelId;
+  console.log(`[Embeddings] Model loaded in ${Math.round(performance.now() - startTime)}ms`);
+  
   return _pipe;
 }
 
 export async function embedText(
-  pipe: FeatureExtractionPipeline,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pipe: any,
   text: string
 ): Promise<Float32Array> {
   // Mean pooling over token embeddings.
   const out = await pipe(text, { pooling: "mean", normalize: true });
-  // transformers.js returns a TypedArray-like structure; `.data` is Float32Array.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const data = (out as any).data as Float32Array;
   return data;
@@ -46,3 +79,11 @@ export function cosineSimilarity(a: Float32Array, b: Float32Array): number {
   return dot;
 }
 
+export function getModelInfo(model: EmbeddingsConfig["embeddingModel"]): { name: string; size: string; quality: string } {
+  const info = {
+    "minilm": { name: "MiniLM-L6-v2", size: "~23MB", quality: "Good" },
+    "bge-small": { name: "BGE-Small-EN", size: "~130MB", quality: "Excellent" },
+    "gte-small": { name: "GTE-Small", size: "~67MB", quality: "Very Good" }
+  };
+  return info[model] || info["bge-small"];
+}

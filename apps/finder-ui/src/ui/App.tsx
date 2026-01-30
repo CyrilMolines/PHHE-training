@@ -1,128 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import type { RankedTraining, TrainingRecord } from "../lib/schema";
-import { loadConfig, saveConfig, type AppConfig } from "../lib/config";
+import { loadConfig, saveConfig, type AppConfig, getModelSizes } from "../lib/config";
 import { loadDemoTrainings } from "../lib/demo";
 import { fetchAllListItems } from "../lib/sharepoint";
 import { buildLexicalIndex, applyStructuredFilters, rankLexical, type LexicalIndex } from "../lib/search";
 import { loadCachedTrainings, saveCachedTrainings, loadEmbedding, saveEmbedding } from "../lib/cache";
+import { getModelInfo } from "../lib/embeddings";
+import { getChatModelInfo, type ExtractedIntent, type TrainingSummary } from "../lib/chatModel";
 
-type Msg = { role: "user" | "bot"; text: string };
+type Msg = { role: "user" | "bot"; text: string; isLoading?: boolean };
 
-type Intent = {
-  query: string;
-  modality?: string;
-  language?: string;
-  platform?: string;
-  audienceContains?: string;
-};
-
-function extractIntentDelta(text: string): Partial<Intent> {
-  const t = text.toLowerCase();
-  const delta: Partial<Intent> = {};
-
-  // Modality
-  if (/\bonline\b/.test(t)) delta.modality = "online";
-  if (/\bin[- ]person\b/.test(t)) delta.modality = "in_person";
-  if (/\bblended\b/.test(t)) delta.modality = "blended";
-
-  // Language (common in the dataset)
-  const langMap: Array<[RegExp, string]> = [
-    [/\benglish\b/, "English"],
-    [/\bfrench\b/, "French"],
-    [/\bspanish\b/, "Spanish"],
-    [/\brussian\b/, "Russian"],
-    [/\barabic\b/, "Arabic"],
-    [/\bportuguese\b/, "Portuguese"],
-    [/\bpolish\b/, "Polish"],
-    [/\bukrainian\b/, "Ukrainian"],
-    [/\bchinese\b/, "Chinese"],
-    [/\bkiswahili\b/, "Kiswahili"],
-    [/\bkirundi\b/, "Kirundi"]
-  ];
-  for (const [re, val] of langMap) {
-    if (re.test(t)) {
-      delta.language = val;
-      break;
-    }
-  }
-
-  // Platform (match by substring; not an enum)
-  const platformHints: Array<[RegExp, string]> = [
-    [/\bopenwho\b/, "OpenWHO"],
-    [/\bwho academy\b/, "WHO Academy"],
-    [/\bhslp\b/, "HSLP"],
-    [/\bgoarn\b/, "GOARN"],
-    [/\bvirtual campus\b/, "Virtual campus"]
-  ];
-  for (const [re, val] of platformHints) {
-    if (re.test(t)) {
-      delta.platform = val;
-      break;
-    }
-  }
-
-  // Audience heuristics
-  if (/\bmember state(s)?\b/.test(t) || /\bministry of health\b/.test(t) || /\bmoh\b/.test(t)) {
-    delta.audienceContains = "Member";
-  }
-  if (/\bwho staff\b/.test(t)) delta.audienceContains = "WHO";
-
-  return delta;
-}
-
-function mergeIntent(prev: Intent, userText: string): Intent {
-  const delta = extractIntentDelta(userText);
-  const query = userText.trim();
-  return {
-    ...prev,
-    ...delta,
-    query: query || prev.query
-  };
-}
-
-async function rankHybrid(
-  records: TrainingRecord[],
-  query: string,
-  index: LexicalIndex,
-  embeddingsEnabled: boolean,
-  embeddingsCfg: { modelsBasePath: string; allowRemoteModels: boolean }
-): Promise<RankedTraining[]> {
-  const lexical = rankLexical(records, query, index);
-  if (!embeddingsEnabled || lexical.length === 0) return lexical;
-
-  try {
-    // Dynamic import keeps the base bundle smaller and avoids loading runtime deps
-    // unless embeddings are actually enabled.
-    const { cosineSimilarity, embedText, loadEmbeddingsPipeline } = await import("../lib/embeddings");
-    const pipe = await loadEmbeddingsPipeline(embeddingsCfg);
-    const qVec = await embedText(pipe, query);
-
-    // Blend lexical + embedding similarity.
-    const byId = new Map<string, RankedTraining>();
-    for (const r of lexical) byId.set(r.record.id, r);
-
-    // Compute embeddings for the top lexical candidates only (cost control).
-    const top = lexical.slice(0, 60);
-    for (const entry of top) {
-      const id = entry.record.id;
-      let vec = await loadEmbedding(id);
-      if (!vec) {
-        vec = await embedText(pipe, entry.record.searchText);
-        await saveEmbedding(id, vec);
-      }
-      const sim = cosineSimilarity(qVec, vec); // already normalized => dot product
-      entry.score = entry.score + sim * 2.0;
-      if (sim > 0.35) entry.reasons.push("semantic similarity");
-    }
-
-    const merged = [...byId.values()];
-    merged.sort((a, b) => b.score - a.score);
-    return merged;
-  } catch {
-    // If embeddings are not available locally, fall back to lexical.
-    return lexical;
-  }
-}
+type ModelStatus = "idle" | "loading" | "ready" | "error";
 
 export function App() {
   const [cfg, setCfg] = useState<AppConfig>(() => loadConfig());
@@ -130,16 +18,21 @@ export function App() {
   const [index, setIndex] = useState<LexicalIndex | null>(null);
   const [loading, setLoading] = useState(false);
   const [configOpen, setConfigOpen] = useState(false);
+  
+  // Model states
+  const [embeddingStatus, setEmbeddingStatus] = useState<ModelStatus>("idle");
+  const [chatStatus, setChatStatus] = useState<ModelStatus>("idle");
+  const [modelProgress, setModelProgress] = useState<string>("");
+  
   const [messages, setMessages] = useState<Msg[]>([
     {
       role: "bot",
-      text:
-        "Tell me what training you need (topic, what you want to achieve). You can also mention language, modality (online / in-person / blended), platform (OpenWHO / WHO Academy / HSLP), or audience."
+      text: "Hello! I'm the WHO Training Finder AI. Tell me what kind of training you're looking for - describe the topic, your goals, preferred language, or format (online/in-person). I'll help you find the best matches."
     }
   ]);
   const [input, setInput] = useState("");
-  const [intent, setIntent] = useState<Intent>({ query: "" });
   const [lastResults, setLastResults] = useState<RankedTraining[] | null>(null);
+  const [lastIntent, setLastIntent] = useState<ExtractedIntent | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -169,79 +62,263 @@ export function App() {
       setRecords(fresh);
       setIndex(buildLexicalIndex(fresh));
       await saveCachedTrainings(fresh);
+      
+      setMessages((m) => [
+        ...m,
+        { role: "bot", text: `Loaded ${fresh.length} trainings. I'm ready to help you find what you need!` }
+      ]);
+    } catch (e) {
+      setMessages((m) => [
+        ...m,
+        { role: "bot", text: `Could not load training data: ${String(e)}` }
+      ]);
     } finally {
       setLoading(false);
     }
   }
 
+  async function loadModels() {
+    if (cfg.enableEmbeddings && embeddingStatus === "idle") {
+      setEmbeddingStatus("loading");
+      setModelProgress("Loading embedding model...");
+      try {
+        const { loadEmbeddingsPipeline } = await import("../lib/embeddings");
+        await loadEmbeddingsPipeline({
+          modelsBasePath: cfg.modelsBasePath,
+          allowRemoteModels: cfg.allowRemoteModels,
+          embeddingModel: cfg.embeddingModel
+        });
+        setEmbeddingStatus("ready");
+        setModelProgress("");
+      } catch (e) {
+        console.error("Failed to load embedding model:", e);
+        setEmbeddingStatus("error");
+        setModelProgress("Embedding model failed to load");
+      }
+    }
+
+    if (cfg.enableChatModel && chatStatus === "idle") {
+      setChatStatus("loading");
+      setModelProgress("Loading AI assistant model...");
+      try {
+        const { loadChatModel } = await import("../lib/chatModel");
+        await loadChatModel({
+          modelsBasePath: cfg.modelsBasePath,
+          allowRemoteModels: cfg.allowRemoteModels
+        });
+        setChatStatus("ready");
+        setModelProgress("");
+      } catch (e) {
+        console.error("Failed to load chat model:", e);
+        setChatStatus("error");
+        setModelProgress("AI model failed to load");
+      }
+    }
+  }
+
   useEffect(() => {
-    // Load cached first (fast), then refresh.
-    loadData(true).catch((e) => {
-      setMessages((m) => [
-        ...m,
-        { role: "bot", text: `Could not load SharePoint list items.\n${String(e)}` }
-      ]);
-    });
+    loadData(true).catch(console.error);
   }, []);
+
+  useEffect(() => {
+    if (records && records.length > 0) {
+      loadModels();
+    }
+  }, [records, cfg.enableEmbeddings, cfg.enableChatModel]);
 
   async function runSearch(userText: string) {
     if (!records || !index) return;
 
-    const nextIntent = mergeIntent(intent, userText);
-    setIntent(nextIntent);
+    // Add loading message
+    const loadingMsgIdx = messages.length;
+    setMessages((m) => [...m, { role: "bot", text: "Analyzing your request...", isLoading: true }]);
 
-    const minUsefulQueryLen = 4;
-    const hasSomeConstraint =
-      Boolean(nextIntent.modality) ||
-      Boolean(nextIntent.language) ||
-      Boolean(nextIntent.platform) ||
-      Boolean(nextIntent.audienceContains);
-
-    if (!hasSomeConstraint && nextIntent.query.trim().length < minUsefulQueryLen) {
-      setMessages((m) => [
-        ...m,
-        {
-          role: "bot",
-          text:
-            "I can help, but I need a bit more detail. What topic or objective are you targeting (for example: IHR, RCCE, surveillance, laboratory, incident management)?"
-        }
-      ]);
-      return;
+    let intent: ExtractedIntent;
+    
+    // Try to use chat model for intent extraction
+    if (chatStatus === "ready") {
+      try {
+        const { extractIntent, loadChatModel } = await import("../lib/chatModel");
+        const chatPipe = await loadChatModel({
+          modelsBasePath: cfg.modelsBasePath,
+          allowRemoteModels: cfg.allowRemoteModels
+        });
+        intent = await extractIntent(chatPipe, userText);
+      } catch {
+        intent = fallbackExtractIntent(userText);
+      }
+    } else {
+      intent = fallbackExtractIntent(userText);
     }
+    
+    setLastIntent(intent);
 
+    // Apply filters
     const filtered = applyStructuredFilters(records, {
-      modality: nextIntent.modality,
-      language: nextIntent.language,
-      platform: nextIntent.platform,
-      audienceContains: nextIntent.audienceContains
+      modality: intent.modality,
+      language: intent.language,
+      platform: intent.platform,
+      audienceContains: intent.audience
     });
 
-    const ranked = await rankHybrid(
-      filtered,
-      nextIntent.query,
-      index,
-      cfg.enableEmbeddings,
-      { modelsBasePath: cfg.modelsBasePath, allowRemoteModels: cfg.allowRemoteModels }
-    );
+    // Rank results
+    let ranked: RankedTraining[];
+    
+    if (embeddingStatus === "ready") {
+      ranked = await rankHybrid(filtered, intent.topic, index);
+    } else {
+      ranked = rankLexical(filtered, intent.topic, index);
+    }
+
     const top = ranked.slice(0, 12);
     setLastResults(top);
 
-    const summaryParts: string[] = [];
-    if (nextIntent.language) summaryParts.push(`language: ${nextIntent.language}`);
-    if (nextIntent.modality) summaryParts.push(`modality: ${nextIntent.modality}`);
-    if (nextIntent.platform) summaryParts.push(`platform: ${nextIntent.platform}`);
-    if (nextIntent.audienceContains) summaryParts.push(`audience contains: ${nextIntent.audienceContains}`);
-
-    setMessages((m) => [
-      ...m,
-      {
-        role: "bot",
-        text:
-          `I found ${ranked.length} match(es)` +
-          (summaryParts.length ? ` (${summaryParts.join(", ")}).` : ".") +
-          ` Showing top ${top.length}.`
+    // Generate response
+    let responseText: string;
+    
+    if (chatStatus === "ready" && top.length > 0) {
+      try {
+        const { generateResponse, loadChatModel } = await import("../lib/chatModel");
+        const chatPipe = await loadChatModel({
+          modelsBasePath: cfg.modelsBasePath,
+          allowRemoteModels: cfg.allowRemoteModels
+        });
+        
+        const summaries: TrainingSummary[] = top.slice(0, 5).map(r => ({
+          name: r.record.learningName,
+          description: r.record.description,
+          technicalArea: r.record.technicalArea,
+          focusArea: r.record.focusArea,
+          platform: r.record.platform,
+          languages: r.record.languages,
+          modality: r.record.modalityRaw
+        }));
+        
+        responseText = await generateResponse(chatPipe, intent, summaries, ranked.length);
+      } catch {
+        responseText = generateFallbackResponse(intent, top, ranked.length);
       }
-    ]);
+    } else {
+      responseText = generateFallbackResponse(intent, top, ranked.length);
+    }
+
+    // Update message (replace loading message)
+    setMessages((m) => {
+      const updated = [...m];
+      updated[loadingMsgIdx] = { role: "bot", text: responseText };
+      return updated;
+    });
+  }
+
+  function fallbackExtractIntent(query: string): ExtractedIntent {
+    const t = query.toLowerCase();
+    let topic = query;
+    
+    const intent: ExtractedIntent = {
+      topic: query,
+      rawQuery: query
+    };
+
+    // Extract and remove language from topic
+    const languages = ["english", "french", "spanish", "russian", "arabic", "portuguese", "chinese", "ukrainian", "polish"];
+    for (const lang of languages) {
+      const langPattern = new RegExp(`\\b(in\\s+)?${lang}\\b`, "gi");
+      if (langPattern.test(t)) {
+        intent.language = lang.charAt(0).toUpperCase() + lang.slice(1);
+        topic = topic.replace(langPattern, "");
+        break;
+      }
+    }
+
+    // Extract and remove modality from topic
+    if (/\bonline\b|e-learning/i.test(t)) {
+      intent.modality = "online";
+      topic = topic.replace(/\bonline\b|e-learning/gi, "");
+    } else if (/\bin[- ]person\b/i.test(t)) {
+      intent.modality = "in_person";
+      topic = topic.replace(/\bin[- ]person\b/gi, "");
+    } else if (/\bblended\b/i.test(t)) {
+      intent.modality = "blended";
+      topic = topic.replace(/\bblended\b/gi, "");
+    }
+
+    // Extract and remove platform from topic
+    if (/openwho/i.test(t)) {
+      intent.platform = "OpenWHO";
+      topic = topic.replace(/openwho/gi, "");
+    } else if (/who academy/i.test(t)) {
+      intent.platform = "WHO Academy";
+      topic = topic.replace(/who academy/gi, "");
+    } else if (/hslp/i.test(t)) {
+      intent.platform = "HSLP";
+      topic = topic.replace(/hslp/gi, "");
+    }
+
+    // Extract audience (don't remove from topic as it might be relevant)
+    if (/member state|ministry/i.test(t)) intent.audience = "Member";
+    else if (/who staff/i.test(t)) intent.audience = "WHO";
+
+    // Clean up topic: remove filler words and extra whitespace
+    topic = topic
+      .replace(/\b(i need|i want|i'm looking for|looking for|find me|show me|a training|training|about|on|for)\b/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    
+    // If topic is empty after cleaning, use a generic search term
+    intent.topic = topic || "health emergency";
+
+    return intent;
+  }
+
+  function generateFallbackResponse(intent: ExtractedIntent, results: RankedTraining[], total: number): string {
+    if (total === 0) {
+      return `I couldn't find any trainings matching "${intent.topic}". Try broadening your search or removing filters.`;
+    }
+    
+    const filters = [];
+    if (intent.language) filters.push(`in ${intent.language}`);
+    if (intent.modality) filters.push(intent.modality.replace("_", "-"));
+    if (intent.platform) filters.push(`on ${intent.platform}`);
+    
+    const filterStr = filters.length ? ` (${filters.join(", ")})` : "";
+    return `I found ${total} training(s) related to "${intent.topic}"${filterStr}. Here are the top ${Math.min(results.length, 12)} matches:`;
+  }
+
+  async function rankHybrid(
+    filteredRecords: TrainingRecord[],
+    query: string,
+    idx: LexicalIndex
+  ): Promise<RankedTraining[]> {
+    const lexical = rankLexical(filteredRecords, query, idx);
+    if (lexical.length === 0 || embeddingStatus !== "ready") return lexical;
+
+    try {
+      const { cosineSimilarity, embedText, loadEmbeddingsPipeline } = await import("../lib/embeddings");
+      const pipe = await loadEmbeddingsPipeline({
+        modelsBasePath: cfg.modelsBasePath,
+        allowRemoteModels: cfg.allowRemoteModels,
+        embeddingModel: cfg.embeddingModel
+      });
+      const qVec = await embedText(pipe, query);
+
+      const top = lexical.slice(0, 60);
+      for (const entry of top) {
+        const id = entry.record.id;
+        let vec = await loadEmbedding(id);
+        if (!vec) {
+          vec = await embedText(pipe, entry.record.searchText);
+          await saveEmbedding(id, vec);
+        }
+        const sim = cosineSimilarity(qVec, vec);
+        entry.score = entry.score + sim * 2.0;
+        if (sim > 0.35) entry.reasons.push("semantic match");
+      }
+
+      top.sort((a, b) => b.score - a.score);
+      return top;
+    } catch {
+      return lexical;
+    }
   }
 
   async function onSend() {
@@ -249,8 +326,9 @@ export function App() {
     if (!text) return;
     setInput("");
     setMessages((m) => [...m, { role: "user", text }]);
+    
     if (!canSearch) {
-      setMessages((m) => [...m, { role: "bot", text: "Loading training data—try again in a few seconds." }]);
+      setMessages((m) => [...m, { role: "bot", text: "Loading training data—please wait a moment..." }]);
       return;
     }
     await runSearch(text);
@@ -260,11 +338,20 @@ export function App() {
     setCfg(next);
     saveConfig(next);
     setConfigOpen(false);
+    
+    // Reset model states if settings changed
+    setEmbeddingStatus("idle");
+    setChatStatus("idle");
+    
     setMessages((m) => [
       ...m,
-      { role: "bot", text: "Saved configuration. Use Refresh to reload from the configured list." }
+      { role: "bot", text: "Settings saved. Click 'Refresh' to apply changes." }
     ]);
   }
+
+  const modelSizes = getModelSizes();
+  const embeddingInfo = getModelInfo(cfg.embeddingModel);
+  const chatInfo = getChatModelInfo();
 
   return (
     <div class="container">
@@ -272,22 +359,39 @@ export function App() {
         <div>
           <div class="title">WHO Training Finder</div>
           <div class="small">
-            Data source: SharePoint list copy via REST (`/_api`) — no external AI calls by default.
+            AI-powered training search • {records?.length || 0} trainings loaded
+            {embeddingStatus === "ready" && " • Semantic search active"}
+            {chatStatus === "ready" && " • AI assistant ready"}
           </div>
+          {modelProgress && <div class="small progress">{modelProgress}</div>}
         </div>
         <div class="controls">
           <button class="primary" disabled={loading} onClick={() => loadData(false)}>
-            {loading ? "Refreshing…" : "Refresh"}
+            {loading ? "Loading…" : "Refresh"}
           </button>
-          <button onClick={() => setConfigOpen((v) => !v)}>{configOpen ? "Close config" : "Config"}</button>
+          <button onClick={() => setConfigOpen((v) => !v)}>
+            {configOpen ? "Close" : "Settings"}
+          </button>
         </div>
+      </div>
+
+      <div class="model-status">
+        <span class={`status-badge ${embeddingStatus}`}>
+          Embeddings: {embeddingStatus === "ready" ? embeddingInfo.name : embeddingStatus}
+        </span>
+        <span class={`status-badge ${chatStatus}`}>
+          AI: {chatStatus === "ready" ? "SmolLM" : chatStatus}
+        </span>
       </div>
 
       <div class="grid">
         <div class="panel chat">
           <div class="messages">
-            {messages.map((m) => (
-              <div class={`message ${m.role}`}>{m.text}</div>
+            {messages.map((m, i) => (
+              <div key={i} class={`message ${m.role} ${m.isLoading ? "loading" : ""}`}>
+                {m.isLoading && <span class="spinner" />}
+                {m.text}
+              </div>
             ))}
             <div ref={messagesEndRef} />
           </div>
@@ -295,7 +399,7 @@ export function App() {
             <input
               type="text"
               value={input}
-              placeholder="Describe what you need…"
+              placeholder="What training are you looking for?"
               onInput={(e) => setInput((e.target as HTMLInputElement).value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") void onSend();
@@ -309,32 +413,43 @@ export function App() {
 
         {configOpen && (
           <div class="panel config">
-            <ConfigPanel cfg={cfg} onSave={onSaveConfig} />
+            <ConfigPanel cfg={cfg} onSave={onSaveConfig} modelSizes={modelSizes} />
           </div>
         )}
 
-        {lastResults && (
+        {lastResults && lastResults.length > 0 && (
           <div class="panel results">
-            {lastResults.map((r) => (
-              <div class="card">
+            {lastIntent && (
+              <div class="intent-summary">
+                <strong>Detected:</strong> {lastIntent.topic}
+                {lastIntent.language && <span class="pill">{lastIntent.language}</span>}
+                {lastIntent.modality && <span class="pill">{lastIntent.modality}</span>}
+                {lastIntent.platform && <span class="pill">{lastIntent.platform}</span>}
+              </div>
+            )}
+            {lastResults.map((r, i) => (
+              <div key={i} class="card">
                 <div class="cardTitle">{r.record.learningName}</div>
                 <div class="small">{r.record.description}</div>
                 <div class="pillRow">
                   {r.record.technicalArea && <span class="pill">{r.record.technicalArea}</span>}
                   {r.record.focusArea && <span class="pill">{r.record.focusArea}</span>}
-                  {r.record.modality && <span class="pill">{r.record.modality}</span>}
+                  {r.record.modality && r.record.modality !== "unknown" && (
+                    <span class="pill">{r.record.modality}</span>
+                  )}
                   {r.record.platform && <span class="pill">{r.record.platform}</span>}
-                  {r.record.languages.length > 0 && <span class="pill">{r.record.languages.join(", ")}</span>}
+                  {r.record.languages.length > 0 && (
+                    <span class="pill">{r.record.languages.join(", ")}</span>
+                  )}
                 </div>
                 {r.record.normalizedLink && (
-                  <div class="small">
-                    Link:{" "}
+                  <div class="small link">
                     <a href={r.record.normalizedLink} target="_blank" rel="noreferrer">
-                      {r.record.normalizedLink}
+                      Open training →
                     </a>
                   </div>
                 )}
-                {r.reasons.length > 0 && <div class="small">Why: {r.reasons.join(", ")}</div>}
+                {r.reasons.length > 0 && <div class="small reasons">Match: {r.reasons.join(", ")}</div>}
               </div>
             ))}
           </div>
@@ -344,48 +459,76 @@ export function App() {
   );
 }
 
-function ConfigPanel(props: { cfg: AppConfig; onSave: (cfg: AppConfig) => void }) {
+function ConfigPanel(props: { 
+  cfg: AppConfig; 
+  onSave: (cfg: AppConfig) => void;
+  modelSizes: { embeddings: string; chat: string; total: string };
+}) {
   const [dataSource, setDataSource] = useState<AppConfig["dataSource"]>(props.cfg.dataSource);
   const [siteRelativeUrl, setSiteRelativeUrl] = useState(props.cfg.siteRelativeUrl);
   const [listTitle, setListTitle] = useState(props.cfg.listTitle);
   const [enableEmbeddings, setEnableEmbeddings] = useState(props.cfg.enableEmbeddings);
-  const [modelsBasePath, setModelsBasePath] = useState(props.cfg.modelsBasePath);
+  const [embeddingModel, setEmbeddingModel] = useState<AppConfig["embeddingModel"]>(props.cfg.embeddingModel);
+  const [enableChatModel, setEnableChatModel] = useState(props.cfg.enableChatModel);
   const [allowRemoteModels, setAllowRemoteModels] = useState(props.cfg.allowRemoteModels);
 
   return (
     <div class="configGrid">
+      <h3>Data Source</h3>
       <label>
-        Data source
+        Source type
         <select value={dataSource} onChange={(e) => setDataSource((e.target as HTMLSelectElement).value as AppConfig["dataSource"])}>
-          <option value="sharepoint">SharePoint list (recommended)</option>
-          <option value="demo_json">Local demo JSON (generated from provided CSV)</option>
+          <option value="demo_json">Demo data (standalone)</option>
+          <option value="sharepoint">SharePoint list</option>
         </select>
       </label>
 
-      <label>
-        Site relative URL (where the COPY list lives)
-        <input type="text" value={siteRelativeUrl} onInput={(e) => setSiteRelativeUrl((e.target as HTMLInputElement).value)} />
-      </label>
+      {dataSource === "sharepoint" && (
+        <>
+          <label>
+            Site URL (e.g., /sites/EuroWCPHE)
+            <input type="text" value={siteRelativeUrl} onInput={(e) => setSiteRelativeUrl((e.target as HTMLInputElement).value)} />
+          </label>
+          <label>
+            List title
+            <input type="text" value={listTitle} onInput={(e) => setListTitle((e.target as HTMLInputElement).value)} />
+          </label>
+        </>
+      )}
 
-      <label>
-        List title (COPY list)
-        <input type="text" value={listTitle} onInput={(e) => setListTitle((e.target as HTMLInputElement).value)} />
-      </label>
-
-      <label>
-        Models base path (relative to app)
-        <input type="text" value={modelsBasePath} onInput={(e) => setModelsBasePath((e.target as HTMLInputElement).value)} />
-      </label>
-
+      <h3>AI Models</h3>
+      
       <label>
         <input type="checkbox" checked={enableEmbeddings} onChange={(e) => setEnableEmbeddings((e.target as HTMLInputElement).checked)} />
-        Enable semantic embeddings (client-side)
+        Enable semantic search (embeddings)
+      </label>
+      
+      {enableEmbeddings && (
+        <label>
+          Embedding model
+          <select value={embeddingModel} onChange={(e) => setEmbeddingModel((e.target as HTMLSelectElement).value as AppConfig["embeddingModel"])}>
+            <option value="minilm">MiniLM-L6 (~23MB) - Fast</option>
+            <option value="gte-small">GTE-Small (~67MB) - Balanced</option>
+            <option value="bge-small">BGE-Small (~130MB) - Best quality</option>
+          </select>
+        </label>
+      )}
+
+      <label>
+        <input type="checkbox" checked={enableChatModel} onChange={(e) => setEnableChatModel((e.target as HTMLInputElement).checked)} />
+        Enable AI assistant (SmolLM ~270MB)
       </label>
 
       <label>
         <input type="checkbox" checked={allowRemoteModels} onChange={(e) => setAllowRemoteModels((e.target as HTMLInputElement).checked)} />
-        Allow remote model downloads (default off)
+        Download models from HuggingFace
       </label>
+
+      <div class="model-info">
+        <strong>Estimated download:</strong> {props.modelSizes.total}
+        <br />
+        <small>Models are cached in browser after first load</small>
+      </div>
 
       <div class="controls">
         <button
@@ -397,19 +540,15 @@ function ConfigPanel(props: { cfg: AppConfig; onSave: (cfg: AppConfig) => void }
               siteRelativeUrl: siteRelativeUrl.trim(),
               listTitle: listTitle.trim(),
               enableEmbeddings,
-              modelsBasePath: modelsBasePath.trim(),
+              embeddingModel,
+              enableChatModel,
               allowRemoteModels
             })
           }
         >
-          Save
+          Save Settings
         </button>
-      </div>
-
-      <div class="small">
-        If embeddings are enabled and remote downloads are disabled, deploy the model folder under the configured models base path.
       </div>
     </div>
   );
 }
-

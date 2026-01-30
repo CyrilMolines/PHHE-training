@@ -1,0 +1,11 @@
+{
+  "name": "who-phhe-sharepoint-sync",
+  "version": "1.0.0",
+  "description": "Sync WHO PHHE training list from SharePoint to GitHub",
+  "main": "sync-to-github.js",
+  "scripts": {
+    "sync": "node sync-to-github.js"
+  },
+  "author": "WHO PHHE",
+  "license": "MIT"
+}

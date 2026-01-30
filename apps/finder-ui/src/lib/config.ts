@@ -2,30 +2,35 @@ export interface AppConfig {
   dataSource: "sharepoint" | "demo_json";
   siteRelativeUrl: string;
   listTitle: string;
+  
+  // Embedding model settings
   enableEmbeddings: boolean;
-  /**
-   * Path relative to the built app root (example: "./models").
-   * The model folder should be deployed under this directory.
-   */
+  embeddingModel: "minilm" | "bge-small" | "gte-small";
+  
+  // Chat model settings  
+  enableChatModel: boolean;
+  
+  // Model loading settings
   modelsBasePath: string;
-  /**
-   * Default false to avoid external downloads.
-   * If true, transformers.js may fetch models remotely.
-   */
   allowRemoteModels: boolean;
 }
 
-const STORAGE_KEY = "whoTrainingFinder.config.v1";
+const STORAGE_KEY = "whoTrainingFinder.config.v2";
 
 export function defaultConfig(): AppConfig {
   const siteRelativeUrl = guessSiteRelativeUrl();
   return {
-    dataSource: "sharepoint",
+    dataSource: "demo_json", // Default to demo for standalone hosting
     siteRelativeUrl,
-    listTitle: "WHO training on humanitarian and health emergencie",
+    listTitle: "Copytraininglist2912026",
+    
     enableEmbeddings: true,
+    embeddingModel: "bge-small", // Better quality default
+    
+    enableChatModel: true, // Enable conversational AI
+    
     modelsBasePath: "./models",
-    allowRemoteModels: false
+    allowRemoteModels: true // Allow downloading models from HuggingFace
   };
 }
 
@@ -57,3 +62,19 @@ export function saveConfig(cfg: AppConfig): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(cfg));
 }
 
+export function getModelSizes(): { embeddings: string; chat: string; total: string } {
+  const embeddingSizes = {
+    "minilm": 23,
+    "bge-small": 130,
+    "gte-small": 67
+  };
+  
+  const embSize = embeddingSizes["bge-small"]; // Default
+  const chatSize = 270; // SmolLM-135M
+  
+  return {
+    embeddings: `~${embSize}MB`,
+    chat: `~${chatSize}MB`,
+    total: `~${embSize + chatSize}MB`
+  };
+}

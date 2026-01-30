@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "training-finder-sp-fx-client-side-solution",
+    "id": "5b06fb0c-9cb2-4e5d-991b-541446da7cd9",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "TrainingFinderSPFx description"
+      },
+      "longDescription": {
+        "default": "TrainingFinderSPFx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "training-finder-sp-fx Feature",
+        "description": "The feature that activates elements of the training-finder-sp-fx solution.",
+        "id": "655f548c-244f-470e-a6e0-4962464aff84",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/training-finder-sp-fx.sppkg"
+  }
+}
