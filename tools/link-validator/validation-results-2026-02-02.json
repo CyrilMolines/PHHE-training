@@ -12,12 +12,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 668,
+    "responseTime": 786,
     "details": [],
     "positives": [
       "Found: \"Module 0\""
     ],
-    "contentLength": 32195
+    "contentLength": 32195,
+    "aiResult": null
   },
   {
     "record": {
@@ -32,12 +33,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 417,
+    "responseTime": 689,
     "details": [],
     "positives": [
       "Found: \"Module 2\""
     ],
-    "contentLength": 172890
+    "contentLength": 172885,
+    "aiResult": null
   },
   {
     "record": {
@@ -52,10 +54,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 491,
+    "responseTime": 547,
     "details": [],
     "positives": [],
-    "contentLength": 171383
+    "contentLength": 171261,
+    "aiResult": null
   },
   {
     "record": {
@@ -89,7 +92,8 @@
     "responseTime": 147,
     "details": [],
     "positives": [],
-    "contentLength": 28259
+    "contentLength": 28259,
+    "aiResult": null
   },
   {
     "record": {
@@ -104,10 +108,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 315,
+    "responseTime": 383,
     "details": [],
     "positives": [],
-    "contentLength": 171899
+    "contentLength": 172026,
+    "aiResult": null
   },
   {
     "record": {
@@ -122,10 +127,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 285,
+    "responseTime": 520,
     "details": [],
     "positives": [],
-    "contentLength": 188546
+    "contentLength": 188546,
+    "aiResult": null
   },
   {
     "record": {
@@ -140,12 +146,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 396,
+    "responseTime": 415,
     "details": [],
     "positives": [
       "Found: \"Module1\""
     ],
-    "contentLength": 253020
+    "contentLength": 252960,
+    "aiResult": null
   },
   {
     "record": {
@@ -176,10 +183,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 566,
+    "responseTime": 555,
     "details": [],
     "positives": [],
-    "contentLength": 24510
+    "contentLength": 24510,
+    "aiResult": null
   },
   {
     "record": {
@@ -194,7 +202,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 880,
+    "responseTime": 933,
     "details": [
       "Known auth domain: extranet.who.int"
     ],
@@ -214,12 +222,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 355,
+    "responseTime": 322,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 171674
+    "contentLength": 171624,
+    "aiResult": null
   },
   {
     "record": {
@@ -266,10 +275,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 288,
+    "responseTime": 339,
     "details": [],
     "positives": [],
-    "contentLength": 172813
+    "contentLength": 172868,
+    "aiResult": null
   },
   {
     "record": {
@@ -284,12 +294,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 287,
+    "responseTime": 316,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 172622
+    "contentLength": 172621,
+    "aiResult": null
   },
   {
     "record": {
@@ -304,10 +315,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 308,
+    "responseTime": 327,
     "details": [],
     "positives": [],
-    "contentLength": 172405
+    "contentLength": 172405,
+    "aiResult": null
   },
   {
     "record": {
@@ -322,10 +334,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 280,
+    "responseTime": 389,
     "details": [],
     "positives": [],
-    "contentLength": 172542
+    "contentLength": 172499,
+    "aiResult": null
   },
   {
     "record": {
@@ -340,10 +353,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 400,
+    "responseTime": 402,
     "details": [],
     "positives": [],
-    "contentLength": 172456
+    "contentLength": 172452,
+    "aiResult": null
   },
   {
     "record": {
@@ -358,10 +372,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 374,
+    "responseTime": 379,
     "details": [],
     "positives": [],
-    "contentLength": 172431
+    "contentLength": 172427,
+    "aiResult": null
   },
   {
     "record": {
@@ -376,10 +391,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 273,
+    "responseTime": 306,
     "details": [],
     "positives": [],
-    "contentLength": 172662
+    "contentLength": 172666,
+    "aiResult": null
   },
   {
     "record": {
@@ -410,12 +426,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 267,
+    "responseTime": 315,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 171666
+    "contentLength": 171674,
+    "aiResult": null
   },
   {
     "record": {
@@ -430,10 +447,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 162,
+    "responseTime": 239,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -448,7 +466,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 270,
+    "responseTime": 464,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -477,7 +495,8 @@
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 175665
+    "contentLength": 175675,
+    "aiResult": null
   },
   {
     "record": {
@@ -492,10 +511,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 281,
+    "responseTime": 645,
     "details": [],
     "positives": [],
-    "contentLength": 187170
+    "contentLength": 187174,
+    "aiResult": null
   },
   {
     "record": {
@@ -510,10 +530,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 294,
+    "responseTime": 288,
     "details": [],
     "positives": [],
-    "contentLength": 175725
+    "contentLength": 175766,
+    "aiResult": null
   },
   {
     "record": {
@@ -525,16 +546,17 @@
       "modality": "online",
       "modalityRaw": "Online"
     },
-    "status": "auth_required",
+    "status": "ok",
     "statusCode": 200,
-    "error": "Login/registration required",
-    "responseTime": 270,
-    "details": [
-      "Found: \"saml\"",
-      "Redirects to SSO/login page"
+    "error": null,
+    "responseTime": 275,
+    "details": [],
+    "positives": [
+      "Found: \"Course overview\"",
+      "Found: \"Module1\""
     ],
-    "positives": [],
-    "contentLength": 268526
+    "contentLength": 268522,
+    "aiResult": null
   },
   {
     "record": {
@@ -549,10 +571,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 103,
+    "responseTime": 98,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -567,7 +590,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 273,
+    "responseTime": 469,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -591,10 +614,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 279,
+    "responseTime": 417,
     "details": [],
     "positives": [],
-    "contentLength": 172582
+    "contentLength": 172581,
+    "aiResult": null
   },
   {
     "record": {
@@ -609,10 +633,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 255,
+    "responseTime": 424,
     "details": [],
     "positives": [],
-    "contentLength": 172019
+    "contentLength": 172019,
+    "aiResult": null
   },
   {
     "record": {
@@ -627,10 +652,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 312,
+    "responseTime": 386,
     "details": [],
     "positives": [],
-    "contentLength": 172150
+    "contentLength": 172197,
+    "aiResult": null
   },
   {
     "record": {
@@ -645,7 +671,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 875,
+    "responseTime": 890,
     "details": [
       "Known auth domain: extranet.who.int"
     ],
@@ -665,7 +691,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 8572,
+    "responseTime": 5820,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"unauthorized\"",
@@ -688,10 +714,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 307,
+    "responseTime": 427,
     "details": [],
     "positives": [],
-    "contentLength": 171584
+    "contentLength": 171153,
+    "aiResult": null
   },
   {
     "record": {
@@ -717,9 +744,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -734,12 +763,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 263,
+    "responseTime": 448,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 173584
+    "contentLength": 173580,
+    "aiResult": null
   },
   {
     "record": {
@@ -754,12 +784,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 553,
+    "responseTime": 539,
     "details": [],
     "positives": [
       "Found: \"Course Overview\""
     ],
-    "contentLength": 172105
+    "contentLength": 172101,
+    "aiResult": null
   },
   {
     "record": {
@@ -774,10 +805,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 425,
+    "responseTime": 546,
     "details": [],
     "positives": [],
-    "contentLength": 171457
+    "contentLength": 171462,
+    "aiResult": null
   },
   {
     "record": {
@@ -792,7 +824,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 337,
+    "responseTime": 456,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -816,10 +848,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 189,
+    "responseTime": 164,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -834,10 +867,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 151,
+    "responseTime": 105,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -852,10 +886,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 281,
+    "responseTime": 314,
     "details": [],
     "positives": [],
-    "contentLength": 171850
+    "contentLength": 171850,
+    "aiResult": null
   },
   {
     "record": {
@@ -870,10 +905,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 267,
+    "responseTime": 351,
     "details": [],
     "positives": [],
-    "contentLength": 173030
+    "contentLength": 173026,
+    "aiResult": null
   },
   {
     "record": {
@@ -888,10 +924,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 421,
+    "responseTime": 496,
     "details": [],
     "positives": [],
-    "contentLength": 175182
+    "contentLength": 175182,
+    "aiResult": null
   },
   {
     "record": {
@@ -906,10 +943,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 582,
+    "responseTime": 560,
     "details": [],
     "positives": [],
-    "contentLength": 24075
+    "contentLength": 24075,
+    "aiResult": null
   },
   {
     "record": {
@@ -924,10 +962,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 471,
+    "responseTime": 456,
     "details": [],
     "positives": [],
-    "contentLength": 171206
+    "contentLength": 171206,
+    "aiResult": null
   },
   {
     "record": {
@@ -942,10 +981,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 203,
+    "responseTime": 225,
     "details": [],
     "positives": [],
-    "contentLength": 95854
+    "contentLength": 109895,
+    "aiResult": null
   },
   {
     "record": {
@@ -976,10 +1016,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 295,
+    "responseTime": 332,
     "details": [],
     "positives": [],
-    "contentLength": 172518
+    "contentLength": 172518,
+    "aiResult": null
   },
   {
     "record": {
@@ -994,10 +1035,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 111,
+    "responseTime": 94,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1012,7 +1054,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 327,
+    "responseTime": 390,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -1036,7 +1078,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 329,
+    "responseTime": 391,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -1060,10 +1102,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 567,
+    "responseTime": 536,
     "details": [],
     "positives": [],
-    "contentLength": 27882
+    "contentLength": 27882,
+    "aiResult": null
   },
   {
     "record": {
@@ -1075,9 +1118,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -1089,9 +1134,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -1106,12 +1153,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 294,
+    "responseTime": 313,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 171893
+    "contentLength": 171770,
+    "aiResult": null
   },
   {
     "record": {
@@ -1126,7 +1174,7 @@
     "status": "error",
     "statusCode": 404,
     "error": "HTTP 404",
-    "responseTime": 192,
+    "responseTime": 248,
     "details": []
   },
   {
@@ -1142,10 +1190,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 264,
+    "responseTime": 432,
     "details": [],
     "positives": [],
-    "contentLength": 195569
+    "contentLength": 195570,
+    "aiResult": null
   },
   {
     "record": {
@@ -1160,10 +1209,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 289,
+    "responseTime": 387,
     "details": [],
     "positives": [],
-    "contentLength": 172430
+    "contentLength": 172430,
+    "aiResult": null
   },
   {
     "record": {
@@ -1178,10 +1228,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 297,
+    "responseTime": 369,
     "details": [],
     "positives": [],
-    "contentLength": 172066
+    "contentLength": 172062,
+    "aiResult": null
   },
   {
     "record": {
@@ -1196,10 +1247,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 72,
+    "responseTime": 112,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1214,10 +1266,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 308,
+    "responseTime": 397,
     "details": [],
     "positives": [],
-    "contentLength": 172196
+    "contentLength": 172197,
+    "aiResult": null
   },
   {
     "record": {
@@ -1232,10 +1285,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 365,
+    "responseTime": 404,
     "details": [],
     "positives": [],
-    "contentLength": 171526
+    "contentLength": 171526,
+    "aiResult": null
   },
   {
     "record": {
@@ -1250,12 +1304,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 315,
+    "responseTime": 476,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 172037
+    "contentLength": 171915,
+    "aiResult": null
   },
   {
     "record": {
@@ -1270,10 +1325,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 285,
+    "responseTime": 448,
     "details": [],
     "positives": [],
-    "contentLength": 173210
+    "contentLength": 173206,
+    "aiResult": null
   },
   {
     "record": {
@@ -1288,10 +1344,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 76,
+    "responseTime": 133,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1306,10 +1363,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 266,
+    "responseTime": 272,
     "details": [],
     "positives": [],
-    "contentLength": 175802
+    "contentLength": 175802,
+    "aiResult": null
   },
   {
     "record": {
@@ -1324,10 +1382,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 279,
+    "responseTime": 362,
     "details": [],
     "positives": [],
-    "contentLength": 171479
+    "contentLength": 171479,
+    "aiResult": null
   },
   {
     "record": {
@@ -1342,10 +1401,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 138,
+    "responseTime": 93,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1360,10 +1420,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 147,
+    "responseTime": 200,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1378,10 +1439,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 96,
+    "responseTime": 135,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1396,12 +1458,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 275,
+    "responseTime": 333,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 278706
+    "contentLength": 278710,
+    "aiResult": null
   },
   {
     "record": {
@@ -1416,10 +1479,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 318,
+    "responseTime": 409,
     "details": [],
     "positives": [],
-    "contentLength": 172312
+    "contentLength": 172748,
+    "aiResult": null
   },
   {
     "record": {
@@ -1434,10 +1498,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 331,
+    "responseTime": 292,
     "details": [],
     "positives": [],
-    "contentLength": 173227
+    "contentLength": 173227,
+    "aiResult": null
   },
   {
     "record": {
@@ -1468,10 +1533,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 147,
+    "responseTime": 117,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1486,10 +1552,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 311,
+    "responseTime": 325,
     "details": [],
     "positives": [],
-    "contentLength": 171480
+    "contentLength": 171484,
+    "aiResult": null
   },
   {
     "record": {
@@ -1504,10 +1571,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 82,
+    "responseTime": 110,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1522,10 +1590,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 142,
+    "responseTime": 100,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1540,10 +1609,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 106,
+    "responseTime": 81,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1558,10 +1628,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 295,
+    "responseTime": 265,
     "details": [],
     "positives": [],
-    "contentLength": 175692
+    "contentLength": 175682,
+    "aiResult": null
   },
   {
     "record": {
@@ -1592,10 +1663,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 539,
+    "responseTime": 553,
     "details": [],
     "positives": [],
-    "contentLength": 27307
+    "contentLength": 27307,
+    "aiResult": null
   },
   {
     "record": {
@@ -1610,10 +1682,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 275,
+    "responseTime": 373,
     "details": [],
     "positives": [],
-    "contentLength": 172173
+    "contentLength": 172122,
+    "aiResult": null
   },
   {
     "record": {
@@ -1628,10 +1701,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 288,
+    "responseTime": 407,
     "details": [],
     "positives": [],
-    "contentLength": 172481
+    "contentLength": 172481,
+    "aiResult": null
   },
   {
     "record": {
@@ -1646,10 +1720,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 298,
+    "responseTime": 417,
     "details": [],
     "positives": [],
-    "contentLength": 173758
+    "contentLength": 173762,
+    "aiResult": null
   },
   {
     "record": {
@@ -1664,10 +1739,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 77,
+    "responseTime": 88,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1682,10 +1758,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 80,
+    "responseTime": 124,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1700,10 +1777,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 1097,
+    "responseTime": 92,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -1718,7 +1796,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 332,
+    "responseTime": 333,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -1742,10 +1820,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 280,
+    "responseTime": 353,
     "details": [],
     "positives": [],
-    "contentLength": 171504
+    "contentLength": 171504,
+    "aiResult": null
   },
   {
     "record": {
@@ -1760,12 +1839,12 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 316,
+    "responseTime": 321,
     "details": [
       "Found: \"aDFs\""
     ],
     "positives": [],
-    "contentLength": 171866
+    "contentLength": 171862
   },
   {
     "record": {
@@ -1780,10 +1859,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 309,
+    "responseTime": 347,
     "details": [],
     "positives": [],
-    "contentLength": 172624
+    "contentLength": 172750,
+    "aiResult": null
   },
   {
     "record": {
@@ -1798,12 +1878,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 326,
+    "responseTime": 322,
     "details": [],
     "positives": [
       "Found: \"course content\""
     ],
-    "contentLength": 173207
+    "contentLength": 173333,
+    "aiResult": null
   },
   {
     "record": {
@@ -1818,10 +1899,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 334,
+    "responseTime": 272,
     "details": [],
     "positives": [],
-    "contentLength": 172950
+    "contentLength": 173029,
+    "aiResult": null
   },
   {
     "record": {
@@ -1836,10 +1918,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 391,
+    "responseTime": 487,
     "details": [],
     "positives": [],
-    "contentLength": 172510
+    "contentLength": 172640,
+    "aiResult": null
   },
   {
     "record": {
@@ -1854,7 +1937,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 326,
+    "responseTime": 329,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -1878,10 +1961,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 206,
+    "responseTime": 186,
     "details": [],
     "positives": [],
-    "contentLength": 105062
+    "contentLength": 105062,
+    "aiResult": null
   },
   {
     "record": {
@@ -1896,10 +1980,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 536,
+    "responseTime": 553,
     "details": [],
     "positives": [],
-    "contentLength": 26498
+    "contentLength": 26498,
+    "aiResult": null
   },
   {
     "record": {
@@ -1914,12 +1999,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 305,
+    "responseTime": 389,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 173482
+    "contentLength": 173483,
+    "aiResult": null
   },
   {
     "record": {
@@ -1950,7 +2036,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 274,
+    "responseTime": 289,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -1974,7 +2060,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 263,
+    "responseTime": 270,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
@@ -1998,10 +2084,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 300,
+    "responseTime": 310,
     "details": [],
     "positives": [],
-    "contentLength": 171486
+    "contentLength": 171659,
+    "aiResult": null
   },
   {
     "record": {
@@ -2016,12 +2103,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 258,
+    "responseTime": 255,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 176175
+    "contentLength": 176168,
+    "aiResult": null
   },
   {
     "record": {
@@ -2036,10 +2124,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 179,
+    "responseTime": 83,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2054,10 +2143,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 556,
+    "responseTime": 530,
     "details": [],
     "positives": [],
-    "contentLength": 26030
+    "contentLength": 26030,
+    "aiResult": null
   },
   {
     "record": {
@@ -2072,10 +2162,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 553,
+    "responseTime": 541,
     "details": [],
     "positives": [],
-    "contentLength": 25097
+    "contentLength": 25097,
+    "aiResult": null
   },
   {
     "record": {
@@ -2090,7 +2181,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 1479,
+    "responseTime": 1018,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"unauthorized\"",
@@ -2113,7 +2204,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 888,
+    "responseTime": 796,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"unauthorized\"",
@@ -2136,7 +2227,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 1686,
+    "responseTime": 1211,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"unauthorized\"",
@@ -2159,7 +2250,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 753,
+    "responseTime": 709,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"unauthorized\"",
@@ -2182,7 +2273,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 823,
+    "responseTime": 716,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"unauthorized\"",
@@ -2205,7 +2296,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 560,
+    "responseTime": 520,
     "details": [
       "Known auth domain: extranet.who.int"
     ],
@@ -2225,7 +2316,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 2082,
+    "responseTime": 749,
     "details": [
       "Known auth domain: extranet.who.int"
     ],
@@ -2258,9 +2349,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -2275,7 +2368,7 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 1980,
+    "responseTime": 1810,
     "details": [
       "Known auth domain: extranet.who.int",
       "Found: \"unauthorized\"",
@@ -2298,12 +2391,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 339,
+    "responseTime": 367,
     "details": [],
     "positives": [
       "Found: \"Module 0\""
     ],
-    "contentLength": 172672
+    "contentLength": 172802,
+    "aiResult": null
   },
   {
     "record": {
@@ -2318,12 +2412,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 228,
+    "responseTime": 209,
     "details": [],
     "positives": [
       "Found: \"player.vimeo.com\""
     ],
-    "contentLength": 12793
+    "contentLength": 12768,
+    "aiResult": null
   },
   {
     "record": {
@@ -2338,12 +2433,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 196,
+    "responseTime": 199,
     "details": [],
     "positives": [
       "Found: \"player.vimeo.com\""
     ],
-    "contentLength": 12813
+    "contentLength": 12843,
+    "aiResult": null
   },
   {
     "record": {
@@ -2358,12 +2454,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 302,
+    "responseTime": 387,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 171577
+    "contentLength": 171581,
+    "aiResult": null
   },
   {
     "record": {
@@ -2378,10 +2475,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 584,
+    "responseTime": 352,
     "details": [],
     "positives": [],
-    "contentLength": 172869
+    "contentLength": 172869,
+    "aiResult": null
   },
   {
     "record": {
@@ -2412,10 +2510,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 516,
+    "responseTime": 656,
     "details": [],
     "positives": [],
-    "contentLength": 171748
+    "contentLength": 171744,
+    "aiResult": null
   },
   {
     "record": {
@@ -2430,10 +2529,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 148,
+    "responseTime": 73,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2448,10 +2548,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 273,
+    "responseTime": 444,
     "details": [],
     "positives": [],
-    "contentLength": 173894
+    "contentLength": 173897,
+    "aiResult": null
   },
   {
     "record": {
@@ -2466,10 +2567,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 277,
+    "responseTime": 302,
     "details": [],
     "positives": [],
-    "contentLength": 19099
+    "contentLength": 19099,
+    "aiResult": null
   },
   {
     "record": {
@@ -2484,10 +2586,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 76,
+    "responseTime": 75,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2502,10 +2605,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 641,
+    "responseTime": 543,
     "details": [],
     "positives": [],
-    "contentLength": 3142590
+    "contentLength": 3142590,
+    "aiResult": null
   },
   {
     "record": {
@@ -2520,12 +2624,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 380,
+    "responseTime": 301,
     "details": [],
     "positives": [
       "Found: \"Module 2\""
     ],
-    "contentLength": 172007
+    "contentLength": 172133,
+    "aiResult": null
   },
   {
     "record": {
@@ -2540,10 +2645,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 214,
+    "responseTime": 205,
     "details": [],
     "positives": [],
-    "contentLength": 132837
+    "contentLength": 132837,
+    "aiResult": null
   },
   {
     "record": {
@@ -2558,10 +2664,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 225,
+    "responseTime": 177,
     "details": [],
     "positives": [],
-    "contentLength": 132837
+    "contentLength": 132837,
+    "aiResult": null
   },
   {
     "record": {
@@ -2576,10 +2683,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 98,
+    "responseTime": 105,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2594,10 +2702,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 175,
+    "responseTime": 197,
     "details": [],
     "positives": [],
-    "contentLength": 99241
+    "contentLength": 99242,
+    "aiResult": null
   },
   {
     "record": {
@@ -2612,12 +2721,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 248,
+    "responseTime": 258,
     "details": [],
     "positives": [
       "Found: \"Module 4\""
     ],
-    "contentLength": 175973
+    "contentLength": 175915,
+    "aiResult": null
   },
   {
     "record": {
@@ -2632,10 +2742,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 400,
+    "responseTime": 288,
     "details": [],
     "positives": [],
-    "contentLength": 171309
+    "contentLength": 171308,
+    "aiResult": null
   },
   {
     "record": {
@@ -2650,10 +2761,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 111,
+    "responseTime": 74,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2668,10 +2780,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 115,
+    "responseTime": 216,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2686,10 +2799,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 172,
+    "responseTime": 145,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2704,10 +2818,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 107,
+    "responseTime": 99,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2722,10 +2837,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 75,
+    "responseTime": 102,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2740,10 +2856,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 115,
+    "responseTime": 152,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2758,10 +2875,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 123,
+    "responseTime": 76,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2776,10 +2894,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 320,
+    "responseTime": 290,
     "details": [],
     "positives": [],
-    "contentLength": 172979
+    "contentLength": 172975,
+    "aiResult": null
   },
   {
     "record": {
@@ -2794,10 +2913,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 272,
+    "responseTime": 114,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2812,10 +2932,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 72,
+    "responseTime": 184,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2830,10 +2951,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 113,
+    "responseTime": 84,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -2848,12 +2970,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 291,
+    "responseTime": 418,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 378135
+    "contentLength": 378127,
+    "aiResult": null
   },
   {
     "record": {
@@ -2868,10 +2991,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 271,
+    "responseTime": 417,
     "details": [],
     "positives": [],
-    "contentLength": 19099
+    "contentLength": 19099,
+    "aiResult": null
   },
   {
     "record": {
@@ -2886,10 +3010,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 406,
+    "responseTime": 275,
     "details": [],
     "positives": [],
-    "contentLength": 19099
+    "contentLength": 19099,
+    "aiResult": null
   },
   {
     "record": {
@@ -2904,10 +3029,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 278,
+    "responseTime": 275,
     "details": [],
     "positives": [],
-    "contentLength": 19099
+    "contentLength": 19099,
+    "aiResult": null
   },
   {
     "record": {
@@ -2922,10 +3048,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 279,
+    "responseTime": 292,
     "details": [],
     "positives": [],
-    "contentLength": 19099
+    "contentLength": 19099,
+    "aiResult": null
   },
   {
     "record": {
@@ -2940,10 +3067,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 319,
+    "responseTime": 354,
     "details": [],
     "positives": [],
-    "contentLength": 19099
+    "contentLength": 19099,
+    "aiResult": null
   },
   {
     "record": {
@@ -2958,10 +3086,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 276,
+    "responseTime": 291,
     "details": [],
     "positives": [],
-    "contentLength": 171589
+    "contentLength": 171720,
+    "aiResult": null
   },
   {
     "record": {
@@ -2973,9 +3102,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -2990,12 +3121,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 574,
+    "responseTime": 566,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 29730
+    "contentLength": 29730,
+    "aiResult": null
   },
   {
     "record": {
@@ -3186,10 +3318,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 68,
+    "responseTime": 105,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3204,10 +3337,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 75,
+    "responseTime": 70,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3219,9 +3353,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -3233,9 +3369,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -3247,9 +3385,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -3296,10 +3436,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 359,
+    "responseTime": 369,
     "details": [],
     "positives": [],
-    "contentLength": 29678
+    "contentLength": 29678,
+    "aiResult": null
   },
   {
     "record": {
@@ -3339,9 +3480,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -3353,9 +3496,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -3367,9 +3512,11 @@
       "modality": "blended",
       "modalityRaw": "Blended"
     },
-    "status": "warning",
-    "error": "No URL provided for online training",
-    "details": []
+    "status": "blended",
+    "error": null,
+    "details": [
+      "Blended training - URL may vary"
+    ]
   },
   {
     "record": {
@@ -3384,10 +3531,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 53,
+    "responseTime": 61,
     "details": [],
     "positives": [],
-    "contentLength": 29689
+    "contentLength": 29689,
+    "aiResult": null
   },
   {
     "record": {
@@ -3402,10 +3550,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 70,
+    "responseTime": 75,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3420,10 +3569,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 102,
+    "responseTime": 72,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3438,10 +3588,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 84,
+    "responseTime": 69,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3456,10 +3607,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 89,
+    "responseTime": 115,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3474,10 +3626,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 72,
+    "responseTime": 80,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3492,10 +3645,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 103,
+    "responseTime": 138,
     "details": [],
     "positives": [],
-    "contentLength": 51985
+    "contentLength": 51985,
+    "aiResult": null
   },
   {
     "record": {
@@ -3510,10 +3664,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 282,
+    "responseTime": 276,
     "details": [],
     "positives": [],
-    "contentLength": 257348
+    "contentLength": 257404,
+    "aiResult": null
   },
   {
     "record": {
@@ -3528,10 +3683,11 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 266,
+    "responseTime": 291,
     "details": [],
     "positives": [],
-    "contentLength": 171316
+    "contentLength": 171316,
+    "aiResult": null
   },
   {
     "record": {
@@ -3546,12 +3702,12 @@
     "status": "auth_required",
     "statusCode": 200,
     "error": "Login/registration required",
-    "responseTime": 293,
+    "responseTime": 321,
     "details": [
       "Title: \"Screening and treatment facilities design in the context of Mpox outbreaks - OpenWHO.org\""
     ],
     "positives": [],
-    "contentLength": 171854
+    "contentLength": 171417
   },
   {
     "record": {
@@ -3566,12 +3722,13 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 279,
+    "responseTime": 276,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 171350
+    "contentLength": 171469,
+    "aiResult": null
   },
   {
     "record": {
@@ -3586,11 +3743,12 @@
     "status": "ok",
     "statusCode": 200,
     "error": null,
-    "responseTime": 287,
+    "responseTime": 359,
     "details": [],
     "positives": [
       "Found: \"Module 1\""
     ],
-    "contentLength": 171210
+    "contentLength": 171211,
+    "aiResult": null
   }
 ]

@@ -2,23 +2,19 @@
 /**
  * WHO PHHE Training Link Validator
  * 
- * Deep content validation with optional AI analysis.
+ * Deep content validation - checks if training content is actually available,
+ * not just if the URL responds.
  * 
  * Usage:
  *   node validate-links.js [path-to-json-or-csv]
- *   node validate-links.js --ai [path]   # Enable AI-assisted analysis
  * 
  * If no file is provided, uses the demo-trainings.json from the project.
  */
 
-import fs from "fs";
-import path from "path";
-import https from "https";
-import http from "http";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const fs = require("fs");
+const path = require("path");
+const https = require("https");
+const http = require("http");
 
 // Allow self-signed certificates (common on WHO/UN sites)
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
@@ -31,82 +27,8 @@ const CONFIG = {
   userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 };
 
-// Check for --ai flag
-const useAI = process.argv.includes("--ai");
-const args = process.argv.filter(arg => arg !== "--ai");
-
-// ============ AI MODEL (lazy loaded) ============
-let aiPipeline = null;
-
-async function loadAIModel() {
-  if (aiPipeline) return aiPipeline;
-  
-  console.log("\n🤖 Loading AI model (SmolLM-135M)...");
-  const startTime = Date.now();
-  
-  try {
-    const { pipeline, env } = await import("@huggingface/transformers");
-    
-    // Configure for Node.js
-    env.allowLocalModels = false;
-    env.useBrowserCache = false;
-    
-    // Use text-generation for analysis
-    aiPipeline = await pipeline(
-      "text-generation",
-      "HuggingFaceTB/SmolLM-135M-Instruct",
-      { dtype: "fp32" }
-    );
-    
-    console.log(`✓ AI model loaded in ${((Date.now() - startTime) / 1000).toFixed(1)}s\n`);
-    return aiPipeline;
-  } catch (err) {
-    console.error(`⚠ Failed to load AI model: ${err.message}`);
-    console.error("  Continuing without AI analysis...\n");
-    return null;
-  }
-}
-
-async function analyzeWithAI(textContent, url, trainingTitle) {
-  if (!aiPipeline) return null;
-  
-  // Truncate content to avoid token limits
-  const truncated = textContent.substring(0, 1500);
-  
-  const prompt = `<|im_start|>system
-You are a training link validator. Analyze if a webpage contains valid training content.
-<|im_end|>
-<|im_start|>user
-Training: "${trainingTitle}"
-URL: ${url}
-Page content excerpt:
-${truncated}
-
-Is this a valid, accessible training page? Answer ONLY with one word: VALID, BROKEN, or UNCERTAIN.
-<|im_end|>
-<|im_start|>assistant
-`;
-
-  try {
-    const result = await aiPipeline(prompt, {
-      max_new_tokens: 10,
-      temperature: 0.1,
-      do_sample: false
-    });
-    
-    const response = result[0].generated_text.split("<|im_start|>assistant")[1]?.trim().toUpperCase() || "";
-    
-    if (response.includes("VALID")) return { aiVerdict: "valid", aiConfidence: "high" };
-    if (response.includes("BROKEN")) return { aiVerdict: "broken", aiConfidence: "high" };
-    return { aiVerdict: "uncertain", aiConfidence: "low" };
-  } catch (err) {
-    return { aiVerdict: "error", aiConfidence: "none", aiError: err.message };
-  }
-}
-
 // Patterns that indicate content is unavailable (truly broken)
 const UNAVAILABLE_PATTERNS = [
-  // Generic 404/not found
   /page\s*(not|cannot be)\s*found/i,
   /404\s*(error|not found)/i,
   /content\s*(is\s*)?(no longer|not)\s*(available|found)/i,
@@ -115,25 +37,19 @@ const UNAVAILABLE_PATTERNS = [
   /we\s*couldn't\s*find/i,
   /no\s*longer\s*available/i,
   /has\s*been\s*(removed|deleted|taken down)/i,
-  
-  // Video platforms - truly removed
   /video\s*(is\s*)?(unavailable|removed|deleted)/i,
   /this\s*video\s*(is\s*)?no longer available/i,
   /video\s*does\s*not\s*exist/i,
   /this\s*video\s*has\s*been\s*removed/i,
-  
-  // Course platforms - ended/removed
   /course\s*(is\s*)?(unavailable|closed|ended)/i,
   /this\s*course\s*(is\s*)?no longer (available|offered)/i,
   /course\s*has\s*ended/i,
-  
-  // Learning platforms - removed
   /training\s*(is\s*)?(unavailable|removed|discontinued)/i,
   /module\s*(is\s*)?(unavailable|removed)/i,
   /resource\s*not\s*found/i
 ];
 
-// Patterns that indicate login/registration required (NOT broken, just restricted)
+// Patterns that indicate login/registration required
 const LOGIN_REQUIRED_PATTERNS = [
   /sign\s*in\s*to\s*(continue|access|view)/i,
   /log\s*in\s*to\s*(continue|access|view)/i,
@@ -164,7 +80,6 @@ const AUTH_REQUIRED_DOMAINS = [
 
 // Patterns that indicate content IS available
 const AVAILABLE_PATTERNS = [
-  // Video indicators
   /<video[\s>]/i,
   /video-player/i,
   /youtube\.com\/embed/i,
@@ -172,8 +87,6 @@ const AVAILABLE_PATTERNS = [
   /player\.vimeo\.com/i,
   /wistia/i,
   /jwplayer/i,
-  
-  // Course indicators
   /enroll\s*(now)?/i,
   /start\s*(learning|course|training)/i,
   /begin\s*(course|training|module)/i,
@@ -182,8 +95,6 @@ const AVAILABLE_PATTERNS = [
   /learning\s*objectives/i,
   /module\s*\d+/i,
   /lesson\s*\d+/i,
-  
-  // Training indicators
   /training\s*materials?/i,
   /download\s*(materials?|resources?)/i,
   /complete\s*this\s*(course|training|module)/i
@@ -226,7 +137,6 @@ function parseCSV(content) {
 }
 
 function normalizeRecord(raw) {
-  // Handle both JSON format and CSV format
   return {
     id: raw.id || raw.ID || `row-${Math.random().toString(36).slice(2)}`,
     learningName: raw.learningName || raw["Learning Name"] || raw.Title || "Unknown",
@@ -253,13 +163,11 @@ function fetchUrl(url) {
     };
     
     const req = protocol.get(url, options, (res) => {
-      // Handle redirects
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         const redirectUrl = res.headers.location.startsWith("http") 
           ? res.headers.location 
           : new URL(res.headers.location, url).href;
         
-        // Follow redirect (limit to 5 redirects)
         if (!fetchUrl.redirectCount) fetchUrl.redirectCount = 0;
         if (fetchUrl.redirectCount++ < 5) {
           fetchUrl(redirectUrl).then(resolve).catch(reject);
@@ -299,18 +207,15 @@ function analyzeContent(html, url) {
   const positives = [];
   const loginIndicators = [];
   
-  // Check if domain is known to require auth
   const urlObj = new URL(url);
   const isKnownAuthDomain = AUTH_REQUIRED_DOMAINS.some(d => urlObj.hostname.includes(d));
   if (isKnownAuthDomain) {
     loginIndicators.push(`Known auth domain: ${urlObj.hostname}`);
   }
   
-  // Check for login/registration required patterns FIRST
   for (const pattern of LOGIN_REQUIRED_PATTERNS) {
     if (pattern.test(html)) {
       const match = html.match(pattern)?.[0] || "";
-      // Clean up the match for display
       const cleanMatch = match.replace(/<[^>]+>/g, "").trim().substring(0, 50);
       if (cleanMatch) {
         loginIndicators.push(`Found: "${cleanMatch}"`);
@@ -320,7 +225,6 @@ function analyzeContent(html, url) {
     }
   }
   
-  // Check for redirects to login pages
   if (html.includes("login.microsoftonline.com") || 
       html.includes("login.who.int") ||
       html.includes("adfs") ||
@@ -328,55 +232,45 @@ function analyzeContent(html, url) {
     loginIndicators.push("Redirects to SSO/login page");
   }
   
-  // If we have login indicators, this is NOT a broken link
   if (loginIndicators.length > 0) {
     return { issues: [], positives: [], loginRequired: true, loginIndicators };
   }
   
-  // Check for unavailable patterns (only if not a login page)
   for (const pattern of UNAVAILABLE_PATTERNS) {
     if (pattern.test(html)) {
       issues.push(`Found: "${html.match(pattern)?.[0]}"`);
     }
   }
   
-  // Check for available patterns
   for (const pattern of AVAILABLE_PATTERNS) {
     if (pattern.test(html)) {
       positives.push(`Found: "${html.match(pattern)?.[0]}"`);
     }
   }
   
-  // Check page size (very small pages might be error pages)
-  // But only flag if no login indicators
   const textContent = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   if (textContent.length < 500 && loginIndicators.length === 0) {
     issues.push(`Very short content (${textContent.length} chars)`);
   }
   
-  // Check for empty body
   const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   if (bodyMatch && bodyMatch[1].replace(/<[^>]+>/g, "").trim().length < 100) {
-    // Don't flag empty body if it's a login redirect
     if (!html.includes("redirect") && !html.includes("location.href")) {
       issues.push("Nearly empty page body");
     }
   }
   
-  // Check title for error indicators
   const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
   if (titleMatch) {
     const title = titleMatch[1].toLowerCase();
     if (title.includes("404") || title.includes("not found")) {
       issues.push(`Error in title: "${titleMatch[1]}"`);
     }
-    // Check if title indicates login page
     if (title.includes("sign in") || title.includes("log in") || title.includes("login")) {
       return { issues: [], positives: [], loginRequired: true, loginIndicators: [`Title: "${titleMatch[1]}"`] };
     }
   }
   
-  // Platform-specific checks
   if (url.includes("youtube.com") || url.includes("youtu.be")) {
     if (html.includes("Video unavailable") || html.includes("private video")) {
       issues.push("YouTube video unavailable");
@@ -395,54 +289,30 @@ function analyzeContent(html, url) {
     }
   }
   
-  return { issues, positives, loginRequired: false, loginIndicators: [], textContent };
+  return { issues, positives, loginRequired: false, loginIndicators: [] };
 }
 
 async function checkLink(record) {
   const url = record.link;
   
-  // Check modality - in-person trainings don't need a URL
   const modality = (record.modalityRaw || record.modality || "").toLowerCase();
   const isInPerson = modality.includes("person") || modality.includes("face") || modality.includes("classroom");
-  const isToolkit = modality.includes("toolkit") || modality.includes("tool");
   const isBlended = modality.includes("blended") || modality.includes("hybrid");
+  const isToolkit = modality.includes("toolkit") || modality.includes("tool");
   
   if (!url) {
-    // In-person, toolkit, or blended trainings without URL are fine
     if (isInPerson) {
-      return {
-        record,
-        status: "in_person",
-        error: null,
-        details: ["In-person training - no URL needed"]
-      };
+      return { record, status: "in_person", error: null, details: ["In-person training - no URL needed"] };
     }
     if (isBlended) {
-      return {
-        record,
-        status: "blended",
-        error: null,
-        details: ["Blended training - URL may vary"]
-      };
+      return { record, status: "blended", error: null, details: ["Blended training - URL may vary"] };
     }
     if (isToolkit) {
-      return {
-        record,
-        status: "toolkit",
-        error: null,
-        details: ["Toolkit - no URL needed"]
-      };
+      return { record, status: "toolkit", error: null, details: ["Toolkit - no URL needed"] };
     }
-    // Online without URL is a problem
-    return {
-      record,
-      status: "warning",
-      error: "No URL provided for online training",
-      details: []
-    };
+    return { record, status: "warning", error: "No URL provided for online training", details: [] };
   }
   
-  // Normalize URL
   let normalizedUrl = url.trim();
   if (!normalizedUrl.startsWith("http")) {
     normalizedUrl = "https://" + normalizedUrl;
@@ -454,7 +324,6 @@ async function checkLink(record) {
     try {
       const response = await fetchUrl(normalizedUrl);
       
-      // HTTP error status
       if (response.statusCode >= 400) {
         return {
           record,
@@ -466,15 +335,11 @@ async function checkLink(record) {
         };
       }
       
-      // Analyze content with patterns
       const analysis = analyzeContent(response.body, normalizedUrl);
       
-      // Determine status based on analysis
       let status = "ok";
       let error = null;
-      let aiResult = null;
       
-      // Check if login is required (separate category, NOT broken)
       if (analysis.loginRequired) {
         return {
           record,
@@ -488,45 +353,9 @@ async function checkLink(record) {
         };
       }
       
-      // Use AI for ambiguous cases (has issues but also positives, or unclear)
-      if (useAI && analysis.issues.length > 0 && analysis.positives.length > 0) {
-        aiResult = await analyzeWithAI(
-          analysis.textContent || response.body.replace(/<[^>]+>/g, " "),
-          normalizedUrl,
-          record.learningName
-        );
-        
-        if (aiResult?.aiVerdict === "valid") {
-          status = "ok";
-          error = null;
-        } else if (aiResult?.aiVerdict === "broken") {
-          status = "error";
-          error = "AI detected: content unavailable";
-        } else {
-          status = "warning";
-          error = "AI uncertain - manual review needed";
-        }
-      } else if (analysis.issues.length > 0 && analysis.positives.length === 0) {
-        // Clear negative signals, no positives
-        if (useAI) {
-          // Let AI confirm
-          aiResult = await analyzeWithAI(
-            analysis.textContent || response.body.replace(/<[^>]+>/g, " "),
-            normalizedUrl,
-            record.learningName
-          );
-          
-          if (aiResult?.aiVerdict === "valid") {
-            status = "warning";
-            error = "Pattern issues but AI says valid";
-          } else {
-            status = "error";
-            error = "Content appears unavailable";
-          }
-        } else {
-          status = "error";
-          error = "Content appears unavailable";
-        }
+      if (analysis.issues.length > 0 && analysis.positives.length === 0) {
+        status = "error";
+        error = "Content appears unavailable";
       } else if (analysis.issues.length > 0) {
         status = "warning";
         error = "Potential issues detected";
@@ -540,14 +369,13 @@ async function checkLink(record) {
         responseTime: response.responseTime,
         details: analysis.issues,
         positives: analysis.positives,
-        contentLength: response.body.length,
-        aiResult
+        contentLength: response.body.length
       };
       
     } catch (err) {
       lastError = err;
       if (attempt < CONFIG.retries) {
-        await new Promise(r => setTimeout(r, 1000)); // Wait 1s before retry
+        await new Promise(r => setTimeout(r, 1000));
       }
     }
   }
@@ -562,17 +390,11 @@ async function checkLink(record) {
 }
 
 async function runValidation(records) {
-  console.log(`\n📋 Starting validation of ${records.length} training links...`);
-  if (useAI) {
-    console.log("🤖 AI-assisted analysis: ENABLED\n");
-  } else {
-    console.log("💡 Tip: Add --ai flag for AI-assisted analysis\n");
-  }
+  console.log(`\n📋 Starting validation of ${records.length} training links...\n`);
   
   const results = [];
   let completed = 0;
   
-  // Process in batches for concurrency
   for (let i = 0; i < records.length; i += CONFIG.concurrency) {
     const batch = records.slice(i, i + CONFIG.concurrency);
     const batchResults = await Promise.all(batch.map(checkLink));
@@ -582,42 +404,19 @@ async function runValidation(records) {
       let icon, statusColor;
       
       switch (result.status) {
-        case "ok":
-          icon = "✓";
-          statusColor = "\x1b[32m"; // Green
-          break;
-        case "auth_required":
-          icon = "🔐";
-          statusColor = "\x1b[36m"; // Cyan
-          break;
-        case "in_person":
-          icon = "👤";
-          statusColor = "\x1b[35m"; // Magenta
-          break;
-        case "blended":
-          icon = "🔀";
-          statusColor = "\x1b[35m"; // Magenta
-          break;
-        case "toolkit":
-          icon = "🧰";
-          statusColor = "\x1b[35m"; // Magenta
-          break;
-        case "warning":
-          icon = "⚠";
-          statusColor = "\x1b[33m"; // Yellow
-          break;
-        default:
-          icon = "✗";
-          statusColor = "\x1b[31m"; // Red
+        case "ok": icon = "✓"; statusColor = "\x1b[32m"; break;
+        case "auth_required": icon = "🔐"; statusColor = "\x1b[36m"; break;
+        case "in_person": icon = "👤"; statusColor = "\x1b[35m"; break;
+        case "blended": icon = "🔀"; statusColor = "\x1b[35m"; break;
+        case "toolkit": icon = "🧰"; statusColor = "\x1b[35m"; break;
+        case "warning": icon = "⚠"; statusColor = "\x1b[33m"; break;
+        default: icon = "✗"; statusColor = "\x1b[31m";
       }
       
       console.log(`${statusColor}${icon}\x1b[0m [${completed}/${records.length}] ${result.record.learningName.substring(0, 50)}${result.record.learningName.length > 50 ? "..." : ""}`);
       
       if (result.error) {
         console.log(`   └─ ${result.error}`);
-      }
-      if (result.aiResult) {
-        console.log(`   └─ 🤖 AI: ${result.aiResult.aiVerdict} (${result.aiResult.aiConfidence})`);
       }
       if (result.details && result.details.length > 0 && result.status !== "auth_required") {
         result.details.forEach(d => console.log(`   └─ ${d}`));
@@ -642,15 +441,12 @@ function generateReport(results) {
     error: results.filter(r => r.status === "error" || r.status === "timeout").length
   };
   
-  const aiUsed = results.some(r => r.aiResult);
-  
   let report = `
 ================================================================================
                     WHO PHHE TRAINING LINK VALIDATION REPORT
 ================================================================================
 
 Generated: ${new Date().toLocaleString()}
-AI Analysis: ${aiUsed ? "ENABLED" : "Disabled (use --ai flag to enable)"}
 
 SUMMARY
 -------
@@ -667,32 +463,17 @@ NON-ONLINE (no URL needed):
   🔀 Blended trainings:    ${stats.blended}
   🧰 Toolkits:             ${stats.toolkit}
 
-Notes:
-- "Login required" links work but need authentication
-- "In-person", "Blended" and "Toolkit" trainings don't require URLs
-
 `;
 
   if (stats.error > 0) {
     report += `
 ================================================================================
                          BROKEN LINKS (${stats.error})
-                    These trainings need attention!
 ================================================================================
 
 `;
     results.filter(r => r.status === "error" || r.status === "timeout").forEach((r, i) => {
-      report += `${i + 1}. ${r.record.learningName}
-   URL: ${r.record.link}
-   Error: ${r.error}
-`;
-      if (r.aiResult) {
-        report += `   AI verdict: ${r.aiResult.aiVerdict}\n`;
-      }
-      if (r.details && r.details.length > 0) {
-        r.details.forEach(d => { report += `   - ${d}\n`; });
-      }
-      report += "\n";
+      report += `${i + 1}. ${r.record.learningName}\n   URL: ${r.record.link}\n   Error: ${r.error}\n\n`;
     });
   }
 
@@ -704,50 +485,9 @@ Notes:
 
 `;
     results.filter(r => r.status === "warning").forEach((r, i) => {
-      report += `${i + 1}. ${r.record.learningName}
-   URL: ${r.record.link}
-   Issue: ${r.error}
-`;
-      if (r.aiResult) {
-        report += `   AI verdict: ${r.aiResult.aiVerdict}\n`;
-      }
-      if (r.details && r.details.length > 0) {
-        r.details.forEach(d => { report += `   - ${d}\n`; });
-      }
-      report += "\n";
+      report += `${i + 1}. ${r.record.learningName}\n   URL: ${r.record.link}\n   Issue: ${r.error}\n\n`;
     });
   }
-
-  if (stats.authRequired > 0) {
-    report += `
-================================================================================
-                    LOGIN/REGISTRATION REQUIRED (${stats.authRequired})
-              These links work but require authentication to access
-================================================================================
-
-`;
-    results.filter(r => r.status === "auth_required").forEach((r, i) => {
-      report += `${i + 1}. ${r.record.learningName}
-   URL: ${r.record.link}
-`;
-    });
-  }
-
-  report += `
-================================================================================
-                         OPEN ACCESS - WORKING (${stats.ok})
-================================================================================
-
-`;
-  results.filter(r => r.status === "ok").forEach((r, i) => {
-    report += `${i + 1}. ${r.record.learningName}\n`;
-    if (r.positives && r.positives.length > 0) {
-      report += `   Verified: ${r.positives.slice(0, 2).map(p => p.replace("Found: ", "")).join(", ")}\n`;
-    }
-    if (r.aiResult?.aiVerdict === "valid") {
-      report += `   🤖 AI confirmed: valid\n`;
-    }
-  });
 
   return report;
 }
@@ -755,31 +495,21 @@ Notes:
 // ============ MAIN ============
 
 async function main() {
-  console.log("\n🔍 WHO PHHE Training Link Validator");
-  console.log("   Deep Content Check" + (useAI ? " + AI Analysis" : ""));
-  console.log("");
+  console.log("\n🔍 WHO PHHE Training Link Validator\n");
   
-  // Load AI model if enabled
-  if (useAI) {
-    await loadAIModel();
-  }
-  
-  // Get input file
-  let inputFile = args[2];
+  let inputFile = process.argv[2];
   
   if (!inputFile) {
-    // Try to find demo-trainings.json
     const demoPath = path.join(__dirname, "../../apps/finder-ui/public/demo-trainings.json");
     if (fs.existsSync(demoPath)) {
       inputFile = demoPath;
       console.log(`Using default: ${demoPath}\n`);
     } else {
-      console.error("Usage: node validate-links.js [--ai] [path-to-json-or-csv]");
+      console.error("Usage: node validate-links.js [path-to-json-or-csv]");
       process.exit(1);
     }
   }
   
-  // Load data
   console.log(`📂 Loading data from: ${inputFile}`);
   const content = fs.readFileSync(inputFile, "utf8");
   
@@ -794,27 +524,15 @@ async function main() {
   }
   
   const records = rawRecords.map(normalizeRecord);
-  const withUrls = records.filter(r => r.link).length;
-  const withoutUrls = records.length - withUrls;
-  console.log(`📊 Found ${records.length} trainings (${withUrls} with URLs, ${withoutUrls} without)\n`);
+  console.log(`📊 Found ${records.length} trainings\n`);
   
-  // Run validation
   const results = await runValidation(records);
-  
-  // Generate and save report
   const report = generateReport(results);
   
   const reportPath = path.join(__dirname, `validation-report-${new Date().toISOString().split("T")[0]}.txt`);
   fs.writeFileSync(reportPath, report);
-  
   console.log(`\n📄 Report saved to: ${reportPath}`);
   
-  // Also save JSON results for programmatic use
-  const jsonPath = path.join(__dirname, `validation-results-${new Date().toISOString().split("T")[0]}.json`);
-  fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2));
-  console.log(`📊 JSON results saved to: ${jsonPath}`);
-  
-  // Print summary
   const stats = {
     ok: results.filter(r => r.status === "ok").length,
     authRequired: results.filter(r => r.status === "auth_required").length,
@@ -837,11 +555,6 @@ async function main() {
 │  ⚠ Warnings:          ${String(stats.warning).padStart(3)}                │
 │  ✗ Broken:            ${String(stats.error).padStart(3)}                │
 └──────────────────────────────────────────┘
-
-Notes:
-- "Login required" links work but need authentication
-- "In-person", "Blended" & "Toolkit" don't need URLs
-${useAI ? "- 🤖 AI analysis was used for ambiguous cases" : "- 💡 Add --ai flag for AI-assisted analysis"}
 `);
 }
 

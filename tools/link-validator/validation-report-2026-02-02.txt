@@ -3,25 +3,27 @@
                     WHO PHHE TRAINING LINK VALIDATION REPORT
 ================================================================================
 
-Generated: 2/2/2026, 10:34:12 AM
+Generated: 2/2/2026, 12:18:01 PM
+AI Analysis: Disabled (use --ai flag to enable)
 
 SUMMARY
 -------
 Total trainings: 197
 
 ONLINE TRAININGS:
-  ✓ Open & verified:       135 (69%)
-  🔐 Login required:       23 (12%)
-  ⚠ Warnings:              14 (7%)
+  ✓ Open & verified:       136 (69%)
+  🔐 Login required:       22 (11%)
+  ⚠ Warnings:              3 (2%)
   ✗ Broken/Unavailable:    1 (1%)
 
 NON-ONLINE (no URL needed):
   👤 In-person trainings:  24
+  🔀 Blended trainings:    11
   🧰 Toolkits:             0
 
 Notes:
 - "Login required" links work but need authentication
-- "In-person" and "Toolkit" trainings don't require URLs
+- "In-person", "Blended" and "Toolkit" trainings don't require URLs
 
 
 ================================================================================
@@ -35,68 +37,24 @@ Notes:
 
 
 ================================================================================
-                              WARNINGS (14)
+                              WARNINGS (3)
 ================================================================================
 
 1. Leadership in Emergencies Phase 1
    URL: 
    Issue: No URL provided for online training
 
-2. Leadership in Emergencies Phase 2
+2. Effective Online Training
    URL: 
    Issue: No URL provided for online training
 
-3. Orientation on the relevance of gender for health emergencies
-   URL: 
-   Issue: No URL provided for online training
-
-4. Orientation to International Outbreak Response with GOARN/WHO
-   URL: 
-   Issue: No URL provided for online training
-
-5. Fast Track Training on Public Health Emergencies
-   URL: 
-   Issue: No URL provided for online training
-
-6. PHEOC Virtual TableTop Exercsie
-   URL: 
-   Issue: No URL provided for online training
-
-7. RCCE-IM for CBRN Preparedness and Response
-   URL: 
-   Issue: No URL provided for online training
-
-8. RCCE-IM for Mass Gatherings
-   URL: 
-   Issue: No URL provided for online training
-
-9. Social Listening
-   URL: 
-   Issue: No URL provided for online training
-
-10. Effective Online Training
-   URL: 
-   Issue: No URL provided for online training
-
-11. Developing behaviour-based training curriculum
-   URL: 
-   Issue: No URL provided for online training
-
-12. Supporting partners across the capacity-building continuum
-   URL: 
-   Issue: No URL provided for online training
-
-13. Developing behaviour-change-based messages
-   URL: 
-   Issue: No URL provided for online training
-
-14. RCCE-IM in the university curricula in faculties of Medicine, Comms and Public Health
+3. Developing behaviour-based training curriculum
    URL: 
    Issue: No URL provided for online training
 
 
 ================================================================================
-                    LOGIN/REGISTRATION REQUIRED (23)
+                    LOGIN/REGISTRATION REQUIRED (22)
               These links work but require authentication to access
 ================================================================================
 
@@ -104,51 +62,49 @@ Notes:
    URL: https://extranet.who.int/hslp/training/course/index.php?categoryid=43
 2. Introduction to IHR Monitoring and Evaluation
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=345
-3. Emergency Response Framework (ERF)
-   URL: https://openwho.org/channel/Emergency+Response+Framework/537832
-4. Joint External Evaluation - Team Member Orientation
+3. Joint External Evaluation - Team Member Orientation
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=116
-5. Laboratory Quality Management System - Basics
+4. Laboratory Quality Management System - Basics
    URL: https://extranet.who.int/hslp/training/course/index.php?categoryid=41
-6. Laboratory Quality Management System Training Toolkit
+5. Laboratory Quality Management System Training Toolkit
    URL: https://extranet.who.int/hslp/content/LQMS-training-toolkit
-7. Management of ill travelers at points of entry in the context of the COVID-19 outbreak
+6. Management of ill travelers at points of entry in the context of the COVID-19 outbreak
    URL: https://extranet.who.int/hslp/training/course/view.php?id=325
-8. Operational Considerations for Managing COVID-19 Cases and Outbreaks in Aviation
+7. Operational Considerations for Managing COVID-19 Cases and Outbreaks in Aviation
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=328
-9. Operational Considerations for Managing COVID-19 Cases and Outbreaks on Board Ships
+8. Operational Considerations for Managing COVID-19 Cases and Outbreaks on Board Ships
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=326
-10. Chemical, Biological, Radiological and Nuclear (CBRN) considerations in Mass Gatherings
+9. Chemical, Biological, Radiological and Nuclear (CBRN) considerations in Mass Gatherings
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=388
-11. Clinical management of COVID-19 respiratory equipment
+10. Clinical management of COVID-19 respiratory equipment
    URL: https://openwho.org/playlist/dedicated/529855/0_hor2h1ly/0_jdpzzxap
-12. Controlling the Spread of COVID-19 at Ground Crossings
+11. Controlling the Spread of COVID-19 at Ground Crossings
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=333
-13. Ebola - Entry Screening at Ports, Airports and Land Crossings
+12. Ebola - Entry Screening at Ports, Airports and Land Crossings
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=103
-14. Ebola - Exit Screening at Ports, Airports and Land Crossings
+13. Ebola - Exit Screening at Ports, Airports and Land Crossings
    URL: https://extranet.who.int/hslp/training/enrol/index.php?id=98
-15. EVD - GO Package
+14. EVD - GO Package
    URL: https://extranet.who.int/hslp/content/evd-go-package
-16. EVD Preparedness Training Package (WHO Regional Office for Africa – version1)
+15. EVD Preparedness Training Package (WHO Regional Office for Africa – version1)
    URL: https://extranet.who.int/hslp/content/evd-training-package-1
-17. EVD Rapid Response Teams Training Package
+16. EVD Rapid Response Teams Training Package
    URL: https://extranet.who.int/hslp/content/evd-rrt-training-package
-18. EVD Training Package - gCHV Training on EBOLA Flipbook and IPC
+17. EVD Training Package - gCHV Training on EBOLA Flipbook and IPC
    URL: https://extranet.who.int/hslp/content/training-package-2
-19. EVD Training Package - Providing Safe Care in the Community
+18. EVD Training Package - Providing Safe Care in the Community
    URL: https://extranet.who.int/hslp/content/training-package-3
-20. Event Information Site for National IHR Focal Points (EIS)
+19. Event Information Site for National IHR Focal Points (EIS)
    URL: https://extranet.who.int/hslp/training/course/index.php?categoryid=32
-21. Event Management at Points of Entry
+20. Event Management at Points of Entry
    URL: https://extranet.who.int/hslp/training/course/index.php?categoryid=33
-22. Global Laboratory Leadership Programme Learning Package
+21. Global Laboratory Leadership Programme Learning Package
    URL: https://extranet.who.int/hslp/gllp
-23. Unknown
+22. Unknown
    URL: https://openwho.org/playlist/dedicated/503162/0_eh39zv4c/0_u7qyxu5y
 
 ================================================================================
-                         OPEN ACCESS - WORKING (135)
+                         OPEN ACCESS - WORKING (136)
 ================================================================================
 
 1. Health and Migration: Regional strategic lines of action on health and migration - 2022
@@ -179,135 +135,137 @@ Notes:
    Verified: "Module 1"
 20. Introduction to Nipah virus disease
 21. Introduction to oxygen systems
-22. Introduction to the International Health Regulations (IHR)
-23. Joint External Evaluation : Introduction
-24. Joint External Evaluation for Subject Matter Experts
-25. Joint External Evaluation for Technical Writers
-26. Lassa fever Introduction
-27. Learning package for Rapid Response Teams in the context of COVID-19 in India
+22. Emergency Response Framework (ERF)
+   Verified: "Course overview", "Module1"
+23. Introduction to the International Health Regulations (IHR)
+24. Joint External Evaluation : Introduction
+25. Joint External Evaluation for Subject Matter Experts
+26. Joint External Evaluation for Technical Writers
+27. Lassa fever Introduction
+28. Learning package for Rapid Response Teams in the context of COVID-19 in India
    Verified: "Module 1"
-28. Management and Facilitation of a Country COVID-19 Intra-Action Review (IAR)
+29. Management and Facilitation of a Country COVID-19 Intra-Action Review (IAR)
    Verified: "Course Overview"
-29. Management and Facilitation of an After Action Review AAR
-30. Mass Casualty Management
-31. Monitoring and evaluation of national action plans on antimicrobial resistance
-32. Mpox and the 2022-2023 global outbreak
-33. Mpox: Epidemiology, preparedness and response for African outbreak contexts
-34. Mpox: Introductory course for African outbreak contexts
-35. Multi-Hazard Response Framework: Hospital Planning for Health Emergency and Disaster Response
-36. National Action Plans for Health Security (NAPHS)
-37. National health emergency risk communication: training package
-38. Next Generation Sequencing (NGS) for Influenza and SARS-CoV-2: From Sample Collection to Analysis
-39. ONE HEALTH: Basics of multisectoral collaboration at the Human - Animal - Environment interface
-40. Operational Planning Guidelines for COVID-19 for UNCT and other partners
-41. Preparedness and Resilience for Emerging Threats (PRET)
+30. Management and Facilitation of an After Action Review AAR
+31. Mass Casualty Management
+32. Monitoring and evaluation of national action plans on antimicrobial resistance
+33. Mpox and the 2022-2023 global outbreak
+34. Mpox: Epidemiology, preparedness and response for African outbreak contexts
+35. Mpox: Introductory course for African outbreak contexts
+36. Multi-Hazard Response Framework: Hospital Planning for Health Emergency and Disaster Response
+37. National Action Plans for Health Security (NAPHS)
+38. National health emergency risk communication: training package
+39. Next Generation Sequencing (NGS) for Influenza and SARS-CoV-2: From Sample Collection to Analysis
+40. ONE HEALTH: Basics of multisectoral collaboration at the Human - Animal - Environment interface
+41. Operational Planning Guidelines for COVID-19 for UNCT and other partners
+42. Preparedness and Resilience for Emerging Threats (PRET)
    Verified: "Module 1"
-42. Prevention & response to sexual exploitation & abuse for public health practitioners in Ukraine
-43. Ready4Response Tier 1: Response context and principles
-44. Ready4Response Tier 2: Systems, structures and skills
-45. Regulatory preparedness to authorize the use of pandemic vaccines in importing countries
-46. Response Preparedness for Zoonotic Disease Outbreaks Using a One-Health Approach
-47. Risk communication essentials
-48. SARS-CoV-2 antigen rapid diagnostic testing
+43. Prevention & response to sexual exploitation & abuse for public health practitioners in Ukraine
+44. Ready4Response Tier 1: Response context and principles
+45. Ready4Response Tier 2: Systems, structures and skills
+46. Regulatory preparedness to authorize the use of pandemic vaccines in importing countries
+47. Response Preparedness for Zoonotic Disease Outbreaks Using a One-Health Approach
+48. Risk communication essentials
+49. SARS-CoV-2 antigen rapid diagnostic testing
    Verified: "Module 1"
-49. Strengthening collaboration between human and animal health sectors for improved health security
-50. Strengthening the health sector's role in the sound management of chemicals
-51. The Joint Risk Assessment (JRA OT): A Training for Implementers
-52. The Role of Parliaments and Parliamentarians in Strengthening Health Security Preparedness
-53. Use of Epidemic Intelligence systems with a particular focus on event-based surveillance for pandemic preparedness
-54. Wheelchairs in emergencies
-55. WHO costing and budgeting tool for national action plans on antimicrobial resistance
-56. WHO Standard Operating Procedures (SOPs) for Emergencies
+50. Strengthening collaboration between human and animal health sectors for improved health security
+51. Strengthening the health sector's role in the sound management of chemicals
+52. The Joint Risk Assessment (JRA OT): A Training for Implementers
+53. The Role of Parliaments and Parliamentarians in Strengthening Health Security Preparedness
+54. Use of Epidemic Intelligence systems with a particular focus on event-based surveillance for pandemic preparedness
+55. Wheelchairs in emergencies
+56. WHO costing and budgeting tool for national action plans on antimicrobial resistance
+57. WHO Standard Operating Procedures (SOPs) for Emergencies
    Verified: "Module 1"
-57. WHO/ICRC Basic Emergency Care: Conflict-Related Injuries
-58. WHO-ICRC Basic Emergency Care: approach to the acutely ill and injured
-59. An integrated approach to building health systems resilience
-60. Advancing national civil-military collaboration to strengthen health emergency preparedness
-61. An introduction to the people-centred approach to addressing antimicrobial resistance in human health
-62. Antimicrobial Stewardship: A competency-based approach
-63. Assistive products in emergencies
-64. Avian and other zoonotic influenza: Introduction
-65. Basic Precautions: Hand Hygiene (COVID-19)
-66. CBDE Awareness: Recognizing Signs of Deliberate Release of Chemical or Biological Agents
-67. CBDE: Preparedness for Health First Responders
-68. CBDE: Preparedness for Public Health Professionals
-69. Chemical Hazards Part I: An Introduction to Chemical Hazards
-70. Chemical Hazards Part II: Elements for Assessment
-71. Chemical Hazards Part III: Immediate Actions at the Event Site
-72. Cholera Outbreaks: Emergency Preparedness and Response
-73. Clinical management of patients with COVID19 General considerations
-74. Clinical management of patients with COVID19 Initial approach to the acutely ill patient
+58. WHO/ICRC Basic Emergency Care: Conflict-Related Injuries
+59. WHO-ICRC Basic Emergency Care: approach to the acutely ill and injured
+60. An integrated approach to building health systems resilience
+61. Advancing national civil-military collaboration to strengthen health emergency preparedness
+62. An introduction to the people-centred approach to addressing antimicrobial resistance in human health
+63. Antimicrobial Stewardship: A competency-based approach
+64. Assistive products in emergencies
+65. Avian and other zoonotic influenza: Introduction
+66. Basic Precautions: Hand Hygiene (COVID-19)
+67. CBDE Awareness: Recognizing Signs of Deliberate Release of Chemical or Biological Agents
+68. CBDE: Preparedness for Health First Responders
+69. CBDE: Preparedness for Public Health Professionals
+70. Chemical Hazards Part I: An Introduction to Chemical Hazards
+71. Chemical Hazards Part II: Elements for Assessment
+72. Chemical Hazards Part III: Immediate Actions at the Event Site
+73. Cholera Outbreaks: Emergency Preparedness and Response
+74. Clinical management of patients with COVID19 General considerations
+75. Clinical management of patients with COVID19 Initial approach to the acutely ill patient
    Verified: "course content"
-75. Clinical management of patients with COVID19 Investigations and care for mild moderate and severe disease
-76. Clinical management of patients with COVID19 Rehabilitation of patients with COVID19
-77. COVID-19 Simulation Exercises Packages
-78. COVID-19: Putting on and Taking off Personal Protective Equipment (PPE)
-79. COVID-19: risk communication and community engagement
+76. Clinical management of patients with COVID19 Investigations and care for mild moderate and severe disease
+77. Clinical management of patients with COVID19 Rehabilitation of patients with COVID19
+78. COVID-19 Simulation Exercises Packages
+79. COVID-19: Putting on and Taking off Personal Protective Equipment (PPE)
+80. COVID-19: risk communication and community engagement
    Verified: "Module 1"
-80. Ebola and Marburg diseases screening and treatment center design
-81. Clinical management of Ebola virus disease
+81. Ebola and Marburg diseases screening and treatment center design
+82. Clinical management of Ebola virus disease
    Verified: "Module 1"
-82. Emergency Preparedness and IHR Compliance Simulation
-83. Emerging respiratory viruses, including COVID-19: methods of detection, prevention, response, and control
-84. ePROTECT Respiratory Infections: Occupational Health and Safety (COVID-19)
-85. Go.Data: Building additional dashboards in Power BI
+83. Emergency Preparedness and IHR Compliance Simulation
+84. Emerging respiratory viruses, including COVID-19: methods of detection, prevention, response, and control
+85. ePROTECT Respiratory Infections: Occupational Health and Safety (COVID-19)
+86. Go.Data: Building additional dashboards in Power BI
    Verified: "Module 0"
-86. GOARN Outbreak Response Leadership Training
+87. GOARN Outbreak Response Leadership Training
    Verified: "player.vimeo.com"
-87. GOARN Outbreak Response Scenario Training
+88. GOARN Outbreak Response Scenario Training
    Verified: "player.vimeo.com"
-88. Infection prevention and control for COVID-19 in health care and community settings
+89. Infection prevention and control for COVID-19 in health care and community settings
    Verified: "Module 1"
-89. Influenza prevention and control
-90. Simulation Exercise Management: Introduction
-91. Six steps for sustainable implementation of national action plans on antimicrobial resistance
-92. SocialNet: Empowering communities before, during, and after an infectious disease outbreak
-93. WHO Simulation Exercise Management Training
-94. Introduction to the International Health Regulations Monitoring and Evaluation Framework
-95. Leadership and programme management in infection prevention and control module, Trainers guide
-96. Infection prevention and control measures in health-care settings for Ebola or Marburg disease outbreaks
+90. Influenza prevention and control
+91. Simulation Exercise Management: Introduction
+92. Six steps for sustainable implementation of national action plans on antimicrobial resistance
+93. SocialNet: Empowering communities before, during, and after an infectious disease outbreak
+94. WHO Simulation Exercise Management Training
+95. Introduction to the International Health Regulations Monitoring and Evaluation Framework
+96. Leadership and programme management in infection prevention and control module, Trainers guide
+97. Infection prevention and control measures in health-care settings for Ebola or Marburg disease outbreaks
    Verified: "Module 2"
-97. Prevention of surgical site infection (SSI) – December 2018 update
-98. Prevention of catheter-associated urinary tract infections (CAUTI)
-99. Standard precautions: Injection safety and needle-stick injury management
-100. IPC to combat AMR in health care settings: trainer guide
-101. Clinical management of respiratory diphtheria
+98. Prevention of surgical site infection (SSI) – December 2018 update
+99. Prevention of catheter-associated urinary tract infections (CAUTI)
+100. Standard precautions: Injection safety and needle-stick injury management
+101. IPC to combat AMR in health care settings: trainer guide
+102. Clinical management of respiratory diphtheria
    Verified: "Module 4"
-102. Measles outbreak training
-103. Water and Sanitation for Health Facility Improvement Tool (WASH FIT) for improved quality of care
-104. My Five Moments of Hands Hygiene
-105. Antimicrobial Resistance in the environment: key concepts and interventions
-106. Standard precautions: Waste management
-107. Standard precautions: Hand hygiene
-108. Decontamination and sterilization of medical devices
-109. Transmission-based Precautions
-110. Ready4Response Tier 3: Activation process
-111. Infection Prevention and Control in Maternal and Neonatal Care
-112. Prevention of vascular catheters-associated bloodstream infections
-113. Antimicrobial resistance and infection prevention and control
-114. Public Health Emergency Operations Centre (PHEOC)
+103. Measles outbreak training
+104. Water and Sanitation for Health Facility Improvement Tool (WASH FIT) for improved quality of care
+105. My Five Moments of Hands Hygiene
+106. Antimicrobial Resistance in the environment: key concepts and interventions
+107. Standard precautions: Waste management
+108. Standard precautions: Hand hygiene
+109. Decontamination and sterilization of medical devices
+110. Transmission-based Precautions
+111. Ready4Response Tier 3: Activation process
+112. Infection Prevention and Control in Maternal and Neonatal Care
+113. Prevention of vascular catheters-associated bloodstream infections
+114. Antimicrobial resistance and infection prevention and control
+115. Public Health Emergency Operations Centre (PHEOC)
    Verified: "Module 1"
-115. Module 1: Introduction to vSHOC
-116. Module 2: vSHOC Training for Advanced Users
-117. Module 3: vSHOC Emergency Human Resources
-118. Introduction to Event Management System (EMS)
-119. Data procedures in Event Management System (EMS)
-120. EWARS in a box: electronic early warning, alert and response system implementation in emergencies
-121. Virtual Course on Evaluation of Health Facilities using the Hospital Safety Index (HSIv2)
+116. Module 1: Introduction to vSHOC
+117. Module 2: vSHOC Training for Advanced Users
+118. Module 3: vSHOC Emergency Human Resources
+119. Introduction to Event Management System (EMS)
+120. Data procedures in Event Management System (EMS)
+121. EWARS in a box: electronic early warning, alert and response system implementation in emergencies
+122. Virtual Course on Evaluation of Health Facilities using the Hospital Safety Index (HSIv2)
    Verified: "Module 1"
-122. Global competency standards for the provision of health services to refugees and migrants
-123. Health Emergency Prevention, Preparedness, Response and Resilience (HEPR)
-124. Community Health Workers Promoting COVID-19 Vaccination
-125. Preventing rheumatic fever and rheumatic heart disease in the community
-126. Open Source Fundamentals
-127. Outbreak investigations in health facilities
-128. Health systems for health security
-129. Virtual Course - Medical Coordination and Information Cells (CICOM)
-130. Psychological first aid (PFA) in emergency management (Primera ayuda psicológica (PAP) en el manejo de emergencias)
-131. Prevention and Control of infections in health emergencies and disasters (Prevención y Control de Infecciones en emergencias de salud y desastres )
-132. Rapid Response Teams (RRT) Training Programme
-133. Defining an information environment assessment framework
-134. Community First Aid Response Course
+123. Global competency standards for the provision of health services to refugees and migrants
+124. Health Emergency Prevention, Preparedness, Response and Resilience (HEPR)
+125. Community Health Workers Promoting COVID-19 Vaccination
+126. Preventing rheumatic fever and rheumatic heart disease in the community
+127. Open Source Fundamentals
+128. Outbreak investigations in health facilities
+129. Health systems for health security
+130. Virtual Course - Medical Coordination and Information Cells (CICOM)
+131. Psychological first aid (PFA) in emergency management (Primera ayuda psicológica (PAP) en el manejo de emergencias)
+132. Prevention and Control of infections in health emergencies and disasters (Prevención y Control de Infecciones en emergencias de salud y desastres )
+133. Rapid Response Teams (RRT) Training Programme
+134. Defining an information environment assessment framework
+135. Community First Aid Response Course
    Verified: "Module 1"
-135. Cholera case management
+136. Cholera case management
    Verified: "Module 1"
