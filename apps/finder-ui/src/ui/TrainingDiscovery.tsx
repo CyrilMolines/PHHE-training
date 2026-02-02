@@ -57,6 +57,7 @@ const TRAINING_SOURCES = [
     name: "FutureLearn - Health", 
     url: "https://www.futurelearn.com/subjects/healthcare-medicine-courses", 
     category: "MOOC",
+    searchUrl: "https://www.futurelearn.com/search?q=",
     description: "Healthcare and medicine courses"
   },
   { 
@@ -70,6 +71,7 @@ const TRAINING_SOURCES = [
     name: "FEMA Emergency Management", 
     url: "https://training.fema.gov/is/crslist.aspx", 
     category: "FEMA",
+    searchUrl: "https://training.fema.gov/is/searchis.aspx?search=",
     description: "Emergency management courses"
   },
   { 
@@ -82,14 +84,15 @@ const TRAINING_SOURCES = [
     name: "Kaya (HLA)", 
     url: "https://kayaconnect.org/course/index.php", 
     category: "Humanitarian", 
-    searchUrl: "https://kayaconnect.org/course/search.php?search=",
+    searchUrl: "https://kayaconnect.org/course/search.php?q=",
     description: "Humanitarian Leadership Academy"
   },
   { 
-    name: "UNHCR Learning", 
+    name: "UNHCR", 
     url: "https://www.unhcr.org/what-we-do/build-better-futures/education", 
     category: "UN",
-    description: "UNHCR education resources"
+    searchUrl: "https://www.unhcr.org/search?search=",
+    description: "UN Refugee Agency resources"
   },
   { 
     name: "ReliefWeb Training", 
@@ -99,10 +102,10 @@ const TRAINING_SOURCES = [
     description: "Humanitarian training opportunities"
   },
   { 
-    name: "GOARN", 
-    url: "https://extranet.who.int/goarn/", 
+    name: "GOARN LMS", 
+    url: "https://goarn.who.int/lms/catalogue", 
     category: "WHO",
-    description: "Global Outbreak Alert and Response Network (login required)"
+    description: "GOARN Training Platform (login required)"
   }
 ];
 
