@@ -5,10 +5,10 @@
 The WHO PHHE Training Platform is a suite of web-based tools for managing and discovering health emergency training resources. The platform is designed to work without server-side infrastructure, using client-side processing and static hosting.
 
 ### Key Features
-- **Training Finder**: Semantic search with client-side AI
-- **Link Validator**: Automated broken link detection
-- **Training Discovery**: Multi-platform training search
-- **Data Export**: SharePoint to JSON converter
+- **Training Finder**: Fast lexical search with fuzzy matching
+- **Link Validator**: Automated broken link detection (web + Node.js)
+- **Training Platform Search**: Multi-platform search launcher
+- **Data Export**: SharePoint CSV to JSON converter
 
 ### Architecture Principles
 - No server-side processing required
@@ -27,8 +27,8 @@ The WHO PHHE Training Platform is a suite of web-based tools for managing and di
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │
-│  │   Training   │  │    Link      │  │   Training   │  │    Data      │ │
-│  │   Finder     │  │  Validator   │  │  Discovery   │  │   Export     │ │
+│  │   Training   │  │    Link      │  │   Platform   │  │    Data      │ │
+│  │   Finder     │  │  Validator   │  │   Search     │  │   Export     │ │
 │  │   /          │  │  /validator/ │  │  /discovery/ │  │   /export/   │ │
 │  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘ │
 │         │                 │                 │                 │          │
@@ -60,7 +60,6 @@ The WHO PHHE Training Platform is a suite of web-based tools for managing and di
 | Build Tool | Vite | Fast development and production builds |
 | Language | TypeScript | Type-safe JavaScript |
 | Styling | CSS | Custom styles with WHO branding |
-| AI Models | @huggingface/transformers | Client-side ML (Training Finder) |
 
 ### Hosting
 | Service | Purpose |
@@ -195,14 +194,19 @@ node validate-links.js path/to/data.json  # Custom data file
 node validate-links.js path/to/data.csv   # CSV input
 ```
 
-### 4. Training Discovery (`TrainingDiscovery.tsx`)
+### 4. Training Platform Search (`TrainingDiscovery.tsx`)
 
-**Purpose**: Search external platforms for new training resources.
+**Purpose**: Search launcher for external training platforms.
 
 **Features**:
-- Configurable search query
-- Opens search pages on multiple platforms
+- Configurable search query input
 - Quick search keyword buttons
+- Opens individual platform search pages with query
+
+**How it works**:
+1. User enters search query
+2. User clicks "Search" on desired platform
+3. Platform's search page opens in new tab with query pre-filled
 
 **Configured Sources**:
 | Platform | Search URL Pattern |
@@ -216,6 +220,8 @@ node validate-links.js path/to/data.csv   # CSV input
 | Kaya | `https://kayaconnect.org/course/search.php?q=` |
 | UNHCR | `https://www.unhcr.org/search?search=` |
 | ReliefWeb | `https://reliefweb.int/training?search=` |
+| DisasterReady | Browse only (no search URL) |
+| GOARN LMS | Browse only (login required) |
 
 ### 5. Data Export (`DataExport.tsx`)
 
@@ -372,20 +378,21 @@ The tools support URL parameters for configuration:
 2. Use Data Export tool to convert
 3. Upload `demo-trainings.json` to GitHub `gh-pages` branch
 
-### Adding New Training Sources (Discovery)
+### Adding New Training Sources (Platform Search)
 Edit `apps/finder-ui/src/ui/TrainingDiscovery.tsx`:
 ```typescript
 const TRAINING_SOURCES = [
   { 
     name: "New Platform",
-    url: "https://example.com/courses",
-    category: "Category",
-    searchUrl: "https://example.com/search?q=",
-    description: "Description"
+    url: "https://example.com/courses",      // Homepage URL
+    category: "Category",                     // WHO, MOOC, UN, etc.
+    searchUrl: "https://example.com/search?q=", // Optional search URL
+    description: "Brief description"
   },
   // ...
 ];
 ```
+Note: `searchUrl` is optional. If not provided, only "Open" button appears.
 
 ### Modifying Validation Patterns
 Edit `tools/link-validator/validate-links.js`:
