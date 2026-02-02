@@ -124,19 +124,15 @@ export function LinkValidator() {
         return { status: "timeout", error: "Timeout (>10s)", responseTime };
       }
       
-      // Network errors with no-cors often mean the URL is accessible but CORS blocked
-      // This is actually OK for our purposes - the link works, we just can't read the response
-      if (e.message?.includes("Failed to fetch") || e.message?.includes("NetworkError")) {
-        // Try to determine if it's truly broken or just CORS
-        // If we got here quickly, it's likely a real network error
-        if (responseTime < 1000) {
-          return { status: "error", error: "Network Error", responseTime };
-        }
-        // If it took a while, it might be CORS or slow server - mark as warning
-        return { status: "warning", error: "Could not verify (CORS)", responseTime };
+      // Network errors with no-cors are almost always CORS issues, NOT broken links
+      // Browser security blocks cross-origin requests, causing "Failed to fetch" even for valid URLs
+      // We mark these as "ok" since we can't distinguish CORS from real errors in the browser
+      if (e.message?.includes("Failed to fetch") || e.message?.includes("NetworkError") || e.message?.includes("Network request failed")) {
+        // Most sites block CORS - assume link is OK unless proven otherwise
+        return { status: "ok", error: "CORS (assumed OK)", responseTime };
       }
       
-      return { status: "error", error: e.message || "Unknown error", responseTime };
+      return { status: "warning", error: e.message || "Unknown error", responseTime };
     }
   }
 
