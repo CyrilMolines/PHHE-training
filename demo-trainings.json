@@ -118,11 +118,11 @@
     "languages": [],
     "modalityRaw": "Online",
     "platform": "OpenWHO",
-    "link": "https://openwho.org/playlist/dedicated/502240/0_glt2e3wv/0_t0bf5iq1",
+    "link": "https://openwh.org/playlist/dedicated/0_glt2e3wv/",
     "comment": " ",
     "signoffStatus": "",
     "modality": "online",
-    "normalizedLink": "https://openwho.org/playlist/dedicated/502240/0_glt2e3wv/0_t0bf5iq1",
+    "normalizedLink": "https://openwh.org/playlist/dedicated/0_glt2e3wv/",
     "searchText": "how to install go.data this tutorial is a compilation of short videos that explains, in detail, the different ways in which go.data can be installed depending on the user needs."
   },
   {
@@ -3782,27 +3782,6 @@
   {
     "id": "training-181",
     "sourceRow": 181,
-    "learningName": "Effective Online Training",
-    "description": "This course models and assess learners for effective use of online methodologies and assessments specific to content and audience to better ensure that learning objectives are effectively met.",
-    "technicalArea": "",
-    "focusArea": "",
-    "intendedAudience": "",
-    "owner": "WHO",
-    "developer": "EURO/WHE/RCI",
-    "contactDetails": "",
-    "languages": [],
-    "modalityRaw": "Online",
-    "platform": "",
-    "link": "",
-    "comment": "",
-    "signoffStatus": "",
-    "modality": "online",
-    "normalizedLink": "",
-    "searchText": "effective online training this course models and assess learners for effective use of online methodologies and assessments specific to content and audience to better ensure that learning objectives are effectively met."
-  },
-  {
-    "id": "training-182",
-    "sourceRow": 182,
     "learningName": "Developing behaviour-based training curriculum",
     "description": "This course goes beyond teaching knowledge-based content and models behaviour-based strategies to improve the likelihood of skill transfer and behaviour and attitude modification around key competencies and capabilities.",
     "technicalArea": "",
@@ -3822,8 +3801,8 @@
     "searchText": "developing behaviour-based training curriculum this course goes beyond teaching knowledge-based content and models behaviour-based strategies to improve the likelihood of skill transfer and behaviour and attitude modification around key competencies and capabilities."
   },
   {
-    "id": "training-183",
-    "sourceRow": 183,
+    "id": "training-182",
+    "sourceRow": 182,
     "learningName": "Supporting partners across the capacity-building continuum",
     "description": "This course shows the multiple steps and resources available to build capacity - with training events serving as the last resort.  The course strengthens how we see each person as a builder of capacity, going beyond structured and expensive training events.",
     "technicalArea": "",
@@ -3843,8 +3822,8 @@
     "searchText": "supporting partners across the capacity-building continuum this course shows the multiple steps and resources available to build capacity - with training events serving as the last resort.  the course strengthens how we see each person as a builder of capacity, going beyond structured and expensive training events."
   },
   {
-    "id": "training-184",
-    "sourceRow": 184,
+    "id": "training-183",
+    "sourceRow": 183,
     "learningName": "Developing behaviour-change-based messages",
     "description": "The construction of effective risk communication messaging is modeled and taught with multiple opportunities for learner trial with feedback loops. Learners learn how to assess risk communications messages for effectiveness including testing of messages and have the opportunity to develop their own messages within their context for feedback and revision.",
     "technicalArea": "",
@@ -3864,8 +3843,8 @@
     "searchText": "developing behaviour-change-based messages the construction of effective risk communication messaging is modeled and taught with multiple opportunities for learner trial with feedback loops. learners learn how to assess risk communications messages for effectiveness including testing of messages and have the opportunity to develop their own messages within their context for feedback and revision."
   },
   {
-    "id": "training-185",
-    "sourceRow": 185,
+    "id": "training-184",
+    "sourceRow": 184,
     "learningName": "RCCE-IM in the university curricula in faculties of Medicine, Comms and Public Health",
     "description": "Learners are coached on how to assess existing curriculum within both communications and health for possible embedding of risk communications, community engagement and/or infodemic management knowledge, skills and behaviours to improve the quality of programming and increase the reach of WHO programming. ",
     "technicalArea": "",
@@ -3885,8 +3864,8 @@
     "searchText": "rcce-im in the university curricula in faculties of medicine, comms and public health learners are coached on how to assess existing curriculum within both communications and health for possible embedding of risk communications, community engagement and/or infodemic management knowledge, skills and behaviours to improve the quality of programming and increase the reach of who programming. "
   },
   {
-    "id": "training-186",
-    "sourceRow": 186,
+    "id": "training-185",
+    "sourceRow": 185,
     "learningName": "Preventing rheumatic fever and rheumatic heart disease in the community",
     "description": "Using RCCE-IM principles, learners learn about RF and RHD while also the skills of communicating with people about the risks using scenario.",
     "technicalArea": "",
@@ -3906,8 +3885,8 @@
     "searchText": "preventing rheumatic fever and rheumatic heart disease in the community using rcce-im principles, learners learn about rf and rhd while also the skills of communicating with people about the risks using scenario."
   },
   {
-    "id": "training-187",
-    "sourceRow": 187,
+    "id": "training-186",
+    "sourceRow": 186,
     "learningName": "Open Source Fundamentals",
     "description": "This e-learning course is designed to help WHO teams and partners working with WHO understand Open-Source principles and best practices in the context of health emergency preparedness and response.",
     "technicalArea": "",
@@ -3927,8 +3906,8 @@
     "searchText": "open source fundamentals this e-learning course is designed to help who teams and partners working with who understand open-source principles and best practices in the context of health emergency preparedness and response."
   },
   {
-    "id": "training-188",
-    "sourceRow": 188,
+    "id": "training-187",
+    "sourceRow": 187,
     "learningName": "Outbreak investigations in health facilities",
     "description": "Outbreaks are unfortunate events that afflict both patients and staff as well as the cost of health care. In this course, you will learn how to identify and investigate outbreaks, the importance of communication, how to implement outbreak control measures, and how to identify lessons learned to inform and improve future health care delivery. ",
     "technicalArea": "",
@@ -3948,8 +3927,8 @@
     "searchText": "outbreak investigations in health facilities outbreaks are unfortunate events that afflict both patients and staff as well as the cost of health care. in this course, you will learn how to identify and investigate outbreaks, the importance of communication, how to implement outbreak control measures, and how to identify lessons learned to inform and improve future health care delivery. "
   },
   {
-    "id": "training-189",
-    "sourceRow": 189,
+    "id": "training-188",
+    "sourceRow": 188,
     "learningName": "Health systems for health security",
     "description": "This course aims to support the implementation of the WHO Health Systems for Health Security Framework and guide learners to bridge health systems and health security. It introduces the framework's key components and provides guidance and scenario-based exercises to bring HSforHS from concept to action. The online course is a self-paced interactive course with a webinar in module 2. The course is broken into two modules. Module 1 focuses on HSforHS-related knowledge dissemination, and Module 2 focuses on utilizing the knowledge gained in Module 1.",
     "technicalArea": "",
@@ -3969,8 +3948,8 @@
     "searchText": "health systems for health security this course aims to support the implementation of the who health systems for health security framework and guide learners to bridge health systems and health security. it introduces the framework's key components and provides guidance and scenario-based exercises to bring hsforhs from concept to action. the online course is a self-paced interactive course with a webinar in module 2. the course is broken into two modules. module 1 focuses on hsforhs-related knowledge dissemination, and module 2 focuses on utilizing the knowledge gained in module 1."
   },
   {
-    "id": "training-190",
-    "sourceRow": 190,
+    "id": "training-189",
+    "sourceRow": 189,
     "learningName": "Virtual Course - Medical Coordination and Information Cells (CICOM)",
     "description": "The course provides health emergency staff with theoretical knowledge on how to implement the EMT Medical Coordination and Information Cell (CICOM) methodology to support health Emergency Operations Centers. The CICOM methodology serves as a fundamental support for EOCs, with the goal of strengthening actions and addressing needs related to information management, coordination, and operational support for EMTs and Alternative Medical Care Sites (AMCSs), facilitating decision-making in health EOCs. This is vital in the short term to protect life and alleviate the suffering of affected populations.   ",
     "technicalArea": "",
@@ -3990,8 +3969,8 @@
     "searchText": "virtual course - medical coordination and information cells (cicom) the course provides health emergency staff with theoretical knowledge on how to implement the emt medical coordination and information cell (cicom) methodology to support health emergency operations centers. the cicom methodology serves as a fundamental support for eocs, with the goal of strengthening actions and addressing needs related to information management, coordination, and operational support for emts and alternative medical care sites (amcss), facilitating decision-making in health eocs. this is vital in the short term to protect life and alleviate the suffering of affected populations.   "
   },
   {
-    "id": "training-191",
-    "sourceRow": 191,
+    "id": "training-190",
+    "sourceRow": 190,
     "learningName": "Psychological first aid (PFA) in emergency management (Primera ayuda psicológica (PAP) en el manejo de emergencias)",
     "description": "This Psychological First Aid (PFA) course aims to provide people without professional training with tools to provide an appropriate first response to those experiencing psychological difficulties following crisis situations.",
     "technicalArea": "",
@@ -4011,8 +3990,8 @@
     "searchText": "psychological first aid (pfa) in emergency management (primera ayuda psicológica (pap) en el manejo de emergencias) this psychological first aid (pfa) course aims to provide people without professional training with tools to provide an appropriate first response to those experiencing psychological difficulties following crisis situations."
   },
   {
-    "id": "training-192",
-    "sourceRow": 192,
+    "id": "training-191",
+    "sourceRow": 191,
     "learningName": "Prevention and Control of infections in health emergencies and disasters (Prevención y Control de Infecciones en emergencias de salud y desastres )",
     "description": "The course starts from the need to analyze the importance of infection prevention and control as part of preparedness and responses to health emergencies and disasters, as well as to implement general and specific measures for infection prevention and control in healthcare facilities. The objective is to develop competencies in infection prevention and control in health emergencies and disaster situations among personnel working in healthcare facilities.",
     "technicalArea": "",
@@ -4032,8 +4011,8 @@
     "searchText": "prevention and control of infections in health emergencies and disasters (prevención y control de infecciones en emergencias de salud y desastres ) the course starts from the need to analyze the importance of infection prevention and control as part of preparedness and responses to health emergencies and disasters, as well as to implement general and specific measures for infection prevention and control in healthcare facilities. the objective is to develop competencies in infection prevention and control in health emergencies and disaster situations among personnel working in healthcare facilities."
   },
   {
-    "id": "training-193",
-    "sourceRow": 193,
+    "id": "training-192",
+    "sourceRow": 192,
     "learningName": "Rapid Response Teams (RRT) Training Programme",
     "description": "The Rapid Response Teams Training Programme (RRT TP) is a structured collection of learning resources including learning materials, guidance, and tools enabling Member States to plan, implement and evaluate customized training for RRT managers and RRT members at national and subnational levels.",
     "technicalArea": "",
@@ -4053,8 +4032,8 @@
     "searchText": "rapid response teams (rrt) training programme the rapid response teams training programme (rrt tp) is a structured collection of learning resources including learning materials, guidance, and tools enabling member states to plan, implement and evaluate customized training for rrt managers and rrt members at national and subnational levels."
   },
   {
-    "id": "training-194",
-    "sourceRow": 194,
+    "id": "training-193",
+    "sourceRow": 193,
     "learningName": "Defining an information environment assessment framework",
     "description": "This course introduces health professionals and infodemic managers to methods for analyzing and understanding the information ecosystem during public health emergencies. It provides practical guidance on assessing information flows, identifying risks, and supporting evidence-based strategies to manage misinformation and strengthen community resilience.",
     "technicalArea": "",
@@ -4074,8 +4053,8 @@
     "searchText": "defining an information environment assessment framework this course introduces health professionals and infodemic managers to methods for analyzing and understanding the information ecosystem during public health emergencies. it provides practical guidance on assessing information flows, identifying risks, and supporting evidence-based strategies to manage misinformation and strengthen community resilience."
   },
   {
-    "id": "training-195",
-    "sourceRow": 195,
+    "id": "training-194",
+    "sourceRow": 194,
     "learningName": "",
     "description": "This module aims at providing technical recommendations to strengthen healthcare infrastructure in the context of mpox outbreaks.",
     "technicalArea": "",
@@ -4095,8 +4074,8 @@
     "searchText": "this module aims at providing technical recommendations to strengthen healthcare infrastructure in the context of mpox outbreaks."
   },
   {
-    "id": "training-196",
-    "sourceRow": 196,
+    "id": "training-195",
+    "sourceRow": 195,
     "learningName": "Community First Aid Response Course",
     "description": " The Community First Aid Response course equips lay responders and community health workers to recognize emergency conditions, provide safe and simple lifesaving actions, and support patients until they reach formal care—particularly in areas with limited emergency services. To be considered complete, the Community First Aid Response course requires participants to attend in-person sessions and demonstrate practical clinical skills. Hands-on practice is essential to ensure confidence and competence in providing emergency first aid.",
     "technicalArea": "",
@@ -4116,8 +4095,8 @@
     "searchText": "community first aid response course  the community first aid response course equips lay responders and community health workers to recognize emergency conditions, provide safe and simple lifesaving actions, and support patients until they reach formal care—particularly in areas with limited emergency services. to be considered complete, the community first aid response course requires participants to attend in-person sessions and demonstrate practical clinical skills. hands-on practice is essential to ensure confidence and competence in providing emergency first aid."
   },
   {
-    "id": "training-197",
-    "sourceRow": 197,
+    "id": "training-196",
+    "sourceRow": 196,
     "learningName": "Cholera case management",
     "description": "This course provides practical guidance on diagnosing and managing cholera cases, including assessing dehydration levels, applying case definitions, and initiating appropriate treatment plans. Participants will learn to use resources from the Global Task Force on Cholera Control (GTFCC), treat cholera in special populations such as pregnant women and malnourished children, and understand indications for antibiotic therapy. ",
     "technicalArea": "",
