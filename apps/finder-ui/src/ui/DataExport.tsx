@@ -43,11 +43,15 @@ function parseLanguages(raw: string): string[] {
   return raw.split(/[,;\/]/).map(s => s.trim()).filter(Boolean);
 }
 
+// Admin email for receiving data updates
+const ADMIN_EMAIL = "molinescy@who.int";
+
 export function DataExport() {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [records, setRecords] = useState<TrainingRecord[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<string>("");
+  const [copied, setCopied] = useState(false);
 
   function handleFileSelect(e: Event) {
     const input = e.target as HTMLInputElement;
@@ -134,6 +138,45 @@ export function DataExport() {
     URL.revokeObjectURL(url);
   }
 
+  async function copyToClipboard() {
+    if (!records) return;
+    
+    try {
+      const json = JSON.stringify(records, null, 2);
+      await navigator.clipboard.writeText(json);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    } catch (e) {
+      setError("Failed to copy to clipboard. Try downloading instead.");
+    }
+  }
+
+  function emailToAdmin() {
+    if (!records) return;
+    
+    const subject = encodeURIComponent("WHO PHHE Training Data Update");
+    const body = encodeURIComponent(
+      `Hi,\n\n` +
+      `Please update the training data on GitHub. I've attached the updated JSON file (demo-trainings.json).\n\n` +
+      `Summary:\n` +
+      `- Total trainings: ${records.length}\n` +
+      `- Export date: ${new Date().toLocaleDateString()}\n\n` +
+      `Instructions:\n` +
+      `1. Download the attached demo-trainings.json file\n` +
+      `2. Go to https://github.com/CyrilMolines/PHHE-training\n` +
+      `3. Click Add file → Upload files\n` +
+      `4. Upload demo-trainings.json (replace existing)\n` +
+      `5. Commit changes\n\n` +
+      `Thank you!`
+    );
+    
+    // Download the file first so user can attach it
+    downloadJSON();
+    
+    // Open email client
+    window.location.href = `mailto:${ADMIN_EMAIL}?subject=${subject}&body=${body}`;
+  }
+
   return (
     <div class="export-container">
       <div class="export-header">
@@ -183,35 +226,60 @@ export function DataExport() {
         </div>
 
         {records && (
-          <div class="export-section">
-            <h3>Step 4: Download JSON</h3>
-            <p class="section-desc">
-              Download the JSON file and upload it to your GitHub repository 
-              at <code>demo-trainings.json</code>
-            </p>
-            <button class="btn primary" onClick={downloadJSON}>
-              Download demo-trainings.json
-            </button>
-            
-            <div class="preview-box">
-              <h4>Preview ({records.length} records)</h4>
-              <pre>{JSON.stringify(records.slice(0, 2), null, 2)}
-{records.length > 2 ? `\n... and ${records.length - 2} more records` : ""}</pre>
-            </div>
-          </div>
-        )}
+          <>
+            <div class="export-section success-section">
+              <h3>✓ Conversion Complete!</h3>
+              <p class="section-desc">
+                <strong>{records.length}</strong> training records ready to upload.
+              </p>
+              
+              <div class="upload-steps">
+                <div class="step-card">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>Download the JSON file</h4>
+                    <button class="btn primary" onClick={downloadJSON}>
+                      💾 Download demo-trainings.json
+                    </button>
+                  </div>
+                </div>
 
-        <div class="export-section">
-          <h3>Step 5: Push to GitHub</h3>
-          <ol class="export-steps">
-            <li>Go to <a href="https://github.com/CyrilMolines/PHHE-training" target="_blank">your GitHub repository</a></li>
-            <li>Navigate to the root folder</li>
-            <li>Click <strong>Add file</strong> → <strong>Upload files</strong></li>
-            <li>Upload the <code>demo-trainings.json</code> file</li>
-            <li>Click <strong>Commit changes</strong></li>
-          </ol>
-          <p class="note">Changes will be live within 1-2 minutes after commit.</p>
-        </div>
+                <div class="step-card">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>Upload to GitHub</h4>
+                    <p>Click below, then drag & drop your file and click "Commit changes"</p>
+                    <a 
+                      href="https://github.com/CyrilMolines/PHHE-training/upload/gh-pages" 
+                      target="_blank"
+                      class="btn primary"
+                    >
+                      📤 Open GitHub Upload Page
+                    </a>
+                  </div>
+                </div>
+
+                <div class="step-card">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>Done!</h4>
+                    <p>Changes go live within 1-2 minutes after commit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="export-section">
+              <details>
+                <summary>Preview ({records.length} records)</summary>
+                <div class="preview-box">
+                  <pre>{JSON.stringify(records.slice(0, 2), null, 2)}
+{records.length > 2 ? `\n... and ${records.length - 2} more records` : ""}</pre>
+                </div>
+              </details>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
