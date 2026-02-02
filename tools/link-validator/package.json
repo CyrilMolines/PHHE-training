@@ -1,12 +1,17 @@
 {
   "name": "who-phhe-link-validator",
   "version": "1.0.0",
-  "description": "Deep content validation for WHO PHHE training links",
+  "description": "Deep content validation for WHO PHHE training links with AI analysis",
   "main": "validate-links.js",
+  "type": "module",
   "scripts": {
     "validate": "node validate-links.js",
     "validate:demo": "node validate-links.js ../../apps/finder-ui/public/demo-trainings.json",
-    "validate:csv": "node validate-links.js"
+    "validate:csv": "node validate-links.js",
+    "validate:ai": "node validate-links.js --ai"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.0.0"
   },
   "author": "WHO PHHE",
   "license": "MIT"
