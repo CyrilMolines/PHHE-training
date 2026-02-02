@@ -40,12 +40,6 @@ const TRAINING_SOURCES = [
     description: "WHO's interactive learning platform"
   },
   { 
-    name: "WHO eLearning", 
-    url: "https://www.who.int/emergencies/training", 
-    category: "WHO",
-    description: "Emergency training resources"
-  },
-  { 
     name: "edX - Public Health", 
     url: "https://www.edx.org/learn/public-health", 
     category: "MOOC", 
