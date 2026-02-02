@@ -32,18 +32,84 @@ const CONFIG = {
 
 // Known training sources for health emergencies
 const TRAINING_SOURCES = [
-  { name: "OpenWHO", url: "https://openwho.org/courses", category: "WHO", searchUrl: "https://openwho.org/courses?q=" },
-  { name: "WHO eLearning", url: "https://www.who.int/emergencies/training", category: "WHO" },
-  { name: "Coursera - Public Health", url: "https://www.coursera.org/browse/health/public-health", category: "MOOC", searchUrl: "https://www.coursera.org/search?query=" },
-  { name: "edX - Public Health", url: "https://www.edx.org/learn/public-health", category: "MOOC", searchUrl: "https://www.edx.org/search?q=" },
-  { name: "FutureLearn - Health", url: "https://www.futurelearn.com/subjects/healthcare-medicine-courses", category: "MOOC" },
-  { name: "GOARN", url: "https://extranet.who.int/goarn/", category: "WHO" },
-  { name: "CDC TRAIN", url: "https://www.train.org/cdctrain/", category: "CDC" },
-  { name: "FEMA Emergency Management", url: "https://training.fema.gov/is/", category: "FEMA" },
-  { name: "DisasterReady", url: "https://ready.csod.com/", category: "Humanitarian" },
-  { name: "Humanitarian Leadership Academy", url: "https://kayaconnect.org/", category: "Humanitarian" },
-  { name: "UNHCR Learn", url: "https://www.unhcr.org/learn/", category: "UN" },
-  { name: "ReliefWeb Learning", url: "https://reliefweb.int/training", category: "Humanitarian" }
+  { 
+    name: "OpenWHO", 
+    url: "https://openwho.org/", 
+    category: "WHO", 
+    searchUrl: "https://openwho.org/courses?q=",
+    description: "WHO's interactive learning platform"
+  },
+  { 
+    name: "WHO eLearning", 
+    url: "https://www.who.int/emergencies/training", 
+    category: "WHO",
+    description: "Emergency training resources"
+  },
+  { 
+    name: "edX - Public Health", 
+    url: "https://www.edx.org/learn/public-health", 
+    category: "MOOC", 
+    searchUrl: "https://www.edx.org/search?tab=Course&productType=Course&q=",
+    description: "Online courses from top universities"
+  },
+  { 
+    name: "Coursera - Public Health", 
+    url: "https://www.coursera.org/browse/health/public-health", 
+    category: "MOOC", 
+    searchUrl: "https://www.coursera.org/search?query=",
+    description: "University courses and certificates"
+  },
+  { 
+    name: "FutureLearn - Health", 
+    url: "https://www.futurelearn.com/subjects/healthcare-medicine-courses", 
+    category: "MOOC",
+    description: "Healthcare and medicine courses"
+  },
+  { 
+    name: "CDC TRAIN", 
+    url: "https://www.train.org/cdctrain/welcome", 
+    category: "CDC", 
+    searchUrl: "https://www.train.org/cdctrain/search?query=",
+    description: "CDC training resources"
+  },
+  { 
+    name: "FEMA Emergency Management", 
+    url: "https://training.fema.gov/is/crslist.aspx", 
+    category: "FEMA",
+    description: "Emergency management courses"
+  },
+  { 
+    name: "DisasterReady", 
+    url: "https://ready.csod.com/client/disasterready/default.aspx", 
+    category: "Humanitarian",
+    description: "Humanitarian learning platform"
+  },
+  { 
+    name: "Kaya (HLA)", 
+    url: "https://kayaconnect.org/course/index.php", 
+    category: "Humanitarian", 
+    searchUrl: "https://kayaconnect.org/course/search.php?search=",
+    description: "Humanitarian Leadership Academy"
+  },
+  { 
+    name: "UNHCR Learning", 
+    url: "https://www.unhcr.org/what-we-do/build-better-futures/education", 
+    category: "UN",
+    description: "UNHCR education resources"
+  },
+  { 
+    name: "ReliefWeb Training", 
+    url: "https://reliefweb.int/training", 
+    category: "Humanitarian", 
+    searchUrl: "https://reliefweb.int/training?search=",
+    description: "Humanitarian training opportunities"
+  },
+  { 
+    name: "GOARN", 
+    url: "https://extranet.who.int/goarn/", 
+    category: "WHO",
+    description: "Global Outbreak Alert and Response Network (login required)"
+  }
 ];
 
 // Health emergency keywords for searching
@@ -79,9 +145,9 @@ export function TrainingDiscovery() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Manual URL input
-  const [manualUrl, setManualUrl] = useState("");
-  const [manualTitle, setManualTitle] = useState("");
+  // Search state
+  const [searchQuery, setSearchQuery] = useState("public health emergency");
+  const [isSearching, setIsSearching] = useState(false);
   
   // Discovered trainings
   const [discoveries, setDiscoveries] = useState<DiscoveredTraining[]>([]);
@@ -142,21 +208,25 @@ export function TrainingDiscovery() {
     return !existingUrls.has(normalized);
   }
 
-  function addManualEntry() {
-    if (!manualUrl.trim()) return;
+  function searchAllSources() {
+    // Open search pages for all sources that have search URLs
+    const query = encodeURIComponent(searchQuery);
+    const sourcesWithSearch = TRAINING_SOURCES.filter(s => s.searchUrl);
     
-    const isNew = checkIfNew(manualUrl);
-    const entry: DiscoveredTraining = {
-      title: manualTitle.trim() || "Untitled Training",
-      url: manualUrl.trim(),
-      source: "Manual Entry",
-      isNew,
-      addedToExport: false
-    };
-    
-    setDiscoveries(prev => [entry, ...prev]);
-    setManualUrl("");
-    setManualTitle("");
+    sourcesWithSearch.forEach((source, index) => {
+      setTimeout(() => {
+        window.open(source.searchUrl + query, '_blank');
+      }, index * 500); // Stagger to avoid popup blocking
+    });
+  }
+
+  function searchSource(source: typeof TRAINING_SOURCES[0]) {
+    if (source.searchUrl) {
+      const query = encodeURIComponent(searchQuery);
+      window.open(source.searchUrl + query, '_blank');
+    } else {
+      window.open(source.url, '_blank');
+    }
   }
 
   function toggleExport(index: number) {
@@ -249,53 +319,67 @@ export function TrainingDiscovery() {
               </div>
             </div>
 
-            {/* Manual Entry */}
-            <div class="discovery-section">
-              <h3>Add Training URL</h3>
-              <p class="section-desc">Paste a training URL to check if it's already in the directory</p>
-              <div class="manual-input-group">
+            {/* Search Section */}
+            <div class="discovery-section search-section">
+              <h3>🔍 Search Training Sources</h3>
+              <p class="section-desc">Search all platforms for new trainings on a specific topic</p>
+              <div class="search-input-group">
                 <input
                   type="text"
-                  placeholder="Training title (optional)"
-                  value={manualTitle}
-                  onInput={(e) => setManualTitle((e.target as HTMLInputElement).value)}
-                  class="manual-input"
+                  placeholder="Enter search terms..."
+                  value={searchQuery}
+                  onInput={(e) => setSearchQuery((e.target as HTMLInputElement).value)}
+                  class="search-input"
                 />
-                <input
-                  type="url"
-                  placeholder="https://example.com/training"
-                  value={manualUrl}
-                  onInput={(e) => setManualUrl((e.target as HTMLInputElement).value)}
-                  onKeyDown={(e) => e.key === "Enter" && addManualEntry()}
-                  class="manual-input url"
-                />
-                <button class="btn primary" onClick={addManualEntry}>
-                  Check URL
+                <button class="btn primary" onClick={searchAllSources}>
+                  Search All Sources
                 </button>
               </div>
-            </div>
-
-            {/* Known Sources */}
-            <div class="discovery-section">
-              <h3>Browse Training Sources</h3>
-              <p class="section-desc">Click to open known health emergency training platforms</p>
-              <div class="sources-grid">
-                {TRAINING_SOURCES.map((source, i) => (
-                  <a key={i} href={source.url} target="_blank" rel="noreferrer" class="source-card">
-                    <span class="source-name">{source.name}</span>
-                    <span class="source-category">{source.category}</span>
-                  </a>
+              <div class="quick-searches">
+                <span class="quick-label">Quick searches:</span>
+                {SEARCH_KEYWORDS.slice(0, 6).map((kw, i) => (
+                  <button 
+                    key={i} 
+                    class="keyword-btn"
+                    onClick={() => setSearchQuery(kw)}
+                  >
+                    {kw}
+                  </button>
                 ))}
               </div>
             </div>
 
-            {/* Search Keywords */}
+            {/* Training Sources */}
             <div class="discovery-section">
-              <h3>Search Keywords</h3>
-              <p class="section-desc">Use these keywords to search for trainings on the platforms above</p>
-              <div class="keywords-list">
-                {SEARCH_KEYWORDS.map((kw, i) => (
-                  <span key={i} class="keyword-tag">{kw}</span>
+              <h3>📚 Training Platforms</h3>
+              <p class="section-desc">Click "Search" to find trainings, or "Browse" to explore the platform</p>
+              <div class="sources-list">
+                {TRAINING_SOURCES.map((source, i) => (
+                  <div key={i} class="source-row">
+                    <div class="source-info">
+                      <span class="source-name">{source.name}</span>
+                      <span class="source-desc">{source.description}</span>
+                    </div>
+                    <span class="source-category-badge">{source.category}</span>
+                    <div class="source-actions">
+                      {source.searchUrl && (
+                        <button 
+                          class="btn small primary"
+                          onClick={() => searchSource(source)}
+                        >
+                          🔍 Search
+                        </button>
+                      )}
+                      <a 
+                        href={source.url} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        class="btn small secondary"
+                      >
+                        Browse
+                      </a>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
