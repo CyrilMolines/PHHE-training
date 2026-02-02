@@ -155,7 +155,9 @@ function normalizeRecord(raw) {
     learningName: raw.learningName || raw["Learning Name"] || raw.Title || "Unknown",
     link: raw.normalizedLink || raw.link || raw.Link || raw.URL || "",
     technicalArea: raw.technicalArea || raw["Technical Area"] || "",
-    platform: raw.platform || raw.Platform || ""
+    platform: raw.platform || raw.Platform || "",
+    modality: raw.modality || "",
+    modalityRaw: raw.modalityRaw || raw.Modality || ""
   };
 }
 
@@ -634,8 +636,10 @@ async function main() {
     process.exit(1);
   }
   
-  const records = rawRecords.map(normalizeRecord).filter(r => r.link);
-  console.log(`📊 Found ${records.length} trainings with URLs\n`);
+  const records = rawRecords.map(normalizeRecord);
+  const withUrls = records.filter(r => r.link).length;
+  const withoutUrls = records.length - withUrls;
+  console.log(`📊 Found ${records.length} trainings (${withUrls} with URLs, ${withoutUrls} without)\n`);
   
   // Run validation
   const results = await runValidation(records);

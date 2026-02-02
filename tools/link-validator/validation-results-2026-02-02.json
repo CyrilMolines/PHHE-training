@@ -1,0 +1,3596 @@
+[
+  {
+    "record": {
+      "id": "abcb297003edc5f7bbd711bd",
+      "learningName": "Health and Migration: Regional strategic lines of action on health and migration - 2022",
+      "link": "https://campus.paho.org/en/course/health-and-migration",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 668,
+    "details": [],
+    "positives": [
+      "Found: \"Module 0\""
+    ],
+    "contentLength": 32195
+  },
+  {
+    "record": {
+      "id": "1a9681037e13251d2916f900",
+      "learningName": "Health Cluster Coordination",
+      "link": "https://openwho.org/playlist/dedicated/495459/0_tueews0p/0_ah5tl4il",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 417,
+    "details": [],
+    "positives": [
+      "Found: \"Module 2\""
+    ],
+    "contentLength": 172890
+  },
+  {
+    "record": {
+      "id": "650b6d15296cc4afde3ec4d0",
+      "learningName": "Health Emergency Readiness for Response Operations",
+      "link": "https://openwho.org/playlist/dedicated/504475/0_ig03lfgl/0_sapp05yg",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 491,
+    "details": [],
+    "positives": [],
+    "contentLength": 171383
+  },
+  {
+    "record": {
+      "id": "aa80f10e38a0872d31e7e5bb",
+      "learningName": "Health Security Training for Western Balkans",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "0c179c7e006d05349482317f",
+      "learningName": "Hospital Violence Preparedness Assessment Tool",
+      "link": "https://www.campusvirtualsp.org/es/node/28750",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 147,
+    "details": [],
+    "positives": [],
+    "contentLength": 28259
+  },
+  {
+    "record": {
+      "id": "cc7b0197cef61ea648925c57",
+      "learningName": "How to install Go.Data",
+      "link": "https://openwho.org/playlist/dedicated/502240/0_glt2e3wv/0_t0bf5iq1",
+      "technicalArea": "Surveillance",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 315,
+    "details": [],
+    "positives": [],
+    "contentLength": 171899
+  },
+  {
+    "record": {
+      "id": "879c06c66e1810ddcd4d6984",
+      "learningName": "International Coordinating Group on Vaccine Provision",
+      "link": "https://openwho.org/channel/International%2BCoordinating%2BGroup%2Bon%2BVaccine%2BProvision/528037",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 285,
+    "details": [],
+    "positives": [],
+    "contentLength": 188546
+  },
+  {
+    "record": {
+      "id": "17e10a9bbbf049525ccf0c87",
+      "learningName": "IDSR Training",
+      "link": "https://openwho.org/channel/Integrated+disease+surveillance+and+response/500000",
+      "technicalArea": "Surveillance",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 396,
+    "details": [],
+    "positives": [
+      "Found: \"Module1\""
+    ],
+    "contentLength": 253020
+  },
+  {
+    "record": {
+      "id": "04d964acb73eb5bb171af829",
+      "learningName": "IMS and ERF training for WCOs",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "5bcf43b5f7bd9613aa4fb9b6",
+      "learningName": "Incident Command System for Hospitals (ICS-H)",
+      "link": "https://www.campusvirtualsp.org/es/node/29200",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 566,
+    "details": [],
+    "positives": [],
+    "contentLength": 24510
+  },
+  {
+    "record": {
+      "id": "fabd07e06af96f2370aab75b",
+      "learningName": "Infectious Substances Shipping Training (e-ISST) Global",
+      "link": "https://extranet.who.int/hslp/training/course/index.php?categoryid=43",
+      "technicalArea": "Laboratory",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 880,
+    "details": [
+      "Known auth domain: extranet.who.int"
+    ],
+    "positives": [],
+    "contentLength": 46790
+  },
+  {
+    "record": {
+      "id": "3b2d2dc5711b1a68da7bd479",
+      "learningName": "Influenza sentinel surveillance training",
+      "link": "https://openwho.org/playlist/dedicated/501679/0_9dc1d2ag/0_7ity3lsm",
+      "technicalArea": "Surveillance",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 355,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 171674
+  },
+  {
+    "record": {
+      "id": "c7bd1364a86b7cd370bb1370",
+      "learningName": "Influenza surveillance data analysis and bulletin writing workshop",
+      "link": "",
+      "technicalArea": "Surveillance",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "6d88510246f8a064d2fab323",
+      "learningName": "Influenza surveillance data threshold setting workshop",
+      "link": "",
+      "technicalArea": "Surveillance",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "f5b2ba8b78281fb99a25d85b",
+      "learningName": "Infodemic Management 101",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_47ngign5/0_q6tpx5f6",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 288,
+    "details": [],
+    "positives": [],
+    "contentLength": 172813
+  },
+  {
+    "record": {
+      "id": "4a8f0b7d375b5a101b1e844d",
+      "learningName": "Infodemic Management: Addressing health misinformation and disinformation",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_4tojm0ij/0_5zupie62",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 287,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 172622
+  },
+  {
+    "record": {
+      "id": "c57d47f2cad6fd8e183333cf",
+      "learningName": "Infodemic Management: Defining a taxonomy for social listening",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_fsg88i20/0_mbihfi83",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 308,
+    "details": [],
+    "positives": [],
+    "contentLength": 172405
+  },
+  {
+    "record": {
+      "id": "485a7d0ef58e96acac64d2cb",
+      "learningName": "Infodemic management: Developing an infodemic insights report",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_tbe4lkl3/0_u6k3jz0o",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 280,
+    "details": [],
+    "positives": [],
+    "contentLength": 172542
+  },
+  {
+    "record": {
+      "id": "8defa295d7b624393fcc8d5e",
+      "learningName": "Infodemic Management: Social marketing and message testing methods",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_upydku29/0_8zk7zfd2",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 400,
+    "details": [],
+    "positives": [],
+    "contentLength": 172456
+  },
+  {
+    "record": {
+      "id": "abdae2a8268f10f11985cb38",
+      "learningName": "Infodemic Management: Using human-centered design good practices",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_st7yq8gd/0_ab9vz8fn",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 374,
+    "details": [],
+    "positives": [],
+    "contentLength": 172431
+  },
+  {
+    "record": {
+      "id": "196595c3f6ce434187e59df5",
+      "learningName": "Infodemic Management: Working effectively as an infodemic manager in the field",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_npzy2jre/0_7debt56o",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 273,
+    "details": [],
+    "positives": [],
+    "contentLength": 172662
+  },
+  {
+    "record": {
+      "id": "d8e799520305eaf8a83a2275",
+      "learningName": "Interregional Field Simulation Exercise (IFX) Programme for Rapid Response Mobile Labs",
+      "link": "",
+      "technicalArea": "Laboratory",
+      "platform": "GOARN",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "cc0dd0e021423fdbced9684f",
+      "learningName": "Introducing Mental Health and Psychosocial Support (MHPSS) in emergencies",
+      "link": "https://openwho.org/playlist/dedicated/536361/0_fi0dbfix/0_blb84xc7",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 267,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 171666
+  },
+  {
+    "record": {
+      "id": "dd4181f69e9917868bdb1a30",
+      "learningName": "Introduction to Epidemic Intelligence from Open Sources",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0119EN+2025_Q1?source=edX",
+      "technicalArea": "Surveillance",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 162,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "b34e41c0dcaddbbdc95adce8",
+      "learningName": "Introduction to IHR Monitoring and Evaluation",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=345",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 270,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "61eb93924f95d74d9c1d676e",
+      "learningName": "Introduction to Marburg Virus Disease",
+      "link": "https://openwho.org/media/MVD%20Module%201%3A%20Introduction/0_8004qjw3/536450",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 249,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 175665
+  },
+  {
+    "record": {
+      "id": "b636ddd731cc620f34c8a113",
+      "learningName": "Introduction to Nipah virus disease",
+      "link": "https://openwho.org/channel/Nipah+virus+disease/538567",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 281,
+    "details": [],
+    "positives": [],
+    "contentLength": 187170
+  },
+  {
+    "record": {
+      "id": "586f1aac4b3a458cb781c212",
+      "learningName": "Introduction to oxygen systems",
+      "link": "https://openwho.org/media/Oxygen%20ecosystem%20%20oxygen%20systems/0_gd4cunhh/500316",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 294,
+    "details": [],
+    "positives": [],
+    "contentLength": 175725
+  },
+  {
+    "record": {
+      "id": "109d081eb014f3a8a5430682",
+      "learningName": "Emergency Response Framework (ERF)",
+      "link": "https://openwho.org/channel/Emergency+Response+Framework/537832",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 270,
+    "details": [
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 268526
+  },
+  {
+    "record": {
+      "id": "96e612ab868b3b670680e000",
+      "learningName": "Introduction to the International Health Regulations (IHR)",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOA+0092_IHR_EN+2024?from=discovery&source=edX",
+      "technicalArea": "IHR Coordination and National IHR Focal Point Functions",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 103,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "fa6a19230cbeb911548ea21f",
+      "learningName": "Joint External Evaluation - Team Member Orientation",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=116",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 273,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "9ec833133edc1f81e8fd63d8",
+      "learningName": "Joint External Evaluation : Introduction",
+      "link": "https://openwho.org/playlist/dedicated/501681/0_lse5ad3j/0_kdylw4pv",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 279,
+    "details": [],
+    "positives": [],
+    "contentLength": 172582
+  },
+  {
+    "record": {
+      "id": "8703538d283fd35e572bba78",
+      "learningName": "Joint External Evaluation for Subject Matter Experts",
+      "link": "https://openwho.org/playlist/dedicated/501681/0_kgk6qf51/0_hw05biam",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 255,
+    "details": [],
+    "positives": [],
+    "contentLength": 172019
+  },
+  {
+    "record": {
+      "id": "74332480970bec447d1cca16",
+      "learningName": "Joint External Evaluation for Technical Writers",
+      "link": "https://openwho.org/playlist/dedicated/501681/0_emyia387/0_6htlnfwz",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 312,
+    "details": [],
+    "positives": [],
+    "contentLength": 172150
+  },
+  {
+    "record": {
+      "id": "62c6facf552cbbc5c4a4a15f",
+      "learningName": "Laboratory Quality Management System - Basics",
+      "link": "https://extranet.who.int/hslp/training/course/index.php?categoryid=41",
+      "technicalArea": "Laboratory",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 875,
+    "details": [
+      "Known auth domain: extranet.who.int"
+    ],
+    "positives": [],
+    "contentLength": 50257
+  },
+  {
+    "record": {
+      "id": "2d20c39163c34856a5efb1d2",
+      "learningName": "Laboratory Quality Management System Training Toolkit",
+      "link": "https://extranet.who.int/hslp/content/LQMS-training-toolkit",
+      "technicalArea": "Laboratory",
+      "platform": "HSLP",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 8572,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"unauthorized\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 808054
+  },
+  {
+    "record": {
+      "id": "014bab9e74c09e75b0c9663d",
+      "learningName": "Lassa fever Introduction",
+      "link": "https://openwho.org/playlist/dedicated/538566/0_0p8pqfkf/0_konoi3f8",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 307,
+    "details": [],
+    "positives": [],
+    "contentLength": 171584
+  },
+  {
+    "record": {
+      "id": "92df24c221b191e60fcca0be",
+      "learningName": "Leadership in Emergencies Phase 1",
+      "link": "",
+      "technicalArea": "Leadership",
+      "platform": "",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "65e55aa1922dfe3c83d08c7d",
+      "learningName": "Leadership in Emergencies Phase 2",
+      "link": "",
+      "technicalArea": "Leadership",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "fc0f422d7b7fb51a077074ff",
+      "learningName": "Learning package for Rapid Response Teams in the context of COVID-19 in India",
+      "link": "https://openwho.org/playlist/dedicated/528113/0_gdfrptxs/0_fe1db3j1",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 263,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 173584
+  },
+  {
+    "record": {
+      "id": "84aa0301ac99e74b6c71db12",
+      "learningName": "Management and Facilitation of a Country COVID-19 Intra-Action Review (IAR)",
+      "link": "https://openwho.org/playlist/dedicated/552620/0_dahrllhn/0_xerri6jz",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 553,
+    "details": [],
+    "positives": [
+      "Found: \"Course Overview\""
+    ],
+    "contentLength": 172105
+  },
+  {
+    "record": {
+      "id": "cecc3e3463799ee6d763b0e5",
+      "learningName": "Management and Facilitation of an After Action Review AAR",
+      "link": "https://openwho.org/playlist/dedicated/496674/0_bmn0kb3y/0_rvnw5fvh",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 425,
+    "details": [],
+    "positives": [],
+    "contentLength": 171457
+  },
+  {
+    "record": {
+      "id": "145fa2772d994f91ce64a0bc",
+      "learningName": "Management of ill travelers at points of entry in the context of the COVID-19 outbreak",
+      "link": "https://extranet.who.int/hslp/training/course/view.php?id=325",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 337,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "2a2d2871fe8f14691f1d1355",
+      "learningName": "Mass Casualty Management",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOA+0002_MCM_EN+2025?source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 189,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "029ab1a1482bf8f0428d39db",
+      "learningName": "Monitoring and evaluation of national action plans on antimicrobial resistance",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOAcademy-Hosted+H0041EN+H0041EN_Q4_2024?source=edX",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 151,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "ec5f0d84ed5f967fb86266c4",
+      "learningName": "Mpox and the 2022-2023 global outbreak",
+      "link": "https://openwho.org/playlist/dedicated/503162/0_db1xy1c7/0_p02ol27o",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 281,
+    "details": [],
+    "positives": [],
+    "contentLength": 171850
+  },
+  {
+    "record": {
+      "id": "95c416fb5e4c77713ace5b2d",
+      "learningName": "Mpox: Epidemiology, preparedness and response for African outbreak contexts",
+      "link": "https://openwho.org/playlist/dedicated/503162/0_2y98iloq/0_25is3ot2",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 267,
+    "details": [],
+    "positives": [],
+    "contentLength": 173030
+  },
+  {
+    "record": {
+      "id": "b7df3a679b28967e372d3511",
+      "learningName": "Mpox: Introductory course for African outbreak contexts",
+      "link": "https://openwho.org/playlist/dedicated/503162/0_k5teeccu/0_mtu9ipu1",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 421,
+    "details": [],
+    "positives": [],
+    "contentLength": 175182
+  },
+  {
+    "record": {
+      "id": "6ddf622df6f8a85a8a5b286e",
+      "learningName": "Multi-Hazard Response Framework: Hospital Planning for Health Emergency and Disaster Response",
+      "link": "https://www.campusvirtualsp.org/es/node/30623",
+      "technicalArea": "Health services provision",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 582,
+    "details": [],
+    "positives": [],
+    "contentLength": 24075
+  },
+  {
+    "record": {
+      "id": "c782919abb72ec708fa32e4d",
+      "learningName": "National Action Plans for Health Security (NAPHS)",
+      "link": "https://openwho.org/playlist/dedicated/500114/0_xiddrvt4/0_0ft4cjao",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 471,
+    "details": [],
+    "positives": [],
+    "contentLength": 171206
+  },
+  {
+    "record": {
+      "id": "56ac93f28a3ef3ea633059bb",
+      "learningName": "National health emergency risk communication: training package",
+      "link": "https://www.who.int/europe/publications/i/item/WHO-EURO-2018-2993-42751-59637",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 203,
+    "details": [],
+    "positives": [],
+    "contentLength": 95854
+  },
+  {
+    "record": {
+      "id": "1394842f256c31e1ccdaf742",
+      "learningName": "National IHR Focal Point Workshop",
+      "link": "",
+      "technicalArea": "IHR Coordination and National IHR Focal Point Functions",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "0dfdab82b5cfe94ff5efb374",
+      "learningName": "Next Generation Sequencing (NGS) for Influenza and SARS-CoV-2: From Sample Collection to Analysis",
+      "link": "https://openwho.org/playlist/dedicated/529855/0_5c4mlcg4/0_cv4xqt8h",
+      "technicalArea": "Laboratory",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 295,
+    "details": [],
+    "positives": [],
+    "contentLength": 172518
+  },
+  {
+    "record": {
+      "id": "a505b0d646d0952666fec0b1",
+      "learningName": "ONE HEALTH: Basics of multisectoral collaboration at the Human - Animal - Environment interface",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOA+0094_OH_EN+2024?from=discovery&source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 111,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "a11e8df50685f2c6235d4ad4",
+      "learningName": "Operational Considerations for Managing COVID-19 Cases and Outbreaks in Aviation",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=328",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 327,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "e1db8867fec0684c3e1d9de8",
+      "learningName": "Operational Considerations for Managing COVID-19 Cases and Outbreaks on Board Ships",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=326",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 329,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "b0da26cc3f403b2be6f56f6f",
+      "learningName": "Operational Planning Guidelines for COVID-19 for UNCT and other partners",
+      "link": "https://www.campusvirtualsp.org/es/node/28952",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 567,
+    "details": [],
+    "positives": [],
+    "contentLength": 27882
+  },
+  {
+    "record": {
+      "id": "84e1cb0f7038fed97d6babd1",
+      "learningName": "Orientation on the relevance of gender for health emergencies",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "b52ad8bf58cffe1dc2764f41",
+      "learningName": "Orientation to International Outbreak Response with GOARN/WHO",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "GOARN",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "b694ad585e98047800da9289",
+      "learningName": "Preparedness and Resilience for Emerging Threats (PRET)",
+      "link": "https://openwho.org/playlist/dedicated/536083/0_aht29z8m/0_9w81mlf1",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 294,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 171893
+  },
+  {
+    "record": {
+      "id": "bb91dd33f1a80c0df80b089a",
+      "learningName": "Personal well-being for deployment",
+      "link": "https://goarnlms.org/group/49",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "GOARN",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "error",
+    "statusCode": 404,
+    "error": "HTTP 404",
+    "responseTime": 192,
+    "details": []
+  },
+  {
+    "record": {
+      "id": "f0a2adb11c358f8030137bb1",
+      "learningName": "Prevention & response to sexual exploitation & abuse for public health practitioners in Ukraine",
+      "link": "https://openwho.org/channel/PRSEAH+for+public+health+practitioners+in+Ukraine/527797",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 264,
+    "details": [],
+    "positives": [],
+    "contentLength": 195569
+  },
+  {
+    "record": {
+      "id": "172433e64280ada1fbf00932",
+      "learningName": "Ready4Response Tier 1: Response context and principles",
+      "link": "https://openwho.org/playlist/dedicated/494536/0_zaoidkyu/0_08q2gf61",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 289,
+    "details": [],
+    "positives": [],
+    "contentLength": 172430
+  },
+  {
+    "record": {
+      "id": "2b46dec2a3fc62450eaeb6b6",
+      "learningName": "Ready4Response Tier 2: Systems, structures and skills",
+      "link": "https://openwho.org/playlist/dedicated/494536/0_a0z75vwt/0_loggfb63",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 297,
+    "details": [],
+    "positives": [],
+    "contentLength": 172066
+  },
+  {
+    "record": {
+      "id": "0e3c5c611ca15b3594252e7e",
+      "learningName": "Regulatory preparedness to authorize the use of pandemic vaccines in importing countries",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOA+0027_REGPREP_EN+2023?from=discovery&source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 72,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "9abe5ccbe5937acf57d1be63",
+      "learningName": "Response Preparedness for Zoonotic Disease Outbreaks Using a One-Health Approach",
+      "link": "https://openwho.org/playlist/dedicated/525718/0_drmgsh37/0_7hsnn5w1",
+      "technicalArea": "Zoonotic diseases",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 308,
+    "details": [],
+    "positives": [],
+    "contentLength": 172196
+  },
+  {
+    "record": {
+      "id": "1a3a6f54cd56f5cc1883fcff",
+      "learningName": "Risk communication essentials",
+      "link": "https://openwho.org/playlist/dedicated/501691/0_8e5kljir/0_2q00gfhv",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 365,
+    "details": [],
+    "positives": [],
+    "contentLength": 171526
+  },
+  {
+    "record": {
+      "id": "99f7a9fbb14981c8671ef774",
+      "learningName": "SARS-CoV-2 antigen rapid diagnostic testing",
+      "link": "https://openwho.org/playlist/dedicated/529855/0_9v311fgo/0_tkgay1wn",
+      "technicalArea": "Laboratory",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 315,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 172037
+  },
+  {
+    "record": {
+      "id": "e8379f122ee74710376ba1e9",
+      "learningName": "Strengthening collaboration between human and animal health sectors for improved health security",
+      "link": "https://openwho.org/playlist/dedicated/525718/0_frz2e7kc/0_e9jqd26k",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 285,
+    "details": [],
+    "positives": [],
+    "contentLength": 173210
+  },
+  {
+    "record": {
+      "id": "244f1aef4db260fc6cf880d1",
+      "learningName": "Strengthening the health sector's role in the sound management of chemicals",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOA+0033_CMM_EN+2023?from=discovery&source=edX",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 76,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "cbe3ff3c08759354e114fc39",
+      "learningName": "The Joint Risk Assessment (JRA OT): A Training for Implementers",
+      "link": "https://openwho.org/media/JRA%20Training%20for%20implementers%3A%20Overview%20/0_5wvf6ayl/525718",
+      "technicalArea": "Zoonotic diseases",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 266,
+    "details": [],
+    "positives": [],
+    "contentLength": 175802
+  },
+  {
+    "record": {
+      "id": "bd93b44036005f987fcb3fbe",
+      "learningName": "The Role of Parliaments and Parliamentarians in Strengthening Health Security Preparedness",
+      "link": "https://openwho.org/playlist/dedicated/538740/0_q449ey6u/0_iq88tn96",
+      "technicalArea": "Leadership",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 279,
+    "details": [],
+    "positives": [],
+    "contentLength": 171479
+  },
+  {
+    "record": {
+      "id": "c84107fd9623b478f3162740",
+      "learningName": "Use of Epidemic Intelligence systems with a particular focus on event-based surveillance for pandemic preparedness",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0118EN+2025_Q1?source=edX",
+      "technicalArea": "Surveillance",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 138,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "249b5e6c6a81c0fce155a81c",
+      "learningName": "Wheelchairs in emergencies",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/wheelchairs-in-emergencies-en?source=gateway",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 147,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "ef3efe1bf8062d1879abb805",
+      "learningName": "WHO costing and budgeting tool for national action plans on antimicrobial resistance",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOAcademy-Hosted+H0043EN+H0043EN_Q4_2024?source=edX",
+      "technicalArea": "Project management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 96,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "50742e79bea5206eb231f587",
+      "learningName": "WHO Standard Operating Procedures (SOPs) for Emergencies",
+      "link": "https://openwho.org/channel/WHO+Standard+Operating+Procedures+for+Emergencies/495160",
+      "technicalArea": "Human resources",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 275,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 278706
+  },
+  {
+    "record": {
+      "id": "0e1ddfc9e89b7d3d6c6bf78a",
+      "learningName": "WHO/ICRC Basic Emergency Care: Conflict-Related Injuries",
+      "link": "https://openwho.org/playlist/dedicated/537171/0_an1ufwse/0_tk4xv7rb",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 318,
+    "details": [],
+    "positives": [],
+    "contentLength": 172312
+  },
+  {
+    "record": {
+      "id": "ee0aaa49e763e36edea95f84",
+      "learningName": "WHO-ICRC Basic Emergency Care: approach to the acutely ill and injured",
+      "link": "https://openwho.org/playlist/dedicated/537171/0_7mm5wr4l/0_lic60gzx",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 331,
+    "details": [],
+    "positives": [],
+    "contentLength": 173227
+  },
+  {
+    "record": {
+      "id": "dec78a2654399112899b79ed",
+      "learningName": "Kazakhstan Country-Focused Leadership in Emergencies Course",
+      "link": "",
+      "technicalArea": "Leadership",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "9a5d4d00eb7bcf3391fb0edd",
+      "learningName": "An integrated approach to building health systems resilience",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOAcademy-Hosted+H0060EN+H0060EN_Q4_2024?source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 147,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "7428007cf628c409a50f8f68",
+      "learningName": "Advancing national civil-military collaboration to strengthen health emergency preparedness",
+      "link": "https://openwho.org/playlist/dedicated/527251/0_5qpallbj/0_iq88tn96",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 311,
+    "details": [],
+    "positives": [],
+    "contentLength": 171480
+  },
+  {
+    "record": {
+      "id": "4552b2d59e95c8f78cb4bbb5",
+      "learningName": "An introduction to the people-centred approach to addressing antimicrobial resistance in human health",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOAcademy-Hosted+H0040EN+H0040EN_Q4_2024?from=discovery&source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 82,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "d40e4ce98b61a40520b989a4",
+      "learningName": "Antimicrobial Stewardship: A competency-based approach",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOAcademy-Hosted+H0098EN+H0098EN_Q4_2024?source=edX",
+      "technicalArea": "Health services provision",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 142,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "fe9bf9d323e7cffad26136e2",
+      "learningName": "Assistive products in emergencies",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/assistive-products-in-emergencies-en?source=gateway",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 106,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "87ab2d29235171fc83316ae4",
+      "learningName": "Avian and other zoonotic influenza: Introduction",
+      "link": "https://openwho.org/media/Introduction%20Zoonotic%20Influenza/0_cq1foy2r/503150",
+      "technicalArea": "Zoonotic diseases",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 295,
+    "details": [],
+    "positives": [],
+    "contentLength": 175692
+  },
+  {
+    "record": {
+      "id": "f5ba28f2a3cff03f46569673",
+      "learningName": "Basic Emergency Care Provider Course",
+      "link": "",
+      "technicalArea": "Health services provision",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "955edc8e991f1efd9a25c790",
+      "learningName": "Basic Precautions: Hand Hygiene (COVID-19)",
+      "link": "https://www.campusvirtualsp.org/es/node/29045",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 539,
+    "details": [],
+    "positives": [],
+    "contentLength": 27307
+  },
+  {
+    "record": {
+      "id": "a667e36bf028fee970129443",
+      "learningName": "CBDE Awareness: Recognizing Signs of Deliberate Release of Chemical or Biological Agents",
+      "link": "https://openwho.org/playlist/dedicated/501116/0_gax9z8nk/0_31qixco6",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 275,
+    "details": [],
+    "positives": [],
+    "contentLength": 172173
+  },
+  {
+    "record": {
+      "id": "99d6220483dc0f9c63860cfb",
+      "learningName": "CBDE: Preparedness for Health First Responders",
+      "link": "https://openwho.org/playlist/dedicated/501116/0_w27tnxn2/0_bfjewsep",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 288,
+    "details": [],
+    "positives": [],
+    "contentLength": 172481
+  },
+  {
+    "record": {
+      "id": "7ae7b3e863dabefc1b6bf2c5",
+      "learningName": "CBDE: Preparedness for Public Health Professionals",
+      "link": "https://openwho.org/playlist/dedicated/501116/0_y3z538el/0_vv1olcc3",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 298,
+    "details": [],
+    "positives": [],
+    "contentLength": 173758
+  },
+  {
+    "record": {
+      "id": "3424a047bcae05045f501bc5",
+      "learningName": "Chemical Hazards Part I: An Introduction to Chemical Hazards",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOA+0037A_CHEMHAZ_EN+2024?source=edX",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 77,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "1bc7a554cff863404eee44d1",
+      "learningName": "Chemical Hazards Part II: Elements for Assessment",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOA+0037B_CHEMHAZ_EN+2024?source=edX",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 80,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "97da0d222f72439629f9390a",
+      "learningName": "Chemical Hazards Part III: Immediate Actions at the Event Site",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOA+0037C_CHEMHAZ_EN+2024?source=edX",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 1097,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "954b8310f57871286194ea20",
+      "learningName": "Chemical, Biological, Radiological and Nuclear (CBRN) considerations in Mass Gatherings",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=388",
+      "technicalArea": "Chemical, biological, radiological and nuclear emergencies",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 332,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "042356a8d27e03ab4ced753e",
+      "learningName": "Cholera Outbreaks: Emergency Preparedness and Response",
+      "link": "https://openwho.org/playlist/dedicated/493105/0_txbklgi0/0_rusjh8yz",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 280,
+    "details": [],
+    "positives": [],
+    "contentLength": 171504
+  },
+  {
+    "record": {
+      "id": "c526933db810e313000a9dc4",
+      "learningName": "Clinical management of COVID-19 respiratory equipment",
+      "link": "https://openwho.org/playlist/dedicated/529855/0_hor2h1ly/0_jdpzzxap",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 316,
+    "details": [
+      "Found: \"aDFs\""
+    ],
+    "positives": [],
+    "contentLength": 171866
+  },
+  {
+    "record": {
+      "id": "975d290f8bb024ecdf56c54a",
+      "learningName": "Clinical management of patients with COVID19 General considerations",
+      "link": "https://openwho.org/playlist/dedicated/500316/0_5lox1o7u/0_tu656kc3",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 309,
+    "details": [],
+    "positives": [],
+    "contentLength": 172624
+  },
+  {
+    "record": {
+      "id": "8651e0294eb66d852c3115e0",
+      "learningName": "Clinical management of patients with COVID19 Initial approach to the acutely ill patient",
+      "link": "https://openwho.org/playlist/dedicated/500316/0_xfe055ah/0_sgcgs6yg",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 326,
+    "details": [],
+    "positives": [
+      "Found: \"course content\""
+    ],
+    "contentLength": 173207
+  },
+  {
+    "record": {
+      "id": "558fea70d0f9675fc1345261",
+      "learningName": "Clinical management of patients with COVID19 Investigations and care for mild moderate and severe disease",
+      "link": "https://openwho.org/playlist/dedicated/500316/0_5f1x2wvv/0_jlfj5odb",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 334,
+    "details": [],
+    "positives": [],
+    "contentLength": 172950
+  },
+  {
+    "record": {
+      "id": "15ff6146d759060312f9284e",
+      "learningName": "Clinical management of patients with COVID19 Rehabilitation of patients with COVID19",
+      "link": "https://openwho.org/playlist/dedicated/500316/0_ic95heel/0_ebpgu9oh",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 391,
+    "details": [],
+    "positives": [],
+    "contentLength": 172510
+  },
+  {
+    "record": {
+      "id": "fa65b5e34114b31b01cb6b68",
+      "learningName": "Controlling the Spread of COVID-19 at Ground Crossings",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=333",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 326,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "76f4da2705df645a033d2b6a",
+      "learningName": "COVID-19 Simulation Exercises Packages",
+      "link": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/training/simulation-exercise",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "Webpage",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 206,
+    "details": [],
+    "positives": [],
+    "contentLength": 105062
+  },
+  {
+    "record": {
+      "id": "92c09ee113c0680df10359d3",
+      "learningName": "COVID-19: Putting on and Taking off Personal Protective Equipment (PPE)",
+      "link": "https://www.campusvirtualsp.org/es/node/29023",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 536,
+    "details": [],
+    "positives": [],
+    "contentLength": 26498
+  },
+  {
+    "record": {
+      "id": "f90376263a7633bcbce9caa3",
+      "learningName": "COVID-19: risk communication and community engagement",
+      "link": "https://openwho.org/playlist/dedicated/529855/0_bth07gtj/0_wlhik4bk",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 305,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 173482
+  },
+  {
+    "record": {
+      "id": "04ef654ec8de26853e166d47",
+      "learningName": "Early Warning and Response Training",
+      "link": "",
+      "technicalArea": "Surveillance",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "299126bf9caf8cada5a14ad5",
+      "learningName": "Ebola - Entry Screening at Ports, Airports and Land Crossings",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=103",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 274,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "d2a2bc326b68fc290c2a4035",
+      "learningName": "Ebola - Exit Screening at Ports, Airports and Land Crossings",
+      "link": "https://extranet.who.int/hslp/training/enrol/index.php?id=98",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 263,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"<form class=\"mt-3\" action=\"https://extranet.who.in\"",
+      "Found: \"<input type=\"password\" name=\"password\" id=\"passwor\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 30918
+  },
+  {
+    "record": {
+      "id": "390acf0fc022e7e20175a59a",
+      "learningName": "Ebola and Marburg diseases screening and treatment center design",
+      "link": "https://openwho.org/playlist/dedicated/536527/0_rt7m1knx/0_j68o40ng",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 300,
+    "details": [],
+    "positives": [],
+    "contentLength": 171486
+  },
+  {
+    "record": {
+      "id": "fb460a78295e7db39ad2603f",
+      "learningName": "Clinical management of Ebola virus disease",
+      "link": "https://openwho.org/media/Ebola%20Module%201%3A%20Screening%20and%20triage%3A%20Recognize%20suspect%20patients%20with%20Ebola%20early/0_guwpwaxh/536527",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 258,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 176175
+  },
+  {
+    "record": {
+      "id": "28707ecc01d943cd8cbc22a7",
+      "learningName": "Emergency Preparedness and IHR Compliance Simulation",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOA+0019_EPIC_EN+2024?from=discovery&source=edX",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 179,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "56aaec5c0d3267bcbf1d6f0d",
+      "learningName": "Emerging respiratory viruses, including COVID-19: methods of detection, prevention, response, and control",
+      "link": "https://www.campusvirtualsp.org/es/node/28738",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 556,
+    "details": [],
+    "positives": [],
+    "contentLength": 26030
+  },
+  {
+    "record": {
+      "id": "0b7d2c711e025aaf4714f1d3",
+      "learningName": "ePROTECT Respiratory Infections: Occupational Health and Safety (COVID-19)",
+      "link": "https://www.campusvirtualsp.org/es/node/28882",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 553,
+    "details": [],
+    "positives": [],
+    "contentLength": 25097
+  },
+  {
+    "record": {
+      "id": "7c143a1f42c06161150d0359",
+      "learningName": "EVD - GO Package",
+      "link": "https://extranet.who.int/hslp/content/evd-go-package",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "HSLP",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 1479,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"unauthorized\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 63356
+  },
+  {
+    "record": {
+      "id": "6071e6afcc719a14165764b0",
+      "learningName": "EVD Preparedness Training Package (WHO Regional Office for Africa – version1)",
+      "link": "https://extranet.who.int/hslp/content/evd-training-package-1",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "HSLP",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 888,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"unauthorized\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 72412
+  },
+  {
+    "record": {
+      "id": "50e2cba46710419f0eba0eb6",
+      "learningName": "EVD Rapid Response Teams Training Package",
+      "link": "https://extranet.who.int/hslp/content/evd-rrt-training-package",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "HSLP",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 1686,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"unauthorized\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 104866
+  },
+  {
+    "record": {
+      "id": "263c4ea63e9a291caf9db501",
+      "learningName": "EVD Training Package - gCHV Training on EBOLA Flipbook and IPC",
+      "link": "https://extranet.who.int/hslp/content/training-package-2",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "HSLP",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 753,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"unauthorized\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 29236
+  },
+  {
+    "record": {
+      "id": "e28bbfe2823992821c34152e",
+      "learningName": "EVD Training Package - Providing Safe Care in the Community",
+      "link": "https://extranet.who.int/hslp/content/training-package-3",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "HSLP",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 823,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"unauthorized\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 29546
+  },
+  {
+    "record": {
+      "id": "23644fe9a2a4cd5642b3dc6b",
+      "learningName": "Event Information Site for National IHR Focal Points (EIS)",
+      "link": "https://extranet.who.int/hslp/training/course/index.php?categoryid=32",
+      "technicalArea": "Surveillance",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 560,
+    "details": [
+      "Known auth domain: extranet.who.int"
+    ],
+    "positives": [],
+    "contentLength": 46647
+  },
+  {
+    "record": {
+      "id": "6c8d6fbc44e8107a1483a06d",
+      "learningName": "Event Management at Points of Entry",
+      "link": "https://extranet.who.int/hslp/training/course/index.php?categoryid=33",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "HSLP",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 2082,
+    "details": [
+      "Known auth domain: extranet.who.int"
+    ],
+    "positives": [],
+    "contentLength": 46593
+  },
+  {
+    "record": {
+      "id": "78c75cebe8f207018206bf38",
+      "learningName": "Facilitation skills for workshops and trainings (ToT)",
+      "link": "",
+      "technicalArea": "IHR Coordination and National IHR Focal Point Functions",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "6231d7d5a1ed44685efefa69",
+      "learningName": "Fast Track Training on Public Health Emergencies",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "a5b16b19badb07bffd705011",
+      "learningName": "Global Laboratory Leadership Programme Learning Package",
+      "link": "https://extranet.who.int/hslp/gllp",
+      "technicalArea": "Laboratory",
+      "platform": "HSLP",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 1980,
+    "details": [
+      "Known auth domain: extranet.who.int",
+      "Found: \"unauthorized\"",
+      "Found: \"saml\"",
+      "Redirects to SSO/login page"
+    ],
+    "positives": [],
+    "contentLength": 367716
+  },
+  {
+    "record": {
+      "id": "6b4577b2ec2cc2dcb2cf0972",
+      "learningName": "Go.Data: Building additional dashboards in Power BI",
+      "link": "https://openwho.org/playlist/dedicated/502240/0_rwrsmdul/0_6fjycl0h",
+      "technicalArea": "Surveillance",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 339,
+    "details": [],
+    "positives": [
+      "Found: \"Module 0\""
+    ],
+    "contentLength": 172672
+  },
+  {
+    "record": {
+      "id": "5b2c752a25fe9dda529f4313",
+      "learningName": "GOARN Outbreak Response Leadership Training",
+      "link": "https://goarn.who.int/handbook",
+      "technicalArea": "Leadership",
+      "platform": "GOARN",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 228,
+    "details": [],
+    "positives": [
+      "Found: \"player.vimeo.com\""
+    ],
+    "contentLength": 12793
+  },
+  {
+    "record": {
+      "id": "af07152905b7c8a40c02912c",
+      "learningName": "GOARN Outbreak Response Scenario Training",
+      "link": "https://goarn.who.int/handbook/annex9",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "GOARN",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 196,
+    "details": [],
+    "positives": [
+      "Found: \"player.vimeo.com\""
+    ],
+    "contentLength": 12813
+  },
+  {
+    "record": {
+      "id": "760b2597e5a4fff5478f3d52",
+      "learningName": "Infection prevention and control for COVID-19 in health care and community settings",
+      "link": "https://openwho.org/playlist/dedicated/521973/0_h5hxtqyg/0_j4iv6bgk",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 302,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 171577
+  },
+  {
+    "record": {
+      "id": "83dfa0ef49ee26c13fc2324e",
+      "learningName": "Influenza prevention and control",
+      "link": "https://openwho.org/playlist/dedicated/501679/0_xor51fug/0_jbf659cx",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 584,
+    "details": [],
+    "positives": [],
+    "contentLength": 172869
+  },
+  {
+    "record": {
+      "id": "548370b5e26eadccefd35d50",
+      "learningName": "PHEOC intermediate and advanced courses",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "997bc1616bcbd41e05e90043",
+      "learningName": "Simulation Exercise Management: Introduction",
+      "link": "https://openwho.org/playlist/dedicated/500867/0_sz4szoxc/0_qkklla2u",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 516,
+    "details": [],
+    "positives": [],
+    "contentLength": 171748
+  },
+  {
+    "record": {
+      "id": "659b14b93e298bf0fcfb8202",
+      "learningName": "Six steps for sustainable implementation of national action plans on antimicrobial resistance",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOAcademy-Hosted+H0042EN+H0042EN_Q4_2024?source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 148,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "48861951438c31db703360e2",
+      "learningName": "SocialNet: Empowering communities before, during, and after an infectious disease outbreak",
+      "link": "https://openwho.org/playlist/dedicated/501691/0_gu0eoh5o/0_udh6fa42",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 273,
+    "details": [],
+    "positives": [],
+    "contentLength": 173894
+  },
+  {
+    "record": {
+      "id": "4138cb7967dc306a0c69043e",
+      "learningName": "WHO Simulation Exercise Management Training",
+      "link": "https://who.csod.com/ui/lms-learning-details/app/course/01ac7d5d-5d87-4c89-8fd0-99998c806a50",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "iLearn",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 277,
+    "details": [],
+    "positives": [],
+    "contentLength": 19099
+  },
+  {
+    "record": {
+      "id": "c591480388870a91e87d7723",
+      "learningName": "Introduction to the International Health Regulations Monitoring and Evaluation Framework",
+      "link": "https://web-staging.lxp.academy.who.int/coursewares/course-v1:WHOA+0093_IHRME_EN+2024?source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 76,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "1be0174ec391f61f14309908",
+      "learningName": "Leadership and programme management in infection prevention and control module, Trainers guide",
+      "link": "https://cdn.who.int/media/docs/default-source/integrated-health-services-(ihs)/core-components/trainer-guide.pdf?sfvrsn=aa7f38b1_4&download=true",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 641,
+    "details": [],
+    "positives": [],
+    "contentLength": 3142590
+  },
+  {
+    "record": {
+      "id": "0b3b1463ca5cfa16ef361551",
+      "learningName": "Infection prevention and control measures in health-care settings for Ebola or Marburg disease outbreaks",
+      "link": "https://openwho.org/playlist/dedicated/521973/0_qv81s96r/0_w6xwueg3",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 380,
+    "details": [],
+    "positives": [
+      "Found: \"Module 2\""
+    ],
+    "contentLength": 172007
+  },
+  {
+    "record": {
+      "id": "ecf6cfa34910de87bf4081ff",
+      "learningName": "Prevention of surgical site infection (SSI) – December 2018 update",
+      "link": "https://www.who.int/teams/integrated-health-services/infection-prevention-control/ipc-training-resources#ssi",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "Webpage",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 214,
+    "details": [],
+    "positives": [],
+    "contentLength": 132837
+  },
+  {
+    "record": {
+      "id": "6c6e42f42061327276d5ef64",
+      "learningName": "Prevention of catheter-associated urinary tract infections (CAUTI)",
+      "link": "https://www.who.int/teams/integrated-health-services/infection-prevention-control/ipc-training-resources#CAUTI",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "Webpage",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 225,
+    "details": [],
+    "positives": [],
+    "contentLength": 132837
+  },
+  {
+    "record": {
+      "id": "5199c74ad3996d03cf99fd46",
+      "learningName": "Standard precautions: Injection safety and needle-stick injury management",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0113EN+2025_Q1",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 98,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "5dfbb5648caa3598281aabc1",
+      "learningName": "IPC to combat AMR in health care settings: trainer guide",
+      "link": "https://www.who.int/teams/integrated-health-services/infection-prevention-control/ipc-and-antimicrobial-resistance",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "Webpage",
+      "modality": "toolkit",
+      "modalityRaw": "Training toolkits and packages"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 175,
+    "details": [],
+    "positives": [],
+    "contentLength": 99241
+  },
+  {
+    "record": {
+      "id": "053c01cf1f033f3119a8a8aa",
+      "learningName": "Clinical management of respiratory diphtheria",
+      "link": "https://openwho.org/media/Diphtheria%20Module%204%3A%20Infection%20Prevention%20and%20Control%20(IPC)/0_jqyyet8x/536512",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 248,
+    "details": [],
+    "positives": [
+      "Found: \"Module 4\""
+    ],
+    "contentLength": 175973
+  },
+  {
+    "record": {
+      "id": "b3f9c53c6606b2b949669fe5",
+      "learningName": "Measles outbreak training",
+      "link": "https://openwho.org/playlist/dedicated/542027/0_ad0vqtxk/0_mzwkn3v5",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 400,
+    "details": [],
+    "positives": [],
+    "contentLength": 171309
+  },
+  {
+    "record": {
+      "id": "21428b2e3eefe4e15a7114e0",
+      "learningName": "Water and Sanitation for Health Facility Improvement Tool (WASH FIT) for improved quality of care",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0046EN+H0046EN_Q4_2024?from=discovery&source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 111,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "c89bb22a4f818c07b6f107ac",
+      "learningName": "My Five Moments of Hands Hygiene",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOA+0018_MFM_EN+2022?from=discovery&source=edX",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 115,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "54b064fe94eeeb25b63e824d",
+      "learningName": "Antimicrobial Resistance in the environment: key concepts and interventions",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0049EN+H0049EN_Q4_2024?from=discovery&source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 172,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "7afd1cbb003a6eaccfc48879",
+      "learningName": "Standard precautions: Waste management",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0109EN+2025_Q1?source=edX",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 107,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "fc167fb677d0fc1ff4fad04e",
+      "learningName": "Standard precautions: Hand hygiene",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0108EN+2025_Q1?source=edX",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 75,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "1ea8772ce1a4466ef02045b3",
+      "learningName": "Decontamination and sterilization of medical devices",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0110EN+2025_Q1",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 115,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "a644bce75b95c8bdd38a7f0d",
+      "learningName": "Transmission-based Precautions",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0114EN+2025_Q1",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 123,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "0cfd67207ec1f6be4f6f7693",
+      "learningName": "Ready4Response Tier 3: Activation process",
+      "link": "https://openwho.org/playlist/dedicated/494536/0_aylkqv61/0_o9y26qzb",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 320,
+    "details": [],
+    "positives": [],
+    "contentLength": 172979
+  },
+  {
+    "record": {
+      "id": "ddccbab6e321a92143b7dbb6",
+      "learningName": "Infection Prevention and Control in Maternal and Neonatal Care",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0100EN_Q4_2024+2024_Q4?from=discovery&source=edX",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 272,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "8cd0e3e0bbcc0b2f3b36abde",
+      "learningName": "Prevention of vascular catheters-associated bloodstream infections",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0099EN+H0099EN_Q4_2024",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 72,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "c957a51aa05cd0792b565358",
+      "learningName": "Antimicrobial resistance and infection prevention and control",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0098EN+H0098EN_Q4_2024?from=discovery&source=edX",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 113,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "097d386147fcb8f1c1737457",
+      "learningName": "Public Health Emergency Operations Centre (PHEOC)",
+      "link": "https://openwho.org/emergencymgmt/577192/Public+Health+Emergency+Operations+Centre",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 291,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 378135
+  },
+  {
+    "record": {
+      "id": "223ec8820eca0d027b4bc5af",
+      "learningName": "Module 1: Introduction to vSHOC",
+      "link": "https://who.csod.com/ui/lms-learning-details/app/course/4b567b8d-b6b8-4fd7-abdd-5365dab37ea2",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "iLearn",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 271,
+    "details": [],
+    "positives": [],
+    "contentLength": 19099
+  },
+  {
+    "record": {
+      "id": "e2d81130783bafda40569875",
+      "learningName": "Module 2: vSHOC Training for Advanced Users",
+      "link": "https://who.csod.com/ui/lms-learning-details/app/course/3fec7503-ee30-4804-9d43-0d7db8ed4155",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "iLearn",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 406,
+    "details": [],
+    "positives": [],
+    "contentLength": 19099
+  },
+  {
+    "record": {
+      "id": "7b69ea5cc262dd8c7d0e7b8a",
+      "learningName": "Module 3: vSHOC Emergency Human Resources",
+      "link": "https://who.csod.com/ui/lms-learning-details/app/course/5a7d5d19-5427-4456-b009-6b93d2636cba",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "iLearn",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 278,
+    "details": [],
+    "positives": [],
+    "contentLength": 19099
+  },
+  {
+    "record": {
+      "id": "0ba885172064ed8cec51890d",
+      "learningName": "Introduction to Event Management System (EMS)",
+      "link": "https://who.csod.com/ui/lms-learning-details/app/course/e5194f52-4d3f-4e71-9e86-26b788709135",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "iLearn",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 279,
+    "details": [],
+    "positives": [],
+    "contentLength": 19099
+  },
+  {
+    "record": {
+      "id": "ae814c863d9b43141a888c09",
+      "learningName": "Data procedures in Event Management System (EMS)",
+      "link": "https://who.csod.com/ui/lms-learning-details/app/course/3475ee5f-244e-438f-98d1-b1d5644e4800",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "iLearn",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 319,
+    "details": [],
+    "positives": [],
+    "contentLength": 19099
+  },
+  {
+    "record": {
+      "id": "12b69b2670df5f1a4b831958",
+      "learningName": "EWARS in a box: electronic early warning, alert and response system implementation in emergencies",
+      "link": "https://openwho.org/playlist/dedicated/541847/0_zsd05l6v/0_och981pp",
+      "technicalArea": "Surveillance",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 276,
+    "details": [],
+    "positives": [],
+    "contentLength": 171589
+  },
+  {
+    "record": {
+      "id": "97389e96d1c93fd2f5dd0e1c",
+      "learningName": "PHEOC Virtual TableTop Exercsie",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "7a0b52a9ec667ed5c7d63231",
+      "learningName": "Virtual Course on Evaluation of Health Facilities using the Hospital Safety Index (HSIv2)",
+      "link": "https://campus.paho.org/en/course/health-facilities-assessment-using-hospital-safety-index",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "Virtual campus for public health",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 574,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 29730
+  },
+  {
+    "record": {
+      "id": "3bf7ddc669cce90adb229c38",
+      "learningName": "WHO Simulation Exercise management training course",
+      "link": "",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "1fce0763d389b58711215c93",
+      "learningName": "WHO IAR&AAR management course",
+      "link": "",
+      "technicalArea": "Research & monitoring and evaluation",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "2ae6387211e54841b264e9ff",
+      "learningName": "Strategic Risk Assessment training for National and Subnational Facilitators using the WHO STAR tool kit",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "3dd73d7e53ce64f880a0dc62",
+      "learningName": "Hospital Safety Index (HSI) Training",
+      "link": "",
+      "technicalArea": "Health services provision",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "757253a12b6a089d7c470585",
+      "learningName": "Mass Casualty Management Planning Workshop",
+      "link": "",
+      "technicalArea": "Health services provision",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "36fe8d7441c37c52f870dd7c",
+      "learningName": "Hospital Emergency Response Planning Workshop",
+      "link": "",
+      "technicalArea": "Health services provision",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "39d9440a385a12a3c3654f0b",
+      "learningName": "NAPHS Training workshop",
+      "link": "",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "35ad7880adcd7b7d895103be",
+      "learningName": "Introduction to PoE requirements under the IHR",
+      "link": "",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "a242edb7c3ed1d6cf1d2815b",
+      "learningName": "Assessment of core IHR public health capacities at PoE",
+      "link": "",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "47564438f847860d69cc84f5",
+      "learningName": "Ship sanitation for the early detection, reporting and management of public health events particularly on board ships",
+      "link": "",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "287617986957fb0cd082e36d",
+      "learningName": "Development of a public health contingency plan for PoE",
+      "link": "",
+      "technicalArea": "Points of entry (PoEs) and border health",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "5ffe9e740a2c8353550cac3f",
+      "learningName": "Global competency standards for the provision of health services to refugees and migrants",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0125EN+2025_Q2",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 68,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "f36d86593d7409fbaf5bbc48",
+      "learningName": "Health Emergency Prevention, Preparedness, Response and Resilience (HEPR)",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0089EN+2025_Q1?source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 75,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "640128a37ea326ea98f53ce4",
+      "learningName": "RCCE-IM for CBRN Preparedness and Response",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "d9de31a9204fa09f2fc78f1b",
+      "learningName": "RCCE-IM for Mass Gatherings",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "c23d46706b08e4b90865b7fb",
+      "learningName": "Social Listening",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "3f120d65a2b9825718c434d5",
+      "learningName": "RCCE-IM in Epidemiology and Outbreak Response",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "3a81a70fdfd8c9deec851236",
+      "learningName": "RCCE-IM for Community Health Workers",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "in_person",
+      "modalityRaw": "In-person"
+    },
+    "status": "in_person",
+    "error": null,
+    "details": [
+      "In-person training - no URL needed"
+    ]
+  },
+  {
+    "record": {
+      "id": "bc60f377a0372097b2fe5b8a",
+      "learningName": "Community Health Workers Promoting COVID-19 Vaccination",
+      "link": "https://www.emro.who.int/courses/covid-19-vaccine/index.htm",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "Webpage",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 359,
+    "details": [],
+    "positives": [],
+    "contentLength": 29678
+  },
+  {
+    "record": {
+      "id": "fd1a97b916d321835cf151e4",
+      "learningName": "Effective Online Training",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "097bb9517bab53fbb7d4e8fd",
+      "learningName": "Developing behaviour-based training curriculum",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "90fdb84a99eb04b397dadf86",
+      "learningName": "Supporting partners across the capacity-building continuum",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "fd78a302f8b94e6c49d6f7cc",
+      "learningName": "Developing behaviour-change-based messages",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "91fb04418f6488c360afd563",
+      "learningName": "RCCE-IM in the university curricula in faculties of Medicine, Comms and Public Health",
+      "link": "",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "",
+      "modality": "blended",
+      "modalityRaw": "Blended"
+    },
+    "status": "warning",
+    "error": "No URL provided for online training",
+    "details": []
+  },
+  {
+    "record": {
+      "id": "2b04e0d65f94ed475f762f05",
+      "learningName": "Preventing rheumatic fever and rheumatic heart disease in the community",
+      "link": "https://www.emro.who.int/courses/preventing-rf-rhd/index.htm",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "Webpage",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 53,
+    "details": [],
+    "positives": [],
+    "contentLength": 29689
+  },
+  {
+    "record": {
+      "id": "1ad54b877cd90185f907dafa",
+      "learningName": "Open Source Fundamentals",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0068EN+2025_Q3?source=edX",
+      "technicalArea": "Digital health",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 70,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "75e5c06f2e4a0b05f87c27eb",
+      "learningName": "Outbreak investigations in health facilities",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOAcademy-Hosted+H0080EN+2025_Q1?from=discovery&source=edX",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 102,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "976db83c9bd531f335739bda",
+      "learningName": "Health systems for health security",
+      "link": "https://whoacademy.org/coursewares/course-v1:WHOA+0079_HS_EN+2024?from=discovery&source=edX",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 84,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "9567b9ba41cef73879515e99",
+      "learningName": "Virtual Course - Medical Coordination and Information Cells (CICOM)",
+      "link": "https://whoacademy.org/coursewares/PAHO_VCPH_31285?source=gateway",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 89,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "98efd2600d1bb748b9b611fd",
+      "learningName": "Psychological first aid (PFA) in emergency management (Primera ayuda psicológica (PAP) en el manejo de emergencias)",
+      "link": "https://whoacademy.org/coursewares/PAHO_VCPH_28927?source=gateway",
+      "technicalArea": "Health services provision",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 72,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "bc994b006358885b064968f7",
+      "learningName": "Prevention and Control of infections in health emergencies and disasters (Prevención y Control de Infecciones en emergencias de salud y desastres )",
+      "link": "https://whoacademy.org/coursewares/PAHO_VCPH_100907?source=gateway",
+      "technicalArea": "Infection prevention and control (IPC) & safe environment in health facilities",
+      "platform": "WHO Academy",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 103,
+    "details": [],
+    "positives": [],
+    "contentLength": 51985
+  },
+  {
+    "record": {
+      "id": "23791a222faa969d503fbc3a",
+      "learningName": "Rapid Response Teams (RRT) Training Programme",
+      "link": "https://openwho.org/channel/Rapid+Response+Teams+%28RRT%29+Training+Programme/606945",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 282,
+    "details": [],
+    "positives": [],
+    "contentLength": 257348
+  },
+  {
+    "record": {
+      "id": "0f956ad0ebefc1294af8ab38",
+      "learningName": "Defining an information environment assessment framework",
+      "link": "https://openwho.org/playlist/dedicated/499738/0_fpv6zcpi/0_eodu8xbe",
+      "technicalArea": "Risk communication and community engagement (RCCE)",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 266,
+    "details": [],
+    "positives": [],
+    "contentLength": 171316
+  },
+  {
+    "record": {
+      "id": "bb48085c8742b79911c7d9d0",
+      "learningName": "Unknown",
+      "link": "https://openwho.org/playlist/dedicated/503162/0_eh39zv4c/0_u7qyxu5y",
+      "technicalArea": "Health emergency preparedness and response management",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "auth_required",
+    "statusCode": 200,
+    "error": "Login/registration required",
+    "responseTime": 293,
+    "details": [
+      "Title: \"Screening and treatment facilities design in the context of Mpox outbreaks - OpenWHO.org\""
+    ],
+    "positives": [],
+    "contentLength": 171854
+  },
+  {
+    "record": {
+      "id": "5705ad2753da83a97ca1fe3e",
+      "learningName": "Community First Aid Response Course",
+      "link": "https://openwho.org/playlist/dedicated/631540/0_yd58jxwl/0_8qdpylyv",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 279,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 171350
+  },
+  {
+    "record": {
+      "id": "d0c83072a94969f3f76e26c3",
+      "learningName": "Cholera case management",
+      "link": "https://openwho.org/playlist/dedicated/493105/0_2ag4fqtv/0_s4gyb0h5",
+      "technicalArea": "Health services provision",
+      "platform": "OpenWHO",
+      "modality": "online",
+      "modalityRaw": "Online"
+    },
+    "status": "ok",
+    "statusCode": 200,
+    "error": null,
+    "responseTime": 287,
+    "details": [],
+    "positives": [
+      "Found: \"Module 1\""
+    ],
+    "contentLength": 171210
+  }
+]
