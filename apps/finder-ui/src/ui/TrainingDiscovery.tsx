@@ -36,7 +36,7 @@ const TRAINING_SOURCES = [
     name: "OpenWHO", 
     url: "https://openwho.org/", 
     category: "WHO", 
-    searchUrl: "https://openwho.org/courses?q=",
+    searchUrl: "https://openwho.org/esearch/search?keyword=",
     description: "WHO's interactive learning platform"
   },
   { 
