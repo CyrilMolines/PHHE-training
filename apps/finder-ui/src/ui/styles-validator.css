@@ -189,6 +189,11 @@ body {
   border-color: #9c27b0;
 }
 
+.stat.blended {
+  background: #e0f7fa;
+  border-color: #00acc1;
+}
+
 .stat.clickable {
   cursor: pointer;
   transition: all 0.2s ease;
@@ -206,6 +211,7 @@ body {
 
 .stat.ok.selected { border-color: #2e7d32; border-width: 3px; }
 .stat.in-person.selected { border-color: #7b1fa2; border-width: 3px; }
+.stat.blended.selected { border-color: #00838f; border-width: 3px; }
 .stat.warning.selected { border-color: #e65100; border-width: 3px; }
 .stat.error.selected { border-color: #c62828; border-width: 3px; }
 
@@ -218,6 +224,7 @@ body {
 
 .stat.ok .stat-value { color: #2e7d32; }
 .stat.in-person .stat-value { color: #7b1fa2; }
+.stat.blended .stat-value { color: #00838f; }
 .stat.warning .stat-value { color: #e65100; }
 .stat.error .stat-value { color: #c62828; }
 
@@ -287,6 +294,10 @@ body {
   background: #faf5fc;
 }
 
+.result-row.blended {
+  background: #e0f7fa;
+}
+
 .result-row.auth_required {
   background: #e3f2fd;
 }
@@ -330,6 +341,7 @@ body {
 .result-row.checking .result-status { background: #e3f2fd; color: #1976d2; }
 .result-row.ok .result-status { background: #c8e6c9; color: #2e7d32; }
 .result-row.in_person .result-status { background: #e1bee7; color: #7b1fa2; }
+.result-row.blended .result-status { background: #b2ebf2; color: #00838f; }
 .result-row.auth_required .result-status { background: #bbdefb; color: #1565c0; }
 .result-row.warning .result-status { background: #ffe0b2; color: #e65100; }
 .result-row.error .result-status,

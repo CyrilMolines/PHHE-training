@@ -30,7 +30,7 @@ const CONFIG = {
   }
 };
 
-type LinkStatus = "pending" | "checking" | "ok" | "warning" | "error" | "timeout" | "in_person" | "auth_required";
+type LinkStatus = "pending" | "checking" | "ok" | "warning" | "error" | "timeout" | "in_person" | "blended" | "auth_required";
 
 interface LinkResult {
   record: TrainingRecord;
@@ -145,6 +145,11 @@ export function LinkValidator() {
     return modality.includes("person") || modality.includes("face") || modality.includes("classroom");
   }
 
+  function isBlendedTraining(record: TrainingRecord): boolean {
+    const modality = (record.modalityRaw || record.modality || "").toLowerCase();
+    return modality.includes("blended") || modality.includes("hybrid");
+  }
+
   async function startValidation() {
     if (!records || isChecking) return;
     
@@ -177,11 +182,17 @@ export function LinkValidator() {
       });
 
       if (!url) {
-        // Check if it's in-person training
+        // Check if it's in-person or blended training
         if (isInPersonTraining(record)) {
           setResults(prev => {
             const updated = [...prev];
             updated[i] = { record, status: "in_person", details: "In-person training - no URL needed" };
+            return updated;
+          });
+        } else if (isBlendedTraining(record)) {
+          setResults(prev => {
+            const updated = [...prev];
+            updated[i] = { record, status: "blended", details: "Blended training - URL may vary" };
             return updated;
           });
         } else {
@@ -261,6 +272,7 @@ export function LinkValidator() {
     total: results.length,
     ok: results.filter(r => r.status === "ok").length,
     inPerson: results.filter(r => r.status === "in_person").length,
+    blended: results.filter(r => r.status === "blended").length,
     authRequired: results.filter(r => r.status === "auth_required").length,
     warning: results.filter(r => r.status === "warning").length,
     error: results.filter(r => r.status === "error" || r.status === "timeout").length,
@@ -342,6 +354,13 @@ export function LinkValidator() {
                 <span class="stat-label">In-person</span>
               </div>
               <div 
+                class={`stat blended clickable ${filter === "blended" ? "selected" : ""}`}
+                onClick={() => setFilter(filter === "blended" ? null : "blended")}
+              >
+                <span class="stat-value">{stats.blended}</span>
+                <span class="stat-label">Blended</span>
+              </div>
+              <div 
                 class={`stat warning clickable ${filter === "warning" ? "selected" : ""}`}
                 onClick={() => setFilter(filter === "warning" ? null : "warning")}
               >
@@ -359,7 +378,7 @@ export function LinkValidator() {
 
             {filter && (
               <div class="filter-indicator">
-                Showing: <strong>{filter === "ok" ? "Working" : filter === "in_person" ? "In-person" : filter === "warning" ? "Warnings" : "Broken"}</strong>
+                Showing: <strong>{filter === "ok" ? "Working" : filter === "in_person" ? "In-person" : filter === "blended" ? "Blended" : filter === "warning" ? "Warnings" : "Broken"}</strong>
                 <button class="clear-filter" onClick={() => setFilter(null)}>✕ Clear</button>
               </div>
             )}
@@ -383,6 +402,7 @@ export function LinkValidator() {
                       {r.status === "checking" && <span class="status-icon spin">◌</span>}
                       {r.status === "ok" && <span class="status-icon">✓</span>}
                       {r.status === "in_person" && <span class="status-icon">👤</span>}
+                      {r.status === "blended" && <span class="status-icon">🔀</span>}
                       {r.status === "auth_required" && <span class="status-icon">🔐</span>}
                       {r.status === "warning" && <span class="status-icon">⚠</span>}
                       {(r.status === "error" || r.status === "timeout") && <span class="status-icon">✗</span>}
