@@ -189,6 +189,26 @@ body {
   border-color: #9c27b0;
 }
 
+.stat.clickable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stat.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.stat.selected {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.stat.ok.selected { border-color: #2e7d32; border-width: 3px; }
+.stat.in-person.selected { border-color: #7b1fa2; border-width: 3px; }
+.stat.warning.selected { border-color: #e65100; border-width: 3px; }
+.stat.error.selected { border-color: #c62828; border-width: 3px; }
+
 .stat-value {
   display: block;
   font-size: 28px;
@@ -206,6 +226,35 @@ body {
   color: #666;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* Filter Indicator */
+.filter-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #1565c0;
+}
+
+.clear-filter {
+  background: transparent;
+  border: 1px solid #1565c0;
+  color: #1565c0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.clear-filter:hover {
+  background: #1565c0;
+  color: white;
 }
 
 /* Results */

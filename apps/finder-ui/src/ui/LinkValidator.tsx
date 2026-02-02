@@ -49,6 +49,7 @@ export function LinkValidator() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [filter, setFilter] = useState<string | null>(null);
   const stopRef = useRef(false);
 
   // Load data on mount
@@ -319,32 +320,60 @@ export function LinkValidator() {
             )}
 
             <div class="validator-stats">
-              <div class="stat">
+              <div 
+                class={`stat clickable ${filter === null ? "selected" : ""}`}
+                onClick={() => setFilter(null)}
+              >
                 <span class="stat-value">{stats.total}</span>
                 <span class="stat-label">Total</span>
               </div>
-              <div class="stat ok">
+              <div 
+                class={`stat ok clickable ${filter === "ok" ? "selected" : ""}`}
+                onClick={() => setFilter(filter === "ok" ? null : "ok")}
+              >
                 <span class="stat-value">{stats.ok}</span>
                 <span class="stat-label">Working</span>
               </div>
-              <div class="stat in-person">
+              <div 
+                class={`stat in-person clickable ${filter === "in_person" ? "selected" : ""}`}
+                onClick={() => setFilter(filter === "in_person" ? null : "in_person")}
+              >
                 <span class="stat-value">{stats.inPerson}</span>
                 <span class="stat-label">In-person</span>
               </div>
-              <div class="stat warning">
+              <div 
+                class={`stat warning clickable ${filter === "warning" ? "selected" : ""}`}
+                onClick={() => setFilter(filter === "warning" ? null : "warning")}
+              >
                 <span class="stat-value">{stats.warning}</span>
                 <span class="stat-label">Warnings</span>
               </div>
-              <div class="stat error">
+              <div 
+                class={`stat error clickable ${filter === "error" ? "selected" : ""}`}
+                onClick={() => setFilter(filter === "error" ? null : "error")}
+              >
                 <span class="stat-value">{stats.error}</span>
                 <span class="stat-label">Broken</span>
               </div>
             </div>
 
+            {filter && (
+              <div class="filter-indicator">
+                Showing: <strong>{filter === "ok" ? "Working" : filter === "in_person" ? "In-person" : filter === "warning" ? "Warnings" : "Broken"}</strong>
+                <button class="clear-filter" onClick={() => setFilter(null)}>✕ Clear</button>
+              </div>
+            )}
+
             <div class="validator-results">
-              {results.map((r, i) => (
+              {results
+                .filter(r => {
+                  if (!filter) return true;
+                  if (filter === "error") return r.status === "error" || r.status === "timeout";
+                  return r.status === filter;
+                })
+                .map((r, i) => (
                 <div 
-                  key={i} 
+                  key={r.record.id || i} 
                   class={`result-row ${r.status} ${expandedIndex === i ? "expanded" : ""}`}
                   onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
                 >
