@@ -9,15 +9,30 @@ Just type what you're looking for (e.g., "infection prevention online french")
 
 ---
 
-## 2. Link Validator (Web)
-**Check if training links are broken**
+## 2. Link Validator
 
+### Web Version (Quick Check)
 https://cyrilmolines.github.io/PHHE-training/validator/
 
 - Click **Start Validation** to check all links
 - Click **Stop** to cancel at any time
-- Click any row to see full details
+- Click any stat box to filter results (Working, Broken, etc.)
+- Click any row to expand and see full details
 - Export report when done
+
+> **Note:** Web version does basic reachability checks only. For accurate deep validation, use the command-line version.
+
+### Command-Line Version (Deep Validation)
+```bash
+cd tools/link-validator
+node validate-links.js
+```
+
+This version analyzes actual page content to detect:
+- 404 error pages
+- Login/registration requirements
+- Archived or removed courses
+- Empty or error pages
 
 **Status icons:**
 | Icon | Meaning |
@@ -25,12 +40,30 @@ https://cyrilmolines.github.io/PHHE-training/validator/
 | ✓ | Working - publicly accessible |
 | 🔐 | Login required - works but needs auth |
 | 👤 | In-person - no URL needed |
-| ⚠ | Warning - online training without URL |
+| 🔀 | Blended - hybrid training |
+| ⚠ | Warning - needs review |
 | ✗ | Broken - needs attention |
 
 ---
 
-## 3. Update Training Data
+## 3. Training Discovery
+**Search for new trainings across multiple platforms**
+
+https://cyrilmolines.github.io/PHHE-training/discovery/
+
+- Enter a search term (default: "public health emergency")
+- Click **Search All Sources** to open searches on all platforms
+- Or click **Search** next to individual platforms
+- Compare found trainings against your existing list
+
+**Platforms searched:**
+- OpenWHO, edX, Coursera, FutureLearn
+- CDC TRAIN, FEMA, Kaya, UNHCR
+- ReliefWeb, GOARN LMS
+
+---
+
+## 4. Update Training Data
 **When the SharePoint list changes, update the tools:**
 
 https://cyrilmolines.github.io/PHHE-training/export/
@@ -47,24 +80,13 @@ https://cyrilmolines.github.io/PHHE-training/export/
    - Click **Download demo-trainings.json**
 
 3. **Upload to GitHub**
-   - Click **Open GitHub Upload Page** (or go to: https://github.com/CyrilMolines/PHHE-training/upload/gh-pages)
+   - Click **Open GitHub Upload Page**
    - Drag & drop `demo-trainings.json`
    - Click **Commit changes**
 
 4. **Done!** Changes go live in 1-2 minutes.
 
-> **Note:** You need GitHub collaborator access to upload. Contact the administrator if you don't have access.
-
----
-
-## 4. Training Discovery
-**Find potential new trainings to add**
-
-https://cyrilmolines.github.io/PHHE-training/discovery/
-
-- Check if a URL is already in the list
-- See known training sources
-- Export new finds for review
+> **Note:** You need GitHub collaborator access to upload.
 
 ---
 
@@ -73,9 +95,9 @@ https://cyrilmolines.github.io/PHHE-training/discovery/
 | Task | URL |
 |------|-----|
 | Search trainings | https://cyrilmolines.github.io/PHHE-training/ |
-| Check broken links | https://cyrilmolines.github.io/PHHE-training/validator/ |
-| Update training data | https://cyrilmolines.github.io/PHHE-training/export/ |
+| Check links (quick) | https://cyrilmolines.github.io/PHHE-training/validator/ |
 | Find new trainings | https://cyrilmolines.github.io/PHHE-training/discovery/ |
+| Update training data | https://cyrilmolines.github.io/PHHE-training/export/ |
 
 ---
 
@@ -88,9 +110,14 @@ https://cyrilmolines.github.io/PHHE-training/discovery/
 4. Select **Write** role
 5. They'll receive an email invitation
 
-### Deep link validation (command line):
+### Run deep link validation:
 ```bash
 cd tools/link-validator
 node validate-links.js
 ```
-This checks actual page content, not just URL response.
+
+### Batch file for data sync:
+```bash
+cd tools/sharepoint-sync
+sync-training-data.bat
+```
