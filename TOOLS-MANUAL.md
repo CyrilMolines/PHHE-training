@@ -46,20 +46,18 @@ This version analyzes actual page content to detect:
 
 ---
 
-## 3. Training Discovery
-**Search for new trainings across multiple platforms**
+## 3. Training Platform Search
+**Search for trainings across multiple platforms**
 
 https://cyrilmolines.github.io/PHHE-training/discovery/
 
-- Enter a search term (default: "public health emergency")
-- Click **Search All Sources** to open searches on all platforms
-- Or click **Search** next to individual platforms
-- Compare found trainings against your existing list
+1. Enter a search term (or use quick search buttons)
+2. Click **Search** next to any platform to search with your query
 
-**Platforms searched:**
+**Available platforms:**
 - OpenWHO, edX, Coursera, FutureLearn
 - CDC TRAIN, FEMA, Kaya, UNHCR
-- ReliefWeb, GOARN LMS
+- ReliefWeb, GOARN LMS, DisasterReady
 
 ---
 
@@ -96,7 +94,7 @@ https://cyrilmolines.github.io/PHHE-training/export/
 |------|-----|
 | Search trainings | https://cyrilmolines.github.io/PHHE-training/ |
 | Check links (quick) | https://cyrilmolines.github.io/PHHE-training/validator/ |
-| Find new trainings | https://cyrilmolines.github.io/PHHE-training/discovery/ |
+| Search other platforms | https://cyrilmolines.github.io/PHHE-training/discovery/ |
 | Update training data | https://cyrilmolines.github.io/PHHE-training/export/ |
 
 ---
