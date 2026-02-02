@@ -12,7 +12,7 @@ The WHO PHHE Training Platform is a suite of web-based tools for managing and di
 
 ### Architecture Principles
 - No server-side processing required
-- Runs entirely in the browser (except Node.js validator)
+- Runs entirely in the browser
 - Hosted on GitHub Pages (free static hosting)
 - Data sourced from SharePoint list or static JSON
 
@@ -37,15 +37,6 @@ The WHO PHHE Training Platform is a suite of web-based tools for managing and di
 │  │                     demo-trainings.json                             ││
 │  │                     (Static training data)                          ││
 │  └─────────────────────────────────────────────────────────────────────┘│
-└─────────────────────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        Local Tools (Node.js)                             │
-├─────────────────────────────────────────────────────────────────────────┤
-│  tools/link-validator/validate-links.js                                  │
-│  - Deep content validation                                               │
-│  - No CORS restrictions                                                  │
-│  - Pattern-based analysis                                                │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -100,12 +91,6 @@ Training-Hub/
 │       ├── public/
 │       │   └── demo-trainings.json   # Static training data
 │       └── vite.config.*.ts          # Build configurations
-│
-├── tools/
-│   ├── link-validator/
-│   │   └── validate-links.js         # Node.js deep validator
-│   └── sharepoint-sync/
-│       └── sync-training-data.bat    # Manual sync helper
 │
 ├── TOOLS-MANUAL.md                   # User documentation
 └── TECHNICAL-DOCUMENTATION.md        # This file
@@ -168,33 +153,7 @@ const CONFIG = {
 - `isBlendedTraining(record)`: Check for hybrid modality
 - `startValidation()`: Process all records sequentially
 
-### 3. Node.js Link Validator (`validate-links.js`)
-
-**Purpose**: Deep content validation without CORS restrictions.
-
-**Analysis Method**:
-1. Fetch full HTML content
-2. Check against unavailable patterns (404, removed, etc.)
-3. Check for login/registration indicators
-4. Check for positive content indicators (video, enroll, etc.)
-5. Determine final status based on pattern matches
-
-**Pattern Categories**:
-```javascript
-UNAVAILABLE_PATTERNS    // "page not found", "404", "removed"
-LOGIN_REQUIRED_PATTERNS // "sign in", "login required", "register"
-AVAILABLE_PATTERNS      // "enroll now", "start course", "<video>"
-AUTH_REQUIRED_DOMAINS   // extranet.who.int, login.who.int
-```
-
-**Usage**:
-```bash
-node validate-links.js                    # Use default JSON
-node validate-links.js path/to/data.json  # Custom data file
-node validate-links.js path/to/data.csv   # CSV input
-```
-
-### 4. Training Platform Search (`TrainingDiscovery.tsx`)
+### 3. Training Platform Search (`TrainingDiscovery.tsx`)
 
 **Purpose**: Search launcher for external training platforms.
 
@@ -223,7 +182,7 @@ node validate-links.js path/to/data.csv   # CSV input
 | DisasterReady | Browse only (no search URL) |
 | GOARN LMS | Browse only (login required) |
 
-### 5. Data Export (`DataExport.tsx`)
+### 4. Data Export (`DataExport.tsx`)
 
 **Purpose**: Convert SharePoint CSV export to JSON format.
 
@@ -336,13 +295,9 @@ The tools support URL parameters for configuration:
 ## Security Considerations
 
 ### CORS (Cross-Origin Resource Sharing)
-- Browser cannot fetch external site content
-- `no-cors` mode provides limited information
-- Node.js validator bypasses this limitation
-
-### SSL Certificates
-- Node.js validator disables certificate verification for internal sites
-- `NODE_TLS_REJECT_UNAUTHORIZED = "0"`
+- Browser cannot fetch external site content for analysis
+- `no-cors` mode only verifies basic connectivity
+- Link Validator treats CORS errors as "OK (assumed working)"
 
 ### SharePoint Authentication
 - REST API requires same-origin or authenticated requests
@@ -357,9 +312,9 @@ The tools support URL parameters for configuration:
 - **Cause**: Defaulted to SharePoint mode without authentication
 - **Fix**: URL parameters auto-detect; ensure `demo_json` mode for GitHub Pages
 
-### Browser validator shows many broken links
-- **Cause**: CORS blocks external requests
-- **Fix**: Use Node.js validator for accurate results
+### Link Validator shows all links as "Working"
+- **Cause**: CORS prevents deep content analysis in browser
+- **Note**: Browser validator can only check basic connectivity, not page content
 
 ### Training Finder is slow
 - **Cause**: AI models loading
@@ -393,15 +348,6 @@ const TRAINING_SOURCES = [
 ];
 ```
 Note: `searchUrl` is optional. If not provided, only "Open" button appears.
-
-### Modifying Validation Patterns
-Edit `tools/link-validator/validate-links.js`:
-```javascript
-const UNAVAILABLE_PATTERNS = [
-  /new pattern here/i,
-  // ...
-];
-```
 
 ---
 

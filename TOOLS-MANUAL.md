@@ -10,8 +10,8 @@ Just type what you're looking for (e.g., "infection prevention online french")
 ---
 
 ## 2. Link Validator
+**Check if training links are accessible**
 
-### Web Version (Quick Check)
 https://cyrilmolines.github.io/PHHE-training/validator/
 
 - Click **Start Validation** to check all links
@@ -20,19 +20,7 @@ https://cyrilmolines.github.io/PHHE-training/validator/
 - Click any row to expand and see full details
 - Export report when done
 
-> **Note:** Web version does basic reachability checks only. For accurate deep validation, use the command-line version.
-
-### Command-Line Version (Deep Validation)
-```bash
-cd tools/link-validator
-node validate-links.js
-```
-
-This version analyzes actual page content to detect:
-- 404 error pages
-- Login/registration requirements
-- Archived or removed courses
-- Empty or error pages
+> **Note:** Due to browser security (CORS), the validator checks basic connectivity only. Links that respond are marked as working.
 
 **Status icons:**
 | Icon | Meaning |
@@ -107,15 +95,3 @@ https://cyrilmolines.github.io/PHHE-training/export/
 3. Enter their GitHub username or email
 4. Select **Write** role
 5. They'll receive an email invitation
-
-### Run deep link validation:
-```bash
-cd tools/link-validator
-node validate-links.js
-```
-
-### Batch file for data sync:
-```bash
-cd tools/sharepoint-sync
-sync-training-data.bat
-```
