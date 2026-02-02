@@ -122,6 +122,17 @@ body {
   background: #eee;
 }
 
+.validator-btn.stop {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(211,47,47,0.3);
+}
+
+.validator-btn.stop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211,47,47,0.4);
+}
+
 /* Progress */
 .validator-progress {
   margin-bottom: 20px;
@@ -173,6 +184,11 @@ body {
   border-color: #f44336;
 }
 
+.stat.in-person {
+  background: #f3e5f5;
+  border-color: #9c27b0;
+}
+
 .stat-value {
   display: block;
   font-size: 28px;
@@ -181,6 +197,7 @@ body {
 }
 
 .stat.ok .stat-value { color: #2e7d32; }
+.stat.in-person .stat-value { color: #7b1fa2; }
 .stat.warning .stat-value { color: #e65100; }
 .stat.error .stat-value { color: #c62828; }
 
@@ -193,19 +210,16 @@ body {
 
 /* Results */
 .validator-results {
-  max-height: 500px;
+  max-height: 600px;
   overflow-y: auto;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
 }
 
 .result-row {
-  display: flex;
-  align-items: center;
-  padding: 12px 16px;
   border-bottom: 1px solid #f0f0f0;
-  gap: 12px;
   transition: background 0.2s;
+  cursor: pointer;
 }
 
 .result-row:last-child {
@@ -220,6 +234,14 @@ body {
   background: #f1f8f2;
 }
 
+.result-row.in_person {
+  background: #faf5fc;
+}
+
+.result-row.auth_required {
+  background: #e3f2fd;
+}
+
 .result-row.warning {
   background: #fffaf0;
 }
@@ -231,6 +253,17 @@ body {
 
 .result-row.checking {
   background: #f5f5f5;
+}
+
+.result-row.expanded {
+  background: #fafafa;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
 }
 
 .result-status {
@@ -247,6 +280,8 @@ body {
 .result-row.pending .result-status { background: #e0e0e0; color: #999; }
 .result-row.checking .result-status { background: #e3f2fd; color: #1976d2; }
 .result-row.ok .result-status { background: #c8e6c9; color: #2e7d32; }
+.result-row.in_person .result-status { background: #e1bee7; color: #7b1fa2; }
+.result-row.auth_required .result-status { background: #bbdefb; color: #1565c0; }
 .result-row.warning .result-status { background: #ffe0b2; color: #e65100; }
 .result-row.error .result-status,
 .result-row.timeout .result-status { background: #ffcdd2; color: #c62828; }
@@ -291,6 +326,73 @@ body {
   font-size: 12px;
   color: #999;
   flex-shrink: 0;
+}
+
+.result-expand-icon {
+  font-size: 10px;
+  color: #999;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.result-details-hint {
+  font-size: 12px;
+  color: #7b1fa2;
+  margin-top: 2px;
+}
+
+/* Expanded Details */
+.result-expanded {
+  padding: 0 16px 16px 60px;
+  animation: expandIn 0.2s ease;
+}
+
+@keyframes expandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-row {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  width: 120px;
+  flex-shrink: 0;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-value {
+  flex: 1;
+  color: #333;
+  word-break: break-word;
+}
+
+.detail-value a {
+  color: #3a7443;
+  text-decoration: none;
+}
+
+.detail-value a:hover {
+  text-decoration: underline;
+}
+
+.detail-row.error-row .detail-value {
+  color: #c62828;
 }
 
 /* Scrollbar */

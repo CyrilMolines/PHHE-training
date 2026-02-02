@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useState, useRef } from "preact/hooks";
 import type { TrainingRecord } from "../lib/schema";
 import { loadDemoTrainings } from "../lib/demo";
 
@@ -30,7 +30,7 @@ const CONFIG = {
   }
 };
 
-type LinkStatus = "pending" | "checking" | "ok" | "warning" | "error" | "timeout";
+type LinkStatus = "pending" | "checking" | "ok" | "warning" | "error" | "timeout" | "in_person" | "auth_required";
 
 interface LinkResult {
   record: TrainingRecord;
@@ -38,6 +38,7 @@ interface LinkResult {
   statusCode?: number;
   error?: string;
   responseTime?: number;
+  details?: string;
 }
 
 export function LinkValidator() {
@@ -47,6 +48,8 @@ export function LinkValidator() {
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const stopRef = useRef(false);
 
   // Load data on mount
   useEffect(() => {
@@ -136,11 +139,17 @@ export function LinkValidator() {
     }
   }
 
+  function isInPersonTraining(record: TrainingRecord): boolean {
+    const modality = (record.modalityRaw || record.modality || "").toLowerCase();
+    return modality.includes("person") || modality.includes("face") || modality.includes("classroom");
+  }
+
   async function startValidation() {
     if (!records || isChecking) return;
     
     setIsChecking(true);
     setProgress(0);
+    stopRef.current = false;
 
     // Reset all to pending
     setResults(records.map(record => ({ record, status: "pending" as LinkStatus })));
@@ -150,6 +159,12 @@ export function LinkValidator() {
 
     // Check links sequentially to avoid overwhelming the browser
     for (let i = 0; i < records.length; i++) {
+      // Check if stop was requested
+      if (stopRef.current) {
+        setIsChecking(false);
+        return;
+      }
+
       const record = records[i];
       const url = record.normalizedLink;
 
@@ -161,12 +176,21 @@ export function LinkValidator() {
       });
 
       if (!url) {
-        // No link - mark as warning
-        setResults(prev => {
-          const updated = [...prev];
-          updated[i] = { record, status: "warning", error: "No URL provided" };
-          return updated;
-        });
+        // Check if it's in-person training
+        if (isInPersonTraining(record)) {
+          setResults(prev => {
+            const updated = [...prev];
+            updated[i] = { record, status: "in_person", details: "In-person training - no URL needed" };
+            return updated;
+          });
+        } else {
+          // No link for online training - mark as warning
+          setResults(prev => {
+            const updated = [...prev];
+            updated[i] = { record, status: "warning", error: "No URL provided for online training" };
+            return updated;
+          });
+        }
       } else {
         const result = await checkLink(url);
         setResults(prev => {
@@ -183,6 +207,11 @@ export function LinkValidator() {
       await new Promise(resolve => setTimeout(resolve, 100));
     }
 
+    setIsChecking(false);
+  }
+
+  function stopValidation() {
+    stopRef.current = true;
     setIsChecking(false);
   }
 
@@ -230,6 +259,8 @@ export function LinkValidator() {
   const stats = {
     total: results.length,
     ok: results.filter(r => r.status === "ok").length,
+    inPerson: results.filter(r => r.status === "in_person").length,
+    authRequired: results.filter(r => r.status === "auth_required").length,
     warning: results.filter(r => r.status === "warning").length,
     error: results.filter(r => r.status === "error" || r.status === "timeout").length,
     pending: results.filter(r => r.status === "pending" || r.status === "checking").length
@@ -256,15 +287,23 @@ export function LinkValidator() {
         {!loading && !error && records && (
           <>
             <div class="validator-controls">
-              <button 
-                class="validator-btn primary"
-                onClick={startValidation}
-                disabled={isChecking}
-              >
-                {isChecking ? `Checking... ${progress}%` : "Start Validation"}
-              </button>
+              {!isChecking ? (
+                <button 
+                  class="validator-btn primary"
+                  onClick={startValidation}
+                >
+                  Start Validation
+                </button>
+              ) : (
+                <button 
+                  class="validator-btn stop"
+                  onClick={stopValidation}
+                >
+                  ⏹ Stop ({progress}%)
+                </button>
+              )}
               
-              {stats.error > 0 && !isChecking && (
+              {(stats.error > 0 || stats.warning > 0) && !isChecking && (
                 <button class="validator-btn secondary" onClick={exportReport}>
                   Export Report
                 </button>
@@ -288,6 +327,10 @@ export function LinkValidator() {
                 <span class="stat-value">{stats.ok}</span>
                 <span class="stat-label">Working</span>
               </div>
+              <div class="stat in-person">
+                <span class="stat-value">{stats.inPerson}</span>
+                <span class="stat-label">In-person</span>
+              </div>
               <div class="stat warning">
                 <span class="stat-value">{stats.warning}</span>
                 <span class="stat-label">Warnings</span>
@@ -300,21 +343,87 @@ export function LinkValidator() {
 
             <div class="validator-results">
               {results.map((r, i) => (
-                <div key={i} class={`result-row ${r.status}`}>
-                  <div class="result-status">
-                    {r.status === "pending" && <span class="status-icon">○</span>}
-                    {r.status === "checking" && <span class="status-icon spin">◌</span>}
-                    {r.status === "ok" && <span class="status-icon">✓</span>}
-                    {r.status === "warning" && <span class="status-icon">⚠</span>}
-                    {(r.status === "error" || r.status === "timeout") && <span class="status-icon">✗</span>}
+                <div 
+                  key={i} 
+                  class={`result-row ${r.status} ${expandedIndex === i ? "expanded" : ""}`}
+                  onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
+                >
+                  <div class="result-header">
+                    <div class="result-status">
+                      {r.status === "pending" && <span class="status-icon">○</span>}
+                      {r.status === "checking" && <span class="status-icon spin">◌</span>}
+                      {r.status === "ok" && <span class="status-icon">✓</span>}
+                      {r.status === "in_person" && <span class="status-icon">👤</span>}
+                      {r.status === "auth_required" && <span class="status-icon">🔐</span>}
+                      {r.status === "warning" && <span class="status-icon">⚠</span>}
+                      {(r.status === "error" || r.status === "timeout") && <span class="status-icon">✗</span>}
+                    </div>
+                    <div class="result-info">
+                      <div class="result-name">{r.record.learningName}</div>
+                      {!expandedIndex && r.error && <div class="result-error">{r.error}</div>}
+                      {!expandedIndex && r.details && <div class="result-details-hint">{r.details}</div>}
+                    </div>
+                    {r.responseTime !== undefined && (
+                      <div class="result-time">{r.responseTime}ms</div>
+                    )}
+                    <div class="result-expand-icon">{expandedIndex === i ? "▼" : "▶"}</div>
                   </div>
-                  <div class="result-info">
-                    <div class="result-name">{r.record.learningName}</div>
-                    <div class="result-url">{r.record.normalizedLink || "No URL"}</div>
-                    {r.error && <div class="result-error">{r.error}</div>}
-                  </div>
-                  {r.responseTime !== undefined && (
-                    <div class="result-time">{r.responseTime}ms</div>
+                  
+                  {expandedIndex === i && (
+                    <div class="result-expanded">
+                      <div class="detail-row">
+                        <span class="detail-label">URL</span>
+                        <span class="detail-value">
+                          {r.record.normalizedLink ? (
+                            <a href={r.record.normalizedLink} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                              {r.record.normalizedLink}
+                            </a>
+                          ) : "No URL"}
+                        </span>
+                      </div>
+                      <div class="detail-row">
+                        <span class="detail-label">Description</span>
+                        <span class="detail-value">{r.record.description || "N/A"}</span>
+                      </div>
+                      <div class="detail-row">
+                        <span class="detail-label">Modality</span>
+                        <span class="detail-value">{r.record.modalityRaw || r.record.modality || "N/A"}</span>
+                      </div>
+                      <div class="detail-row">
+                        <span class="detail-label">Technical Area</span>
+                        <span class="detail-value">{r.record.technicalArea || "N/A"}</span>
+                      </div>
+                      <div class="detail-row">
+                        <span class="detail-label">Languages</span>
+                        <span class="detail-value">{r.record.languages?.join(", ") || "N/A"}</span>
+                      </div>
+                      <div class="detail-row">
+                        <span class="detail-label">Platform</span>
+                        <span class="detail-value">{r.record.platform || "N/A"}</span>
+                      </div>
+                      <div class="detail-row">
+                        <span class="detail-label">Owner</span>
+                        <span class="detail-value">{r.record.owner || "N/A"}</span>
+                      </div>
+                      {r.error && (
+                        <div class="detail-row error-row">
+                          <span class="detail-label">Error</span>
+                          <span class="detail-value">{r.error}</span>
+                        </div>
+                      )}
+                      {r.details && (
+                        <div class="detail-row">
+                          <span class="detail-label">Note</span>
+                          <span class="detail-value">{r.details}</span>
+                        </div>
+                      )}
+                      {r.statusCode && (
+                        <div class="detail-row">
+                          <span class="detail-label">HTTP Status</span>
+                          <span class="detail-value">{r.statusCode}</span>
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               ))}
