@@ -248,7 +248,8 @@ export function DataExport() {
                   <div class="step-number">2</div>
                   <div class="step-content">
                     <h4>Upload to GitHub</h4>
-                    <p>Click below, then drag & drop your file and click "Commit changes"</p>
+                    <p>Click below, then drag & drop your file and click "Commit changes".</p>
+                    <p class="export-hint">You can use any filename (e.g. demo-trainings.json or demo-trainings-2025-02.json). The site automatically uses the <strong>most recently committed</strong> JSON file in the repo.</p>
                     <a 
                       href="https://github.com/CyrilMolines/PHHE-training/upload/gh-pages" 
                       target="_blank"

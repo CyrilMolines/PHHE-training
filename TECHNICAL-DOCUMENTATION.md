@@ -324,6 +324,9 @@ The tools support URL parameters for configuration:
 - **Cause**: Browser cache or CDN delay
 - **Fix**: Hard refresh (Ctrl+Shift+R) or wait 2-3 minutes
 
+### Using a different JSON filename on GitHub
+- The app on GitHub Pages automatically loads the **most recently committed** `.json` file in the repo root (gh-pages branch). You can upload with any name (e.g. `demo-trainings.json` or `demo-trainings-2025-02.json`); the latest by commit date is used. To force a specific file, use only one JSON file or name it `demo-trainings.json` and replace the existing file.
+
 ---
 
 ## Maintenance
@@ -331,7 +334,7 @@ The tools support URL parameters for configuration:
 ### Updating Training Data
 1. Export CSV from SharePoint
 2. Use Data Export tool to convert
-3. Upload `demo-trainings.json` to GitHub `gh-pages` branch
+3. Upload the JSON to GitHub `gh-pages` branch (any filename; the site uses the most recently committed JSON). Or upload as `demo-trainings.json` and replace the existing file.
 
 ### Adding New Training Sources (Platform Search)
 Edit `apps/finder-ui/src/ui/TrainingDiscovery.tsx`:

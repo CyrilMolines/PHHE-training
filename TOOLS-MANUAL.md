@@ -67,7 +67,7 @@ https://cyrilmolines.github.io/PHHE-training/export/
 
 3. **Upload to GitHub**
    - Click **Open GitHub Upload Page**
-   - Drag & drop `demo-trainings.json`
+   - Drag & drop your JSON file (any filename is fine; the site uses the **most recently committed** JSON)
    - Click **Commit changes**
 
 4. **Done!** Changes go live in 1-2 minutes.
