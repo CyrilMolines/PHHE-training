@@ -6,8 +6,5 @@
   ],
   "rewrites": [
     { "source": "/", "destination": "/api/root" }
-  ],
-  "routes": [
-    { "src": "/api/check-link", "dest": "/api/check-link" }
   ]
 }
