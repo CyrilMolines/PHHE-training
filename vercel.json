@@ -1,9 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "api/check-link.js", "use": "@vercel/node" },
-    { "src": "api/root.js", "use": "@vercel/node" }
-  ],
   "rewrites": [
     { "source": "/", "destination": "/api/root" }
   ]
