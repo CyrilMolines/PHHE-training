@@ -2,59 +2,40 @@
 
 Serverless API for the PHHE Link Validator. Returns real HTTP status for any URL (no CORS).
 
+- **Live API:** https://phhe-link.vercel.app/
 - **Endpoint:** `GET /api/check-link?url=https://example.com/page`
 - **Response:** `{ "statusCode": 200, "ok": true }` or `{ "statusCode": 404, "ok": false }`
-- **Default URL used by validator:** `https://training-hub.vercel.app`
+- **Validator default:** The Link Validator uses `https://phhe-link.vercel.app` by default.
 
 ---
 
 ## Deploy (one-time)
 
-### Option A: Vercel dashboard (easiest)
+### Vercel dashboard
 
-1. Go to **[https://vercel.com/new](https://vercel.com/new)** and sign in (GitHub is fine).
-2. Click **Import Git Repository** and select your **Training-Hub** repo (or the repo that contains this `api/` folder).
-3. **Project Name:** set to **`training-hub`** so the URL is `https://training-hub.vercel.app`.
-4. **Root Directory:** leave as **`.`** (repo root; `vercel.json` and `api/` must be at root).
-5. Click **Deploy**. Wait for the build to finish.
-6. Your API is live at **https://training-hub.vercel.app/api/check-link?url=...**
+1. Go to **[https://vercel.com/new](https://vercel.com/new)** and sign in.
+2. **Import** → **CyrilMolines/PHHE-training**.
+3. **Project Name:** `phhe-link` (or another available name).
+4. **Root Directory:** leave **empty**.
+5. **Output Directory:** leave **empty**.
+6. **Framework Preset:** **Other**.
+7. Click **Deploy**.
 
-The validator at https://cyrilmolines.github.io/PHHE-training/validator/ uses this URL by default, so it will work with no changes.
-
-Future pushes to the repo will auto-deploy if you left ΓÇ£Vercel for GitΓÇ¥ connected.
+Your API will be at `https://phhe-link.vercel.app/` and `https://phhe-link.vercel.app/api/check-link?url=...`.
 
 ---
 
-### Option B: Vercel CLI (then GitHub Action)
+## Configuration
 
-1. **Log in once:** in a terminal at the **repo root** (where `vercel.json` and `api/` are):
-   ```bash
-   npx vercel login
-   ```
-2. **Create/link project and deploy:**
-   ```bash
-   npx vercel --prod --yes
-   ```
-   When asked for project name, use **`training-hub`** so the URL is `https://training-hub.vercel.app`.
-
-3. **Optional ΓÇô auto-deploy on push:**  
-   After the first deploy, run in the same repo:
-   ```bash
-   npx vercel link
-   ```
-   Then add these as **GitHub repo secrets** (Settings ΓåÆ Secrets and variables ΓåÆ Actions):
-   - **VERCEL_TOKEN** ΓÇô create at [vercel.com/account/tokens](https://vercel.com/account/tokens)
-   - **VERCEL_ORG_ID** ΓÇô from `.vercel/project.json` after `vercel link` (or Vercel dashboard ΓåÆ your team ΓåÆ Settings)
-   - **VERCEL_PROJECT_ID** ΓÇô from `.vercel/project.json` (or Vercel project ΓåÆ Settings ΓåÆ General)
-
-   Pushes that touch `api/` or `vercel.json` will trigger the workflow in `.github/workflows/deploy-api-vercel.yml`.
+- **vercel.json** uses only `rewrites` (no `routes`). Root `/` is rewritten to `/api/root`; `/api/check-link` and `/api/root` are auto-detected from the `api/` folder.
+- If you get 404, see **api/TROUBLESHOOT-VERCEL.md** (Root Directory and Output Directory must be empty).
 
 ---
 
 ## Overriding the API URL
 
-If your API is at a different URL (e.g. `https://my-project.vercel.app`), open the validator with:
+To use a different API URL, open the validator with:
 
-`https://cyrilmolines.github.io/PHHE-training/validator/?api=https://my-project.vercel.app`
+`https://cyrilmolines.github.io/PHHE-training/validator/?api=https://your-project.vercel.app`
 
 No trailing slash on the `api` value.

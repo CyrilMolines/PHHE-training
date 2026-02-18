@@ -1,10 +1,10 @@
-# Vercel 404 troubleshooting (training-hub-rouge)
+# Vercel 404 troubleshooting (phhe-link)
 
-If **https://training-hub-rouge.vercel.app/** or **/api/check-link** return **404: NOT_FOUND**, fix the project settings in the Vercel dashboard.
+If **https://phhe-link.vercel.app/** or **/api/check-link** return **404: NOT_FOUND**, fix the project settings in the Vercel dashboard.
 
 ## 1. Output Directory (most common cause)
 
-**Vercel → training-hub-rouge → Settings → General → Build & Development Settings**
+**Vercel → phhe-link → Settings → General → Build & Development Settings**
 
 - **Output Directory** must be **empty** (or not set).
 - If it is set (e.g. `dist-embed`, `dist`, `out`), Vercel serves **only** that folder. The `api/` folder and serverless functions are then **not** part of the deployment, so every URL returns 404.
@@ -42,8 +42,8 @@ Check: https://github.com/CyrilMolines/PHHE-training/tree/main
 2. Go to **Deployments**.
 3. Open **⋯** on the latest deployment → **Redeploy** (use same commit).
 4. Wait 1–2 minutes, then try:
-   - https://training-hub-rouge.vercel.app/
-   - https://training-hub-rouge.vercel.app/api/check-link?url=https://example.com
+   - https://phhe-link.vercel.app/
+   - https://phhe-link.vercel.app/api/check-link?url=https://example.com
 
 ## 6. Build and runtime logs
 
