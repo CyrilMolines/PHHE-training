@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/check-link.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/check-link", "dest": "/api/check-link" }
+  ]
+}
