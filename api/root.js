@@ -1,0 +1,25 @@
+/**
+ * Serves the root page for the link-check API (so / is not 404).
+ */
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PHHE Link-check API</title>
+</head>
+<body>
+  <h1>PHHE Link-check API</h1>
+  <p>Use the validator with this API:</p>
+  <p><code>GET <a href="/api/check-link?url=https://example.com">/api/check-link?url=https://example.com</a></code></p>
+  <p>Returns <code>{ "statusCode": 200, "ok": true }</code> or <code>{ "statusCode": 404, "ok": false }</code>.</p>
+  <p>Link Validator: add <code>?api=<span id="api-origin"></span></code> to the validator URL.</p>
+  <script>document.getElementById("api-origin").textContent = location.origin;</script>
+</body>
+</html>`;
+
+module.exports = (req, res) => {
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.setHeader("Cache-Control", "public, max-age=60");
+  res.status(200).end(html);
+};

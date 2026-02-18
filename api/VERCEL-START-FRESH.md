@@ -1,27 +1,22 @@
 # Delete Vercel project and start over
 
-## Option A: Delete in the browser (you’re on the right page)
+## Option A: Delete in the browser
 
-The browser should be on **your project → Settings → General**.
+1. Open your project on Vercel → **Settings** → **General**.
+2. Scroll to the bottom (Danger Zone).
+3. Click **Delete** and confirm.
 
-1. **Scroll to the bottom** of the page (Danger Zone).
-2. Click **“Delete”** (or “Remove Project” / “Delete Project”).
-3. Confirm when asked (e.g. type the project name).
-4. Then go to **Option B** to create a new project.
-
-## Option B: Delete via API (then create in browser)
+## Option B: Delete via API
 
 1. Get a token: **https://vercel.com/account/tokens** → Create → copy token.
-2. In PowerShell run (replace `YOUR_TOKEN` with your token):
+2. In PowerShell (replace `YOUR_TOKEN` and `YOUR_PROJECT_NAME`):
 
 ```powershell
 $env:VERCEL_TOKEN = "YOUR_TOKEN"
 Invoke-RestMethod -Uri "https://api.vercel.com/v9/projects/YOUR_PROJECT_NAME" -Method Delete -Headers @{ "Authorization" = "Bearer $env:VERCEL_TOKEN" }
 ```
 
-3. Then create the new project (see below).
-
-## Create the new project (after delete)
+## Create a new project (after delete)
 
 1. Open **https://vercel.com/new**
 2. **Import** → **CyrilMolines/PHHE-training**
