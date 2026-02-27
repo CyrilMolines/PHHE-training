@@ -1,0 +1,13 @@
+{
+  "name": "who-academy-scraper",
+  "version": "1.0.0",
+  "description": "Scrape WHO Academy coursewares and extract metadata across all pages",
+  "private": true,
+  "scripts": {
+    "scrape": "node scrape.js",
+    "scrape:dry": "node scrape.js --dry-run"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}

@@ -5,7 +5,7 @@ Serverless API for the PHHE Link Validator. Returns real HTTP status for any URL
 - **Live API:** https://phhe-link.vercel.app/
 - **Endpoint:** `GET /api/check-link?url=https://example.com/page`
 - **Response:** `{ "statusCode": 200, "ok": true }` or `{ "statusCode": 404, "ok": false }`. On request failure (e.g. network): `{ "statusCode": 502, "ok": false, "error": "..." }`.
-- **Validator default:** The Link Validator uses `https://phhe-link.vercel.app` by default.
+- **Validator default:** The Link Validator uses `https://phhe-link.vercel.app` by default. The validator UI shows error hints (explanations for 301, 302, 404, timeout, etc.) in expanded rows and supports **Group by error** to sort results by error type.
 - **Certificate handling:** If the first request fails with a TLS/certificate error (e.g. "unable to get local issuer certificate" on OpenWHO in Vercel’s runtime), the API retries once with relaxed TLS and returns the server’s real HTTP status. This avoids false positives where valid links are marked as broken.
 
 ---
